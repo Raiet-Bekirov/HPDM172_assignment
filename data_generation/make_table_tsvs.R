@@ -60,7 +60,6 @@ cqc_inspections$region[cqc_inspections$region=='Yorkshire & Humberside'] <- 'Yor
 # Hospitals Table Creation
 
 hospital_table <- data.frame(
-  hosp_id = seq(1,40),
   hosp_name = rep(NA,40),
   address = rep(NA,40),
   num_beds = rep(NA,40),
@@ -150,16 +149,20 @@ hospital_table$hosp_name[hospital_table$hosp_name=='St Marys Hospital'] <- "St M
 hospital_table$address <- gsub("(^|[[:space:],-])([[:alpha:]])", "\\1\\U\\2", hospital_table$address, perl = TRUE)
 hospital_table$address <- gsub("In", "in", hospital_table$address)
 
-hosp_to_export <- subset(hospital_table, select = c(hosp_id, hosp_name, address, num_beds, type, emergency_services, year_of_accred))
+hosp_to_export <- subset(hospital_table, select = c(hosp_name, address, num_beds, type, emergency_services, year_of_accred))
 
 write.table(hosp_to_export, file='hospitals.tsv',
             quote=FALSE, sep='\t', row.names = FALSE,
-            col.names = c('id', 'Hospital Name', 'Address', 'Size (Beds)', 'Type',
+            col.names = c('Hospital Name', 'Address', 'Size (Beds)', 'Type',
                           'Emergency Services', 'Year of Accreditation'))
 
 # Doctors
 
+# These will need unique IDs since 2 drs could share the same name
+
 # Patients
+
+# These will need unique IDs since 2 pts could share the same name 
 
 # Medications
 
