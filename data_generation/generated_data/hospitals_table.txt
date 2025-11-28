@@ -2,7 +2,7 @@ id	Hospital Name	Address	Size (Beds)	Type	Emergency Services	Year of Accreditati
 1	Croydon University Hospital	530 London Road, Thornton Heath CR7 7YE	428	General	Yes	2025
 2	King's Mill Hospital	Mansfield Road, Sutton-in-Ashfield NG17 4JL	671	General	Yes	2023
 3	Liverpool Women's Hospital	Crown Street, Liverpool L8 7SS	24	Specialist	No	2025
-4	St Marys Hospital	Parkhurst Road, Newport PO30 5TG	271	General	Yes	2021
+4	St Mary's Hospital	Parkhurst Road, Newport PO30 5TG	271	General	Yes	2021
 5	Salisbury District Hospital	Odstock Road, Salisbury SP2 8BJ	446	General	Yes	2025
 6	Royal Preston Hospital	Sharoe Green Lane, Preston PR2 9HT	803	Teaching	Yes	2010
 7	Royal Derby Hospital	Uttoxeter Road, Derby DE22 3NE	1454	Teaching	Yes	2025

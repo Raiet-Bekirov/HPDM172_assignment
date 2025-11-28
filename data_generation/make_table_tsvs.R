@@ -146,6 +146,7 @@ while (in_table < req_num_hosp) {
 
 hospital_table$hosp_name <- gsub("(^|[[:space:],-])([[:alpha:]])", "\\1\\U\\2", hospital_table$hosp_name, perl = TRUE)
 hospital_table$hosp_name <- gsub("Of", "of", hospital_table$hosp_name)
+hospital_table$hosp_name[hospital_table$hosp_name=='St Marys Hospital'] <- "St Mary's Hospital"
 hospital_table$address <- gsub("(^|[[:space:],-])([[:alpha:]])", "\\1\\U\\2", hospital_table$address, perl = TRUE)
 hospital_table$address <- gsub("In", "in", hospital_table$address)
 
