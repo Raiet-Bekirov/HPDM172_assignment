@@ -15,21 +15,26 @@ rm cqc_directory.zip
 tail -n +5 cqc_inspections.csv > cleaned_cqc_inspections.csv
 mv cleaned_cqc_inspections.csv cqc_inspections.csv
 
+curl -L -o first_names.csv https://raw.githubusercontent.com/sigpwned/popular-names-by-country-dataset/refs/heads/main/common-forenames-by-country.csv
+
+curl -L -o last_names.csv https://raw.githubusercontent.com/sigpwned/popular-names-by-country-dataset/refs/heads/main/common-surnames-by-country.csv
+
+curl -L -o medications.csv https://www.vumc.org/wei-lab/sites/default/files/public_files/MEDI-2_HPS.csv
+
+curl -L -o uk_postcodes.csv https://raw.githubusercontent.com/academe/UK-Postcodes/b0ec095967119671347074f44dd0a62f9e0830f1/postcodes.csv
+
+curl -L -o uk_postcode_ins.csv https://data.ideal-postcodes.co.uk/incodes.csv?_gl=1*1fd2gym*_gcl_au*MTYyNjU4MTgyNS4xNzY0MzY1OTgz*_ga*OTM3MTg2NzM1LjE3NjQzNjU5ODM.*_ga_TCWN2YPGY5*czE3NjQzNjU5ODIkbzEkZzEkdDE3NjQzNjYxMTQkajYwJGwwJGgxNzA5MjcxNzE.
+tail -n +2 uk_postcode_ins.csv > cleaned_uk_postcode_ins.csv
+mv cleaned_uk_postcode_ins.csv uk_postcode_ins.csv
+
 mkdir source_data
 
 mv acute_trust_services.csv ./source_data/
 mv addresses.csv ./source_data/
 mv beds.csv ./source_data/
 mv cqc_inspections.csv ./source_data/
-
-# TODO
-
-# https://github.com/matt40k/Names/blob/34d163a5c99aa0581ad5d4965d51bf53dd9d78b4/Forename_Autumn2014.csv
-# https://github.com/matt40k/Names/blob/34d163a5c99aa0581ad5d4965d51bf53dd9d78b4/Surname_Autumn2014.csv
-# https://github.com/academe/UK-Postcodes/blob/b0ec095967119671347074f44dd0a62f9e0830f1/postcodes.csv
-
-# USEFUL
-
-# https://www.mrs.org.uk/pdf/postcodeformat.pdf
-# https://pmc.ncbi.nlm.nih.gov/articles/PMC6177714/
-# https://academic.oup.com/ajcp/article/151/5/446/5237639
+mv first_names.csv ./source_data/
+mv last_names.csv ./source_data/
+mv medications.csv ./source_data/
+mv uk_postcodes.csv ./source_data/
+mv uk_postcode_ins.csv ./source_data/
