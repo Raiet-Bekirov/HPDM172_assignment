@@ -400,7 +400,6 @@ hospitals_table$hosp_name <- gsub("(^|[[:space:],-])([[:alpha:]])",
                                  "\\1\\U\\2", hospitals_table$hosp_name,
                                  perl = TRUE)
 hospitals_table$hosp_name <- gsub("Of", "of", hospitals_table$hosp_name)
-hospitals_table$hosp_name[hospitals_table$hosp_name=='St Marys Hospital'] <- "St Mary's Hospital"
 hospitals_table$address <- gsub("(^|[[:space:],-])([[:alpha:]])",
                                "\\1\\U\\2", hospitals_table$address,
                                perl = TRUE)
