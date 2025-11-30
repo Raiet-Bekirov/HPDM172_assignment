@@ -18,8 +18,8 @@ Table doctors {
   doctor_name varchar
   doctor_dob date
   doctor_address varchar
-  hospital_id int [ref: > hospitals.hospital_id]
-  disease_id int [ref: > diseases.disease_id]
+  hospital_id int [ref: > hospitals.hospital_id, not null]
+  disease_id int [ref: > diseases.disease_id, not null]
 }
 
 Table patients {
@@ -27,28 +27,28 @@ Table patients {
   patient_name varchar
   patient_dob date
   patient_address varchar
-  doctor_id int [ref: > doctors.doctor_id]
+  doctor_id int [ref: > doctors.doctor_id, not null]
 }
 
 Table medications {
   medication_id integer [primary key]
   medication_name varchar
-  disease_id int [ref: > diseases.disease_id]
+  disease_id int [ref: > diseases.disease_id, not null]
 }
 
 Table prescriptions {
   prescription_id integer [primary key]
   prescription_date date
-  medication_id int [ref: > medications.medication_id]
-  patient_id int [ref: > patients.patient_id]
-  doctor_id int [ref: > doctors.doctor_id]
+  medication_id int [ref: > medications.medication_id, not null]
+  patient_id int [ref: > patients.patient_id, not null]
+  doctor_id int [ref: > doctors.doctor_id, not null]
 }
 
 Table appointments {
   appointment_id integer [primary key]
   appointment_date date
-  patient_id int [ref: > patients.patient_id]
-  doctor_id int [ref: > doctors.doctor_id]
+  patient_id int [ref: > patients.patient_id, not null]
+  doctor_id int [ref: > doctors.doctor_id, not null]
 }
 
 Table lab_results {
@@ -56,6 +56,6 @@ Table lab_results {
   test_date date
   test_type varchar
   test_result varchar
-  patient_id int [ref: > patients.patient_id]
-  doctor_id int [ref: > doctors.doctor_id]
+  patient_id int [ref: > patients.patient_id, not null]
+  doctor_id int [ref: > doctors.doctor_id, not null]
 }
