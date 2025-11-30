@@ -2,7 +2,7 @@
 
 set.seed(172)
 
-# Source Data Processing
+# Import and process source data
 
 acute_trust_services <- read.csv('source_data/acute_trust_services.csv', header=TRUE)
 acute_trust_services <- data.frame(
@@ -193,7 +193,7 @@ leap_year_days <- data.frame(
           sprintf("%02d", 1:31), sprintf("%02d", 1:30), sprintf("%02d", 1:31))
 )
 
-# Utility Functions
+# Create utility functions for use in data generation
 
 rand_add_from_region <- function(region) {
   posts_towns <- data.frame (
@@ -315,7 +315,7 @@ rand_blood_result <- function(test_code) {
   blood_result
 }
 
-# Hospitals Table Creation
+# Create hospitals table
 
 hospitals_table <- data.frame(
   hosp_id = seq(1,40),
@@ -414,7 +414,7 @@ write.table(hosp_to_export, file='hospitals_table.txt',
                           'no_of_beds', 'hospital_type', 'emergency_services',
                           'accreditation_year'))
 
-# Diseases Table Creation
+# Create diseases table
 
 diseases_table <- data.frame(
   dis_id = seq(1,10),
@@ -425,7 +425,7 @@ write.table(diseases_table, file='diseases_table.txt',
             quote=FALSE, sep='\t', row.names = FALSE,
             col.names = c('disease_id', 'disease_name'))
 
-# Doctors Table Creation
+# Create doctors table
 
 doctors_table <- data.frame(
   doc_id = seq(1,100),
@@ -454,7 +454,7 @@ write.table(doctors_table, file='doctors_table.txt',
             col.names = c('doctor_id', 'doctor_name', 'doctor_dob',
                           'doctor_address', 'hospital_id', 'disease_id'))
 
-# Patients Table Creation
+# Create patients table
 
 patients_table <- data.frame(
   pt_id = seq(1,600),
@@ -479,7 +479,7 @@ write.table(patients_table, file='patients_table.txt',
             col.names = c('patient_id', 'patient_name', 'patient_dob',
                           'patient_address', 'doctor_id'))
 
-# Medications Table Creation
+# Create medications table
 
 medication_indication_counts <- table(medications[,1])
 medications_w_one_ind_listed <- names(medication_indication_counts[medication_indication_counts == 1])
@@ -496,7 +496,7 @@ write.table(medications_table, file='medications_table.txt',
             quote=FALSE, sep='\t', row.names = FALSE,
             col.names = c('medication_id', 'medication_name', 'disease_id'))
 
-# Prescriptions Table Creation
+# Create prescriptions table
 
 prescriptions_table <- data.frame(
   prs_id = seq(1,500),
@@ -533,7 +533,7 @@ write.table(prescriptions_table, file='prescriptions_table.txt',
             quote=FALSE, sep='\t', row.names = FALSE,
             col.names = c('prescription_id', 'prescription_date', 'medication_id', 'patient_id', 'doctor_id'))
 
-# Appointments Table Creation
+# Create appointments table
 
 appointments_table <- data.frame(
   apt_id = seq(1,500),
@@ -562,7 +562,7 @@ write.table(appointments_table, file='appointments_table.txt',
             quote=FALSE, sep='\t', row.names = FALSE,
             col.names = c('appointment_id', 'appointment_date', 'patient_id', 'doctor_id'))
  
-# Lab Results Table Creation
+# Create lab results table
 
 lab_results_table <- data.frame(
   lab_result_id = seq(1,500),
@@ -602,5 +602,7 @@ write.table(lab_results_table, file='lab_results_table.txt',
             quote=FALSE, sep='\t', row.names = FALSE,
             col.names = c('lab_result_id', 'test_date', 'test_type', 'test_result',
                           'patient_id', 'doctor_id'))
+                          
+# Clear global environment
                           
 rm(list = ls())
