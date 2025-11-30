@@ -1,8 +1,6 @@
-# Steps to create `hospitals_db`
+This markdown file details the steps any MySQL user can follow to create their own version of our database, `hospitals_db`.
 
-## Option 1: Create database from scratch and import data from files
-
-(Requires a [mysql](https://www.mysql.com/products/community/) installation.)
+# Option 1: Create the database from scratch and import data from files
 
 Make directory to store input data, for example:
 
@@ -15,7 +13,7 @@ Navigate to the created directory:
 cd /home/ubuntu/hpdm172/assignment/
 ```
 
-Download input data zip file from GitHub:
+Download input data .zip file from GitHub:
 
 ```shell
 wget https://github.com/Raiet-Bekirov/HPDM172_assignment/raw/refs/heads/main/data_generation/generated_data/all_data.zip
@@ -127,16 +125,62 @@ Quit MySQL:
 quit
 ```
 
-Export database to a .sql file:
+Export database to a .sql file (in the command below, replace `<USER-NAME>` with the appropriate MySQL server username):
 
-## Option 2: Restore database from backup file
+```shell
+mysqldump -u <USER-NAME> -p hospitals_db > hospitals_db.sql
+```
 
-## Delete `hospitals_db`
+# Option 2: Restore the database from provided backup file
+
+Make directory to store backup file, for example:
+
+```shell
+mkdir /home/ubuntu/hpdm172/assignment/
+```
+
+Navigate to the created directory:
+
+```shell
+cd /home/ubuntu/hpdm172/assignment/
+```
+
+Download backup .sql file from GitHub:
+
+```shell
+wget https://raw.githubusercontent.com/Raiet-Bekirov/HPDM172_assignment/refs/heads/main/hospitals_db.sql
+```
 
 Log on to MySQL server (in the command below, replace `<USER-NAME>` with the appropriate MySQL server username):
 
 ```shell
 mysql --local-infile=1 -u <USER-NAME> -p
+```
+
+Create new database:
+
+```sql
+CREATE DATABASE hospitals_db;
+```
+
+Quit MySQL:
+
+```sql
+quit
+```
+
+Restore database from `hospitals_db.sql`:
+
+```shell
+mysql -u hds -p hospitals_db < /home/ubuntu/hpdm172/assignment/hospitals_db.sql
+```
+
+# Delete `hospitals_db`
+
+Log on to MySQL server (in the command below, replace `<USER-NAME>` with the appropriate MySQL server username):
+
+```shell
+mysql -u <USER-NAME> -p
 ```
 
 Delete `hospitals_db`:
