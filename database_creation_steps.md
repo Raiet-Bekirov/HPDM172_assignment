@@ -92,9 +92,9 @@ doctor_name VARCHAR(150),
 doctor_dob DATE,
 doctor_address VARCHAR(150),
 hospital_id INT,
-specialty_id INT,
+disease_id INT,
 FOREIGN KEY (hospital_id) REFERENCES hospitals(hospital_id),
-FOREIGN KEY (specialty_id) REFERENCES diseases(disease_id)
+FOREIGN KEY (disease_id) REFERENCES diseases(disease_id)
 );
 ```
 
