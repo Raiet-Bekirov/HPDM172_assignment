@@ -1,0 +1,501 @@
+lab_result_id	test_date	test_type	test_result	patient_id	doctor_id
+1	2024-01-04	Blood Test: Alkaline Phosphatase	145 IU/L	382	5
+2	2024-06-13	Blood Test: Red Blood Cell Count	3 x 10^12/L	54	2
+3	2024-01-13	Blood Test: Creatinine	70 umol/L	561	11
+4	2024-12-05	Blood Test: Iron	25 umol/L	237	100
+5	2024-01-05	Blood Test: Lymphocytes	2.3 x 10^9/L	230	41
+6	2024-09-04	Blood Test: Haemoglobin	52 g/L	433	60
+7	2024-05-11	Blood Test: Alkaline Phosphatase	131 IU/L	572	79
+8	2025-08-03	Blood Test: HDL Cholesterol	1.6 mmol/L	578	87
+9	2024-05-29	Blood Test: Haemoglobin	150 g/L	474	36
+10	2024-05-23	Blood Test: LDL Cholesterol	3.8 mmol/L	153	37
+11	2025-05-20	Blood Test: White Blood Cell Count	15.5 x 10^9/L	453	84
+12	2025-01-11	Blood Test: Alkaline Phosphatase	125 IU/L	581	89
+13	2024-03-12	Blood Test: Alkaline Phosphatase	31 IU/L	532	53
+14	2024-12-30	Blood Test: C-Reactive Protein	5.4 mg/L	587	45
+15	2025-04-29	Blood Test: Red Blood Cell Count	4.5 x 10^12/L	163	75
+16	2025-11-05	Blood Test: LDL Cholesterol	0.9 mmol/L	296	5
+17	2024-01-27	Blood Test: LDL Cholesterol	4.6 mmol/L	326	34
+18	2025-05-25	Blood Test: White Blood Cell Count	9 x 10^9/L	290	90
+19	2024-05-12	Blood Test: White Blood Cell Count	8.6 x 10^9/L	67	79
+20	2024-04-19	Blood Test: Bilirubin	24 umol/L	211	49
+21	2024-08-14	Blood Test: C-Reactive Protein	4 mg/L	484	25
+22	2025-03-09	Blood Test: Bilirubin	12 umol/L	19	42
+23	2024-04-09	Blood Test: Potassium	9 mmol/L	226	55
+24	2025-03-22	Blood Test: Red Blood Cell Count	2.5 x 10^12/L	127	94
+25	2024-04-13	Blood Test: White Blood Cell Count	16 x 10^9/L	456	23
+26	2025-03-11	Blood Test: HbA1c	35 mmol/mol	69	61
+27	2025-08-20	Blood Test: HbA1c	67 mmol/mol	294	13
+28	2024-08-03	Blood Test: Triglycerides	2.1 mmol/L	145	97
+29	2024-03-27	Blood Test: Creatinine	138 umol/L	163	74
+30	2025-09-01	Blood Test: Lactate	6.9 mmol/L	55	48
+31	2025-08-26	Blood Test: Triglycerides	3.7 mmol/L	173	43
+32	2024-09-24	Blood Test: C-Reactive Protein	1 mg/L	355	99
+33	2024-07-11	Blood Test: Creatinine	51 umol/L	178	27
+34	2024-02-12	Blood Test: Triglycerides	0.7 mmol/L	69	80
+35	2024-04-14	Blood Test: White Blood Cell Count	1.6 x 10^9/L	159	17
+36	2024-09-25	Blood Test: Urea	2.8 mmol/L	183	42
+37	2025-03-31	Blood Test: Triglycerides	4 mmol/L	2	5
+38	2025-01-16	Blood Test: Magnesium	0.8 mmol/L	578	45
+39	2024-12-01	Blood Test: Glucose	18.2 mmol/L	290	39
+40	2025-03-03	Blood Test: Magnesium	0.7 mmol/L	443	6
+41	2025-08-04	Blood Test: Urea	1.1 mmol/L	447	38
+42	2025-05-20	Blood Test: Haemoglobin	80 g/L	489	66
+43	2025-03-29	Blood Test: Lactate	2.1 mmol/L	185	23
+44	2024-05-09	Blood Test: HDL Cholesterol	1.9 mmol/L	564	39
+45	2025-05-24	Blood Test: Alkaline Phosphatase	120 IU/L	370	89
+46	2024-09-05	Blood Test: Haemoglobin	145 g/L	494	60
+47	2025-10-12	Blood Test: Lymphocytes	1 x 10^9/L	278	10
+48	2024-10-20	Blood Test: White Blood Cell Count	2.8 x 10^9/L	457	58
+49	2024-09-29	Blood Test: Neutrophils	8.3 x 10^9/L	159	17
+50	2025-06-02	Blood Test: Lactate	1.1 mmol/L	55	41
+51	2025-05-01	Blood Test: Iron	22 umol/L	423	40
+52	2024-04-10	Blood Test: HDL Cholesterol	0.8 mmol/L	46	19
+53	2025-04-21	Blood Test: Creatinine	83 umol/L	280	99
+54	2024-12-08	Blood Test: Triglycerides	1.3 mmol/L	199	89
+55	2024-11-14	Blood Test: Red Blood Cell Count	7.8 x 10^12/L	66	31
+56	2025-08-18	Blood Test: Red Blood Cell Count	2.3 x 10^12/L	545	31
+57	2025-06-16	Blood Test: Triglycerides	4.8 mmol/L	429	30
+58	2024-04-12	Blood Test: C-Reactive Protein	2.4 mg/L	438	35
+59	2024-11-24	Blood Test: Haemoglobin	178 g/L	332	11
+60	2025-06-26	Blood Test: Triglycerides	2.3 mmol/L	483	18
+61	2025-10-12	Blood Test: White Blood Cell Count	2.1 x 10^9/L	129	47
+62	2024-04-08	Blood Test: Lactate	1.2 mmol/L	128	43
+63	2025-03-12	Blood Test: Alkaline Phosphatase	82 IU/L	521	37
+64	2024-03-07	Blood Test: Bilirubin	26 umol/L	468	8
+65	2025-04-11	Blood Test: LDL Cholesterol	4.4 mmol/L	132	65
+66	2024-10-14	Blood Test: C-Reactive Protein	4.8 mg/L	314	62
+67	2025-06-06	Blood Test: C-Reactive Protein	7.6 mg/L	265	23
+68	2025-06-23	Blood Test: HDL Cholesterol	2 mmol/L	551	52
+69	2024-06-07	Blood Test: Creatinine	65 umol/L	289	57
+70	2024-03-20	Blood Test: Glucose	5.2 mmol/L	591	88
+71	2025-04-05	Blood Test: C-Reactive Protein	0.9 mg/L	62	64
+72	2025-07-09	Blood Test: LDL Cholesterol	1.4 mmol/L	517	2
+73	2025-04-28	Blood Test: Lymphocytes	8.4 x 10^9/L	491	9
+74	2025-10-24	Blood Test: HDL Cholesterol	1.5 mmol/L	238	53
+75	2024-06-14	Blood Test: Neutrophils	2 x 10^9/L	563	79
+76	2025-01-09	Blood Test: Triglycerides	3.5 mmol/L	266	88
+77	2024-06-11	Blood Test: LDL Cholesterol	4.1 mmol/L	461	72
+78	2024-10-08	Blood Test: Neutrophils	2.9 x 10^9/L	129	98
+79	2025-02-15	Blood Test: Creatinine	118 umol/L	129	98
+80	2025-09-29	Blood Test: C-Reactive Protein	5 mg/L	38	41
+81	2025-09-25	Blood Test: HDL Cholesterol	0.6 mmol/L	361	100
+82	2025-11-02	Blood Test: Creatinine	105 umol/L	348	52
+83	2024-01-11	Blood Test: Glucose	10.8 mmol/L	193	97
+84	2024-11-04	Blood Test: Red Blood Cell Count	3.7 x 10^12/L	578	5
+85	2025-07-07	Blood Test: Glucose	12.2 mmol/L	122	31
+86	2024-09-05	Blood Test: Glucose	15.7 mmol/L	8	42
+87	2025-01-09	Blood Test: Neutrophils	2.9 x 10^9/L	4	63
+88	2024-01-08	Blood Test: C-Reactive Protein	5.4 mg/L	503	75
+89	2025-08-03	Blood Test: Haemoglobin	164 g/L	94	93
+90	2024-10-28	Blood Test: Bilirubin	26 umol/L	11	17
+91	2025-07-07	Blood Test: Magnesium	0.5 mmol/L	291	37
+92	2024-07-01	Blood Test: Magnesium	0.6 mmol/L	439	96
+93	2024-07-17	Blood Test: C-Reactive Protein	6.9 mg/L	190	21
+94	2025-03-17	Blood Test: HbA1c	46 mmol/mol	239	96
+95	2024-07-17	Blood Test: Triglycerides	0.7 mmol/L	169	6
+96	2025-09-22	Blood Test: Creatinine	145 umol/L	552	95
+97	2024-06-13	Blood Test: Triglycerides	4.6 mmol/L	332	77
+98	2025-10-26	Blood Test: Lactate	7.6 mmol/L	517	59
+99	2024-01-25	Blood Test: Potassium	8.4 mmol/L	448	21
+100	2025-04-22	Blood Test: Potassium	5.8 mmol/L	289	85
+101	2024-01-15	Blood Test: LDL Cholesterol	1.3 mmol/L	285	1
+102	2024-06-27	Blood Test: Magnesium	1 mmol/L	314	68
+103	2024-09-13	Blood Test: Alkaline Phosphatase	145 IU/L	354	52
+104	2024-10-14	Blood Test: HDL Cholesterol	1.8 mmol/L	315	81
+105	2024-08-30	Blood Test: Bilirubin	22 umol/L	298	86
+106	2025-01-26	Blood Test: Lymphocytes	5.8 x 10^9/L	495	66
+107	2025-10-18	Blood Test: Urea	8.9 mmol/L	512	17
+108	2025-10-20	Blood Test: HbA1c	23 mmol/mol	336	74
+109	2025-02-02	Blood Test: Creatinine	75 umol/L	280	34
+110	2025-09-05	Blood Test: Lactate	7.7 mmol/L	340	16
+111	2025-01-25	Blood Test: Creatinine	73 umol/L	324	32
+112	2024-12-28	Blood Test: Neutrophils	1.4 x 10^9/L	169	90
+113	2024-12-19	Blood Test: Potassium	1.7 mmol/L	325	2
+114	2025-01-07	Blood Test: Magnesium	0.7 mmol/L	599	62
+115	2025-09-03	Blood Test: Bilirubin	27 umol/L	105	47
+116	2025-01-12	Blood Test: Lymphocytes	0.2 x 10^9/L	565	92
+117	2024-10-19	Blood Test: White Blood Cell Count	18.9 x 10^9/L	581	20
+118	2024-06-29	Blood Test: Creatinine	41 umol/L	504	33
+119	2025-11-22	Blood Test: Creatinine	129 umol/L	42	37
+120	2024-08-11	Blood Test: Alkaline Phosphatase	37 IU/L	523	98
+121	2025-07-26	Blood Test: Bilirubin	9 umol/L	158	13
+122	2025-11-26	Blood Test: Alkaline Phosphatase	27 IU/L	345	55
+123	2024-09-12	Blood Test: LDL Cholesterol	0.1 mmol/L	54	10
+124	2025-11-05	Blood Test: Triglycerides	0.4 mmol/L	443	26
+125	2025-02-12	Blood Test: Bilirubin	7 umol/L	240	85
+126	2025-05-17	Blood Test: Potassium	1.5 mmol/L	381	83
+127	2025-03-31	Blood Test: Magnesium	0.8 mmol/L	168	52
+128	2025-05-12	Blood Test: Lymphocytes	8.6 x 10^9/L	118	47
+129	2024-12-15	Blood Test: Glucose	19.4 mmol/L	561	86
+130	2024-02-15	Blood Test: Red Blood Cell Count	4.9 x 10^12/L	174	62
+131	2024-04-23	Blood Test: Triglycerides	2 mmol/L	265	16
+132	2025-03-04	Blood Test: Triglycerides	3.8 mmol/L	541	41
+133	2025-05-07	Blood Test: Alkaline Phosphatase	52 IU/L	400	31
+134	2025-11-01	Blood Test: Glucose	17.3 mmol/L	513	96
+135	2025-03-04	Blood Test: Red Blood Cell Count	3.6 x 10^12/L	308	16
+136	2024-10-18	Blood Test: C-Reactive Protein	3.7 mg/L	111	47
+137	2025-03-10	Blood Test: Magnesium	1.5 mmol/L	29	83
+138	2025-07-10	Blood Test: Urea	8.3 mmol/L	65	46
+139	2025-11-10	Blood Test: LDL Cholesterol	1.5 mmol/L	263	4
+140	2024-09-21	Blood Test: Magnesium	1.4 mmol/L	598	32
+141	2025-03-27	Blood Test: Glucose	0.4 mmol/L	165	80
+142	2025-11-08	Blood Test: HbA1c	88 mmol/mol	565	88
+143	2024-05-23	Blood Test: Neutrophils	1.1 x 10^9/L	584	57
+144	2025-08-21	Blood Test: Urea	2.5 mmol/L	37	33
+145	2025-01-01	Blood Test: Triglycerides	2.8 mmol/L	173	56
+146	2025-11-02	Blood Test: Haemoglobin	157 g/L	251	73
+147	2024-11-25	Blood Test: HbA1c	36 mmol/mol	532	37
+148	2024-12-17	Blood Test: Neutrophils	2.8 x 10^9/L	437	67
+149	2024-07-11	Blood Test: Albumin	30 g/L	391	3
+150	2024-02-14	Blood Test: Alkaline Phosphatase	130 IU/L	541	3
+151	2025-10-13	Blood Test: C-Reactive Protein	1.9 mg/L	496	51
+152	2025-03-09	Blood Test: Magnesium	0.7 mmol/L	344	49
+153	2025-09-10	Blood Test: HbA1c	21 mmol/mol	492	78
+154	2024-09-04	Blood Test: Albumin	58 g/L	258	5
+155	2024-09-25	Blood Test: HbA1c	41 mmol/mol	315	90
+156	2024-10-12	Blood Test: LDL Cholesterol	3.5 mmol/L	201	23
+157	2024-05-04	Blood Test: Urea	5.3 mmol/L	29	22
+158	2025-09-05	Blood Test: HDL Cholesterol	1.4 mmol/L	535	79
+159	2025-03-25	Blood Test: Triglycerides	2.9 mmol/L	583	36
+160	2025-02-04	Blood Test: HDL Cholesterol	1.1 mmol/L	238	82
+161	2024-11-04	Blood Test: Alkaline Phosphatase	47 IU/L	140	17
+162	2025-09-15	Blood Test: LDL Cholesterol	3.9 mmol/L	169	65
+163	2025-01-27	Blood Test: Bilirubin	15 umol/L	308	23
+164	2025-04-02	Blood Test: Iron	38 umol/L	524	100
+165	2024-12-20	Blood Test: Albumin	25 g/L	17	2
+166	2025-01-07	Blood Test: Creatinine	119 umol/L	368	34
+167	2025-08-12	Blood Test: Albumin	40 g/L	562	51
+168	2025-04-23	Blood Test: Potassium	8.8 mmol/L	90	87
+169	2025-11-06	Blood Test: Bilirubin	12 umol/L	458	41
+170	2024-05-07	Blood Test: Lactate	4.2 mmol/L	467	64
+171	2024-05-11	Blood Test: Haemoglobin	88 g/L	86	69
+172	2025-05-16	Blood Test: HDL Cholesterol	1.6 mmol/L	179	75
+173	2025-11-16	Blood Test: White Blood Cell Count	12.7 x 10^9/L	236	46
+174	2024-06-22	Blood Test: Red Blood Cell Count	5.6 x 10^12/L	131	53
+175	2025-05-13	Blood Test: Creatinine	100 umol/L	396	79
+176	2025-04-24	Blood Test: LDL Cholesterol	1.1 mmol/L	539	92
+177	2025-03-07	Blood Test: White Blood Cell Count	8.8 x 10^9/L	383	17
+178	2024-05-11	Blood Test: Glucose	9.8 mmol/L	212	83
+179	2024-01-07	Blood Test: Alkaline Phosphatase	83 IU/L	152	24
+180	2025-07-01	Blood Test: Creatinine	147 umol/L	415	12
+181	2024-09-02	Blood Test: HbA1c	93 mmol/mol	306	48
+182	2025-06-28	Blood Test: Lymphocytes	6.7 x 10^9/L	433	60
+183	2024-02-25	Blood Test: Iron	8 umol/L	130	67
+184	2024-07-28	Blood Test: LDL Cholesterol	2.7 mmol/L	249	67
+185	2024-07-26	Blood Test: Triglycerides	2 mmol/L	25	45
+186	2024-02-28	Blood Test: Lactate	2.6 mmol/L	138	91
+187	2024-05-14	Blood Test: Albumin	43 g/L	218	38
+188	2024-06-17	Blood Test: Haemoglobin	63 g/L	265	16
+189	2024-12-02	Blood Test: Alkaline Phosphatase	46 IU/L	184	45
+190	2025-08-22	Blood Test: White Blood Cell Count	3.2 x 10^9/L	85	39
+191	2024-11-13	Blood Test: Lymphocytes	8.8 x 10^9/L	326	99
+192	2024-06-10	Blood Test: HDL Cholesterol	2 mmol/L	72	50
+193	2024-04-14	Blood Test: Iron	5 umol/L	293	98
+194	2025-04-04	Blood Test: Red Blood Cell Count	5.4 x 10^12/L	218	45
+195	2025-08-12	Blood Test: White Blood Cell Count	8.5 x 10^9/L	56	43
+196	2024-03-12	Blood Test: Iron	39 umol/L	488	20
+197	2024-12-25	Blood Test: Triglycerides	2.9 mmol/L	255	71
+198	2024-12-12	Blood Test: Potassium	4.4 mmol/L	285	86
+199	2024-04-30	Blood Test: Magnesium	1.5 mmol/L	26	1
+200	2024-11-05	Blood Test: C-Reactive Protein	5 mg/L	300	25
+201	2024-06-03	Blood Test: Lactate	2.3 mmol/L	245	45
+202	2025-10-02	Blood Test: LDL Cholesterol	2.2 mmol/L	68	98
+203	2024-03-28	Blood Test: Glucose	17.9 mmol/L	42	37
+204	2024-08-31	Blood Test: Neutrophils	7.4 x 10^9/L	524	98
+205	2024-01-29	Blood Test: Alkaline Phosphatase	112 IU/L	214	11
+206	2025-06-18	Blood Test: Red Blood Cell Count	3.2 x 10^12/L	214	77
+207	2024-04-29	Blood Test: C-Reactive Protein	9.8 mg/L	389	66
+208	2025-05-20	Blood Test: Lymphocytes	4.5 x 10^9/L	495	66
+209	2025-04-02	Blood Test: Iron	15 umol/L	69	64
+210	2024-06-03	Blood Test: HbA1c	51 mmol/mol	36	49
+211	2025-10-31	Blood Test: HbA1c	72 mmol/mol	114	29
+212	2024-03-24	Blood Test: Triglycerides	4.9 mmol/L	226	55
+213	2025-05-18	Blood Test: Glucose	14.7 mmol/L	205	15
+214	2025-07-21	Blood Test: HbA1c	88 mmol/mol	456	16
+215	2024-08-17	Blood Test: Neutrophils	4.7 x 10^9/L	381	46
+216	2025-10-05	Blood Test: Magnesium	0.5 mmol/L	174	8
+217	2024-09-06	Blood Test: LDL Cholesterol	0.4 mmol/L	31	39
+218	2024-11-22	Blood Test: Glucose	17.3 mmol/L	487	39
+219	2024-08-07	Blood Test: Red Blood Cell Count	7.1 x 10^12/L	296	73
+220	2025-11-26	Blood Test: HDL Cholesterol	0.6 mmol/L	557	91
+221	2024-01-20	Blood Test: Bilirubin	18 umol/L	110	57
+222	2025-11-20	Blood Test: White Blood Cell Count	0.8 x 10^9/L	325	10
+223	2024-08-09	Blood Test: Lactate	7.2 mmol/L	180	2
+224	2025-03-25	Blood Test: Haemoglobin	56 g/L	191	78
+225	2025-09-23	Blood Test: Glucose	6.6 mmol/L	247	30
+226	2025-05-25	Blood Test: HbA1c	44 mmol/mol	214	29
+227	2024-09-30	Blood Test: Bilirubin	27 umol/L	428	35
+228	2024-11-12	Blood Test: C-Reactive Protein	3.9 mg/L	423	52
+229	2025-01-06	Blood Test: Neutrophils	3 x 10^9/L	161	79
+230	2025-01-26	Blood Test: Potassium	2.4 mmol/L	168	70
+231	2025-01-27	Blood Test: Glucose	4.2 mmol/L	356	86
+232	2024-11-12	Blood Test: C-Reactive Protein	4.2 mg/L	493	2
+233	2025-05-16	Blood Test: Alkaline Phosphatase	62 IU/L	107	37
+234	2024-02-16	Blood Test: Magnesium	1.5 mmol/L	589	7
+235	2025-03-13	Blood Test: C-Reactive Protein	4 mg/L	266	59
+236	2024-12-15	Blood Test: Lactate	4.7 mmol/L	495	50
+237	2025-05-10	Blood Test: Albumin	42 g/L	7	6
+238	2025-05-03	Blood Test: Potassium	4.4 mmol/L	486	84
+239	2024-12-31	Blood Test: Glucose	11.1 mmol/L	534	19
+240	2024-03-15	Blood Test: Iron	7 umol/L	246	90
+241	2024-08-10	Blood Test: Lactate	9.1 mmol/L	117	85
+242	2024-12-14	Blood Test: HDL Cholesterol	0.9 mmol/L	133	63
+243	2024-02-07	Blood Test: C-Reactive Protein	1.4 mg/L	499	47
+244	2025-05-10	Blood Test: LDL Cholesterol	3.3 mmol/L	462	16
+245	2025-01-26	Blood Test: Iron	12 umol/L	294	12
+246	2025-04-11	Blood Test: Lymphocytes	2.2 x 10^9/L	286	54
+247	2025-05-26	Blood Test: LDL Cholesterol	4.8 mmol/L	302	60
+248	2024-06-25	Blood Test: HDL Cholesterol	1.5 mmol/L	304	19
+249	2025-07-10	Blood Test: Creatinine	139 umol/L	62	89
+250	2024-03-14	Blood Test: Glucose	2.5 mmol/L	392	11
+251	2025-01-11	Blood Test: LDL Cholesterol	4.8 mmol/L	404	53
+252	2024-02-02	Blood Test: Magnesium	1.5 mmol/L	552	72
+253	2025-04-12	Blood Test: Albumin	52 g/L	188	63
+254	2024-05-06	Blood Test: Bilirubin	13 umol/L	570	7
+255	2024-09-06	Blood Test: White Blood Cell Count	6.2 x 10^9/L	25	48
+256	2024-09-07	Blood Test: Urea	6.8 mmol/L	237	54
+257	2025-10-27	Blood Test: Neutrophils	6.9 x 10^9/L	257	17
+258	2024-01-12	Blood Test: Glucose	12.3 mmol/L	96	22
+259	2024-07-06	Blood Test: Glucose	18.3 mmol/L	11	45
+260	2024-04-05	Blood Test: LDL Cholesterol	2.7 mmol/L	311	8
+261	2024-03-18	Blood Test: Lactate	9.1 mmol/L	157	48
+262	2025-01-02	Blood Test: LDL Cholesterol	1.4 mmol/L	231	38
+263	2025-03-26	Blood Test: LDL Cholesterol	4.2 mmol/L	536	82
+264	2024-03-03	Blood Test: Lymphocytes	8.4 x 10^9/L	411	60
+265	2024-11-21	Blood Test: HDL Cholesterol	2 mmol/L	400	93
+266	2025-07-21	Blood Test: HDL Cholesterol	0.6 mmol/L	246	20
+267	2024-06-21	Blood Test: HbA1c	90 mmol/mol	101	98
+268	2025-09-10	Blood Test: Triglycerides	4.8 mmol/L	393	41
+269	2024-05-13	Blood Test: Red Blood Cell Count	5.2 x 10^12/L	187	66
+270	2024-03-21	Blood Test: Neutrophils	6.5 x 10^9/L	2	72
+271	2024-06-20	Blood Test: Lymphocytes	10 x 10^9/L	309	40
+272	2024-10-03	Blood Test: Magnesium	1.2 mmol/L	496	43
+273	2025-01-13	Blood Test: Alkaline Phosphatase	126 IU/L	133	97
+274	2024-03-03	Blood Test: Lymphocytes	9.2 x 10^9/L	511	30
+275	2025-08-11	Blood Test: HDL Cholesterol	2 mmol/L	63	11
+276	2025-10-30	Blood Test: Urea	2.7 mmol/L	356	1
+277	2024-03-15	Blood Test: Haemoglobin	181 g/L	67	76
+278	2024-01-28	Blood Test: Haemoglobin	128 g/L	280	85
+279	2025-05-25	Blood Test: HbA1c	78 mmol/mol	457	63
+280	2025-08-04	Blood Test: Potassium	8.7 mmol/L	320	94
+281	2024-01-29	Blood Test: Potassium	6 mmol/L	591	10
+282	2025-06-15	Blood Test: HDL Cholesterol	0.6 mmol/L	281	35
+283	2025-08-14	Blood Test: Red Blood Cell Count	6.1 x 10^12/L	314	42
+284	2024-12-06	Blood Test: White Blood Cell Count	6.8 x 10^9/L	193	68
+285	2024-09-22	Blood Test: LDL Cholesterol	2.4 mmol/L	574	51
+286	2024-06-11	Blood Test: Potassium	1.1 mmol/L	408	97
+287	2024-02-16	Blood Test: LDL Cholesterol	3.9 mmol/L	132	35
+288	2024-07-27	Blood Test: Triglycerides	4.8 mmol/L	538	75
+289	2025-03-11	Blood Test: Glucose	11.3 mmol/L	7	89
+290	2025-05-18	Blood Test: HbA1c	32 mmol/mol	137	84
+291	2024-05-02	Blood Test: Lymphocytes	6.2 x 10^9/L	330	64
+292	2025-01-29	Blood Test: Magnesium	0.6 mmol/L	147	54
+293	2025-01-10	Blood Test: Lymphocytes	1.9 x 10^9/L	475	77
+294	2025-06-14	Blood Test: Potassium	9.2 mmol/L	435	23
+295	2024-09-03	Blood Test: C-Reactive Protein	1.4 mg/L	351	59
+296	2024-11-11	Blood Test: LDL Cholesterol	3.2 mmol/L	458	95
+297	2025-11-21	Blood Test: Iron	23 umol/L	160	4
+298	2025-04-13	Blood Test: LDL Cholesterol	0.9 mmol/L	326	98
+299	2024-04-24	Blood Test: Creatinine	88 umol/L	387	34
+300	2024-01-21	Blood Test: Creatinine	31 umol/L	541	72
+301	2024-03-11	Blood Test: HDL Cholesterol	1.3 mmol/L	532	59
+302	2024-02-26	Blood Test: HDL Cholesterol	1.8 mmol/L	48	40
+303	2025-02-15	Blood Test: LDL Cholesterol	2.9 mmol/L	76	99
+304	2024-05-23	Blood Test: Iron	9 umol/L	136	16
+305	2024-07-12	Blood Test: Potassium	8.5 mmol/L	535	50
+306	2025-02-23	Blood Test: Haemoglobin	129 g/L	47	28
+307	2024-01-26	Blood Test: HDL Cholesterol	0.9 mmol/L	387	33
+308	2024-05-04	Blood Test: C-Reactive Protein	9.1 mg/L	597	84
+309	2024-02-05	Blood Test: Potassium	8.4 mmol/L	236	51
+310	2024-07-25	Blood Test: Alkaline Phosphatase	88 IU/L	244	23
+311	2025-11-23	Blood Test: Creatinine	148 umol/L	545	93
+312	2025-11-25	Blood Test: HDL Cholesterol	1.9 mmol/L	245	46
+313	2025-08-03	Blood Test: HDL Cholesterol	1 mmol/L	379	66
+314	2025-05-21	Blood Test: HDL Cholesterol	1.9 mmol/L	105	69
+315	2024-09-05	Blood Test: Potassium	2.6 mmol/L	104	53
+316	2025-11-13	Blood Test: Triglycerides	0.3 mmol/L	215	82
+317	2025-05-03	Blood Test: Lymphocytes	1.7 x 10^9/L	341	85
+318	2025-04-23	Blood Test: Glucose	1.7 mmol/L	32	86
+319	2024-12-06	Blood Test: Lymphocytes	5.5 x 10^9/L	404	53
+320	2024-07-03	Blood Test: HbA1c	26 mmol/mol	57	82
+321	2025-05-16	Blood Test: Lymphocytes	6.8 x 10^9/L	487	81
+322	2025-01-29	Blood Test: Haemoglobin	102 g/L	355	14
+323	2024-02-22	Blood Test: White Blood Cell Count	16.4 x 10^9/L	476	84
+324	2025-01-25	Blood Test: Glucose	18.4 mmol/L	60	66
+325	2024-08-12	Blood Test: Magnesium	0.8 mmol/L	35	19
+326	2025-09-20	Blood Test: Alkaline Phosphatase	38 IU/L	295	59
+327	2025-09-30	Blood Test: LDL Cholesterol	0.1 mmol/L	427	85
+328	2025-01-21	Blood Test: Lactate	7.9 mmol/L	585	86
+329	2024-03-09	Blood Test: Potassium	7 mmol/L	162	63
+330	2025-05-04	Blood Test: C-Reactive Protein	8.7 mg/L	44	9
+331	2025-03-13	Blood Test: Urea	1.3 mmol/L	33	100
+332	2024-06-23	Blood Test: Neutrophils	1.7 x 10^9/L	236	17
+333	2024-12-22	Blood Test: Triglycerides	0.7 mmol/L	86	98
+334	2025-03-17	Blood Test: Red Blood Cell Count	7.4 x 10^12/L	70	68
+335	2025-09-29	Blood Test: Albumin	26 g/L	475	63
+336	2025-03-23	Blood Test: Neutrophils	4.4 x 10^9/L	125	90
+337	2025-08-08	Blood Test: HbA1c	25 mmol/mol	129	54
+338	2024-07-01	Blood Test: HbA1c	37 mmol/mol	134	3
+339	2025-07-23	Blood Test: HDL Cholesterol	1 mmol/L	138	68
+340	2024-07-28	Blood Test: Neutrophils	6.6 x 10^9/L	31	67
+341	2024-10-24	Blood Test: Iron	12 umol/L	128	48
+342	2025-10-14	Blood Test: Creatinine	59 umol/L	293	85
+343	2024-02-05	Blood Test: HbA1c	24 mmol/mol	195	5
+344	2024-10-23	Blood Test: Bilirubin	6 umol/L	599	11
+345	2025-11-26	Blood Test: Urea	4.5 mmol/L	87	40
+346	2025-03-07	Blood Test: Haemoglobin	118 g/L	243	88
+347	2025-04-17	Blood Test: Magnesium	0.8 mmol/L	398	66
+348	2025-06-13	Blood Test: Potassium	3.9 mmol/L	586	67
+349	2025-09-03	Blood Test: Iron	10 umol/L	443	67
+350	2025-09-23	Blood Test: C-Reactive Protein	6.4 mg/L	89	83
+351	2025-05-02	Blood Test: C-Reactive Protein	2.7 mg/L	212	48
+352	2025-02-08	Blood Test: HDL Cholesterol	1.2 mmol/L	262	85
+353	2024-10-22	Blood Test: Potassium	4.1 mmol/L	397	42
+354	2025-08-21	Blood Test: Iron	12 umol/L	365	13
+355	2025-07-25	Blood Test: HbA1c	94 mmol/mol	260	12
+356	2025-02-20	Blood Test: HbA1c	41 mmol/mol	435	16
+357	2024-12-09	Blood Test: Lymphocytes	8.8 x 10^9/L	212	38
+358	2025-11-23	Blood Test: Triglycerides	3.8 mmol/L	522	52
+359	2024-12-31	Blood Test: Alkaline Phosphatase	80 IU/L	232	68
+360	2024-01-15	Blood Test: Haemoglobin	98 g/L	536	88
+361	2025-03-07	Blood Test: Iron	12 umol/L	331	52
+362	2024-02-29	Blood Test: White Blood Cell Count	9.6 x 10^9/L	337	74
+363	2024-01-17	Blood Test: Albumin	42 g/L	117	69
+364	2024-10-27	Blood Test: Albumin	41 g/L	438	30
+365	2025-06-08	Blood Test: HbA1c	59 mmol/mol	105	7
+366	2024-12-12	Blood Test: White Blood Cell Count	17 x 10^9/L	62	55
+367	2024-12-23	Blood Test: Haemoglobin	133 g/L	274	100
+368	2024-03-19	Blood Test: Triglycerides	1.1 mmol/L	472	38
+369	2025-06-06	Blood Test: Glucose	9.4 mmol/L	111	7
+370	2025-04-02	Blood Test: Lactate	4.1 mmol/L	226	55
+371	2024-03-19	Blood Test: LDL Cholesterol	2.6 mmol/L	569	36
+372	2024-12-02	Blood Test: Bilirubin	7 umol/L	98	13
+373	2024-05-29	Blood Test: Triglycerides	2.6 mmol/L	600	6
+374	2025-11-14	Blood Test: Bilirubin	13 umol/L	305	43
+375	2024-10-09	Blood Test: Triglycerides	4 mmol/L	570	4
+376	2025-09-25	Blood Test: Iron	27 umol/L	370	26
+377	2024-04-18	Blood Test: Neutrophils	2.5 x 10^9/L	562	48
+378	2025-08-19	Blood Test: Triglycerides	3.2 mmol/L	516	13
+379	2024-06-21	Blood Test: Triglycerides	0.6 mmol/L	287	57
+380	2025-05-13	Blood Test: Red Blood Cell Count	7.3 x 10^12/L	480	64
+381	2024-04-04	Blood Test: C-Reactive Protein	5.5 mg/L	523	69
+382	2025-09-30	Blood Test: C-Reactive Protein	8.6 mg/L	396	79
+383	2025-08-15	Blood Test: C-Reactive Protein	6.3 mg/L	581	6
+384	2025-11-22	Blood Test: Potassium	5.7 mmol/L	4	74
+385	2025-10-03	Blood Test: Red Blood Cell Count	6 x 10^12/L	215	59
+386	2025-03-14	Blood Test: HDL Cholesterol	1.9 mmol/L	472	45
+387	2025-07-06	Blood Test: Triglycerides	3.9 mmol/L	22	70
+388	2025-11-13	Blood Test: Bilirubin	11 umol/L	50	41
+389	2024-08-14	Blood Test: LDL Cholesterol	0.6 mmol/L	109	10
+390	2025-02-26	Blood Test: Magnesium	0.8 mmol/L	95	93
+391	2024-04-05	Blood Test: White Blood Cell Count	17.8 x 10^9/L	518	64
+392	2024-03-04	Blood Test: Red Blood Cell Count	2.7 x 10^12/L	542	24
+393	2025-08-28	Blood Test: Magnesium	1.1 mmol/L	565	53
+394	2025-03-22	Blood Test: Triglycerides	0.7 mmol/L	549	55
+395	2025-07-11	Blood Test: Creatinine	118 umol/L	200	18
+396	2025-01-02	Blood Test: White Blood Cell Count	0.7 x 10^9/L	339	41
+397	2024-10-05	Blood Test: Iron	31 umol/L	126	23
+398	2025-08-12	Blood Test: White Blood Cell Count	9.9 x 10^9/L	203	81
+399	2024-03-11	Blood Test: Iron	34 umol/L	2	95
+400	2024-06-25	Blood Test: Potassium	4.1 mmol/L	566	30
+401	2024-07-06	Blood Test: Red Blood Cell Count	3 x 10^12/L	162	71
+402	2024-05-24	Blood Test: Alkaline Phosphatase	149 IU/L	68	36
+403	2024-11-08	Blood Test: Magnesium	0.8 mmol/L	585	71
+404	2025-09-09	Blood Test: Alkaline Phosphatase	21 IU/L	254	42
+405	2024-09-10	Blood Test: Neutrophils	1 x 10^9/L	422	45
+406	2024-07-30	Blood Test: Neutrophils	3.4 x 10^9/L	222	77
+407	2025-06-15	Blood Test: Triglycerides	1.1 mmol/L	457	68
+408	2025-11-08	Blood Test: White Blood Cell Count	19 x 10^9/L	237	7
+409	2025-05-29	Blood Test: White Blood Cell Count	10.7 x 10^9/L	318	62
+410	2025-07-20	Blood Test: Bilirubin	23 umol/L	380	39
+411	2025-10-08	Blood Test: Haemoglobin	73 g/L	101	49
+412	2024-07-23	Blood Test: Iron	30 umol/L	391	87
+413	2025-06-25	Blood Test: Glucose	5.5 mmol/L	587	45
+414	2025-04-04	Blood Test: Red Blood Cell Count	4.8 x 10^12/L	205	95
+415	2025-03-27	Blood Test: Glucose	16.4 mmol/L	110	9
+416	2025-05-12	Blood Test: Urea	7.8 mmol/L	144	10
+417	2024-10-01	Blood Test: C-Reactive Protein	6.9 mg/L	302	79
+418	2024-10-11	Blood Test: Glucose	15 mmol/L	344	33
+419	2025-05-16	Blood Test: Albumin	31 g/L	287	9
+420	2025-08-06	Blood Test: Red Blood Cell Count	3.7 x 10^12/L	346	23
+421	2025-09-17	Blood Test: White Blood Cell Count	16.2 x 10^9/L	425	12
+422	2025-05-30	Blood Test: Albumin	38 g/L	338	25
+423	2024-02-02	Blood Test: Red Blood Cell Count	3.6 x 10^12/L	548	79
+424	2025-07-18	Blood Test: Creatinine	55 umol/L	157	72
+425	2024-06-07	Blood Test: Haemoglobin	93 g/L	298	91
+426	2025-11-29	Blood Test: Haemoglobin	132 g/L	375	4
+427	2024-07-27	Blood Test: HbA1c	98 mmol/mol	582	29
+428	2024-12-28	Blood Test: Urea	8.1 mmol/L	586	67
+429	2025-09-26	Blood Test: HDL Cholesterol	0.7 mmol/L	591	92
+430	2024-11-07	Blood Test: LDL Cholesterol	3.7 mmol/L	579	77
+431	2024-07-14	Blood Test: Red Blood Cell Count	6.4 x 10^12/L	34	9
+432	2024-11-22	Blood Test: Alkaline Phosphatase	75 IU/L	517	88
+433	2024-11-17	Blood Test: Urea	6.8 mmol/L	381	46
+434	2025-10-06	Blood Test: Lactate	2.1 mmol/L	429	55
+435	2024-08-14	Blood Test: Magnesium	1 mmol/L	445	38
+436	2025-02-23	Blood Test: LDL Cholesterol	4.5 mmol/L	5	29
+437	2025-03-21	Blood Test: Urea	4.1 mmol/L	113	58
+438	2025-11-05	Blood Test: C-Reactive Protein	7.3 mg/L	582	68
+439	2024-07-08	Blood Test: Creatinine	61 umol/L	74	55
+440	2025-07-21	Blood Test: Lymphocytes	8.7 x 10^9/L	209	49
+441	2024-08-01	Blood Test: Neutrophils	8.8 x 10^9/L	362	23
+442	2024-03-20	Blood Test: Bilirubin	13 umol/L	521	37
+443	2025-05-25	Blood Test: Lactate	3.4 mmol/L	172	82
+444	2024-05-04	Blood Test: HDL Cholesterol	1.7 mmol/L	15	20
+445	2025-11-14	Blood Test: Lactate	1 mmol/L	529	43
+446	2024-10-21	Blood Test: C-Reactive Protein	0.5 mg/L	276	69
+447	2024-02-02	Blood Test: White Blood Cell Count	8.9 x 10^9/L	223	23
+448	2024-12-18	Blood Test: Alkaline Phosphatase	82 IU/L	571	58
+449	2025-01-29	Blood Test: Albumin	32 g/L	242	31
+450	2024-02-01	Blood Test: Bilirubin	30 umol/L	549	26
+451	2024-02-10	Blood Test: Glucose	12.1 mmol/L	399	49
+452	2024-04-05	Blood Test: C-Reactive Protein	2.2 mg/L	397	91
+453	2024-07-02	Blood Test: Urea	2.6 mmol/L	570	57
+454	2025-07-11	Blood Test: Triglycerides	3.1 mmol/L	287	98
+455	2025-02-01	Blood Test: Triglycerides	0.4 mmol/L	40	22
+456	2025-04-14	Blood Test: Potassium	9.6 mmol/L	500	7
+457	2025-05-30	Blood Test: Neutrophils	6.8 x 10^9/L	160	9
+458	2025-05-28	Blood Test: Neutrophils	9.2 x 10^9/L	201	16
+459	2025-07-29	Blood Test: Triglycerides	3.5 mmol/L	154	74
+460	2024-10-18	Blood Test: White Blood Cell Count	2.3 x 10^9/L	509	77
+461	2025-11-13	Blood Test: Triglycerides	0.6 mmol/L	105	47
+462	2024-02-14	Blood Test: Albumin	45 g/L	21	30
+463	2024-01-12	Blood Test: Lactate	7.8 mmol/L	447	48
+464	2024-01-08	Blood Test: Lymphocytes	3.3 x 10^9/L	139	78
+465	2025-09-11	Blood Test: Urea	1.8 mmol/L	297	6
+466	2025-09-12	Blood Test: Glucose	0.9 mmol/L	26	75
+467	2024-08-02	Blood Test: HbA1c	81 mmol/mol	153	10
+468	2024-05-23	Blood Test: Glucose	8.7 mmol/L	267	15
+469	2025-10-20	Blood Test: Magnesium	1.4 mmol/L	118	33
+470	2024-04-02	Blood Test: Magnesium	1 mmol/L	1	38
+471	2024-01-21	Blood Test: HDL Cholesterol	1.6 mmol/L	420	38
+472	2025-06-16	Blood Test: Red Blood Cell Count	3.2 x 10^12/L	23	34
+473	2025-10-24	Blood Test: Iron	40 umol/L	403	88
+474	2024-10-01	Blood Test: Red Blood Cell Count	3.6 x 10^12/L	306	83
+475	2024-08-07	Blood Test: HbA1c	98 mmol/mol	57	53
+476	2025-04-07	Blood Test: LDL Cholesterol	3.5 mmol/L	199	65
+477	2025-09-18	Blood Test: C-Reactive Protein	6 mg/L	442	57
+478	2024-03-24	Blood Test: Iron	7 umol/L	13	91
+479	2025-06-08	Blood Test: Glucose	1.9 mmol/L	89	17
+480	2024-02-02	Blood Test: Magnesium	1.3 mmol/L	148	58
+481	2024-07-23	Blood Test: Lymphocytes	6.5 x 10^9/L	292	69
+482	2025-11-28	Blood Test: C-Reactive Protein	0.8 mg/L	206	33
+483	2024-07-07	Blood Test: C-Reactive Protein	6.9 mg/L	469	26
+484	2025-04-05	Blood Test: Triglycerides	0.3 mmol/L	513	18
+485	2025-09-25	Blood Test: HDL Cholesterol	1.9 mmol/L	73	6
+486	2024-06-08	Blood Test: Haemoglobin	190 g/L	200	96
+487	2025-04-13	Blood Test: LDL Cholesterol	2.6 mmol/L	485	36
+488	2025-05-08	Blood Test: Haemoglobin	85 g/L	303	55
+489	2025-03-28	Blood Test: Bilirubin	20 umol/L	275	76
+490	2025-03-16	Blood Test: Triglycerides	2.4 mmol/L	487	20
+491	2024-01-18	Blood Test: Potassium	1.6 mmol/L	260	70
+492	2025-11-06	Blood Test: Glucose	0.9 mmol/L	48	19
+493	2024-12-22	Blood Test: Creatinine	115 umol/L	271	36
+494	2024-08-12	Blood Test: Triglycerides	3 mmol/L	514	54
+495	2024-06-22	Blood Test: Glucose	7.5 mmol/L	139	96
+496	2025-11-27	Blood Test: Magnesium	1.4 mmol/L	20	32
+497	2024-04-27	Blood Test: Potassium	8.4 mmol/L	205	15
+498	2024-02-29	Blood Test: Magnesium	0.9 mmol/L	386	42
+499	2024-12-14	Blood Test: LDL Cholesterol	3.7 mmol/L	194	99
+500	2025-04-02	Blood Test: Haemoglobin	148 g/L	73	64
