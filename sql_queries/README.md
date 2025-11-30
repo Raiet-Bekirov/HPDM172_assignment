@@ -22,7 +22,7 @@
 
 ## Steps to run any of these queries
 
-Make directory to store query text files, for example:
+Make directory to store SQL script files, for example:
 
 ```shell
 mkdir /home/ubuntu/hpdm172/assignment/queries
@@ -35,7 +35,7 @@ cd /home/ubuntu/hpdm172/assignment/queries
 
 Download query .sql file from GitHub, for example:
 
-```sql
+```shell
 wget https://github.com/Raiet-Bekirov/HPDM172_assignment/raw/refs/heads/main/sql_queries/get_docs_at_hosp.sql
 ```
 
@@ -49,6 +49,12 @@ Switch to `hospitals_db`:
 
 ```sql
 USE hospitals_db;
+```
+
+Set any variables called by the SQL script file, for example:
+
+```sql
+SET @HospitalName = "St Thomas' Hospital";
 ```
 
 Execute the SQL script file, for example:
