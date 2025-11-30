@@ -561,7 +561,7 @@ for (i in 1:500) {
 
 write.table(appointments_table, file='appointments_table.txt',
             quote=FALSE, sep='\t', row.names = FALSE,
-            col.names = c('appointments_id', 'appointment_date', 'patient_id', 'doctor_id'))
+            col.names = c('appointment_id', 'appointment_date', 'patient_id', 'doctor_id'))
  
 # Lab Results Table Creation
 
