@@ -603,3 +603,5 @@ write.table(lab_results_table, file='lab_results_table.txt',
             quote=FALSE, sep='\t', row.names = FALSE,
             col.names = c('lab_result_id', 'test_date', 'test_type', 'test_result',
                           'patient_id', 'doctor_id'))
+                          
+rm(list = ls())
