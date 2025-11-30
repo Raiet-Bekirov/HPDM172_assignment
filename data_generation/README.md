@@ -1,5 +1,7 @@
 # Data Generation Summary
 
+![](hospitals_db_erd.png)
+
 # Steps to Reproduce
 
 (Requires a [conda](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html) installation.)
@@ -34,7 +36,7 @@ Download the R script called by `generate_data.sh` when generating the data:
 wget https://raw.githubusercontent.com/Raiet-Bekirov/HPDM172_assignment/refs/heads/main/data_generation/make_tables.R
 ```
 
-Download the conda environment file used to create the virtual environment in which the data is created: 
+Download the conda environment file used to create the virtual environment in which the data is generated: 
 
 ```shell
 wget https://raw.githubusercontent.com/Raiet-Bekirov/HPDM172\_assignment/refs/heads/main/data_generation/data_gen_env.yml
