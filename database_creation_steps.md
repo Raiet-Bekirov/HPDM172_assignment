@@ -1,4 +1,4 @@
-This markdown file details the steps any MySQL user can follow to create their own version of our database, `hospitals_db`.
+This markdown file details the steps any MySQL user can follow to create their own version of our database.
 
 # Option 1: Create the database from scratch and import data from files
 
