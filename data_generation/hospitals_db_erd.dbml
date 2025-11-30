@@ -40,14 +40,14 @@ Table prescriptions {
   prescription_id integer [primary key]
   prescription_date date
   medication_id int [ref: > medications.medication_id]
-  patient_id int [ref: > patients.doctor_id]
+  patient_id int [ref: > patients.patient_id]
   doctor_id int [ref: > doctors.doctor_id]
 }
 
 Table appointments {
   appointment_id integer [primary key]
   appointment_date date
-  patient_id int [ref: > patients.doctor_id]
+  patient_id int [ref: > patients.patient_id]
   doctor_id int [ref: > doctors.doctor_id]
 }
 
@@ -56,6 +56,6 @@ Table lab_results {
   test_date date
   test_type varchar
   test_result varchar
-  patient_id int [ref: > patients.doctor_id]
+  patient_id int [ref: > patients.patient_id]
   doctor_id int [ref: > doctors.doctor_id]
 }
