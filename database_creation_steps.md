@@ -1,6 +1,6 @@
-This markdown file details the steps any MySQL user can follow to create their own version of our database.
+This markdown file details the steps any MySQL user can follow to duplicate our database, `hospitals_db`.
 
-# Option 1: Create the database from scratch and import data from files
+# Option 1: Create the database from scratch and import data from files
 
 Make directory to store input data, for example:
 
