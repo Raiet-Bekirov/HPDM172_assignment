@@ -82,12 +82,12 @@ CREATE TABLE `doctors` (
   `doctor_dob` date DEFAULT NULL,
   `doctor_address` varchar(150) DEFAULT NULL,
   `hospital_id` int DEFAULT NULL,
-  `specialty_id` int DEFAULT NULL,
+  `disease_id` int DEFAULT NULL,
   PRIMARY KEY (`doctor_id`),
   KEY `hospital_id` (`hospital_id`),
-  KEY `specialty_id` (`specialty_id`),
+  KEY `disease_id` (`disease_id`),
   CONSTRAINT `doctors_ibfk_1` FOREIGN KEY (`hospital_id`) REFERENCES `hospitals` (`hospital_id`),
-  CONSTRAINT `doctors_ibfk_2` FOREIGN KEY (`specialty_id`) REFERENCES `diseases` (`disease_id`)
+  CONSTRAINT `doctors_ibfk_2` FOREIGN KEY (`disease_id`) REFERENCES `diseases` (`disease_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -260,4 +260,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-11-30 14:39:25
+-- Dump completed on 2025-11-30 15:30:06
