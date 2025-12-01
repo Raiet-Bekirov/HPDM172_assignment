@@ -182,7 +182,7 @@ Load data from `hospitals_table.txt`:
 
 ```sql
 LOAD DATA LOCAL INFILE
-'/home/ubuntu/hpdm172/assignment/data/hospitals_table.txt'
+'data/hospitals_table.txt'
 INTO TABLE hospitals
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
@@ -203,7 +203,7 @@ Load data from `diseases_table.txt`:
 
 ```sql
 LOAD DATA LOCAL INFILE
-'/home/ubuntu/hpdm172/assignment/data/diseases_table.txt'
+'data/diseases_table.txt'
 INTO TABLE diseases
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
@@ -230,7 +230,7 @@ Load data from `doctors_table.txt`:
 
 ```sql
 LOAD DATA LOCAL INFILE
-'/home/ubuntu/hpdm172/assignment/data/doctors_table.txt'
+'data/doctors_table.txt'
 INTO TABLE doctors
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
@@ -255,7 +255,7 @@ Load data from `patients_table.txt`:
 
 ```sql
 LOAD DATA LOCAL INFILE
-'/home/ubuntu/hpdm172/assignment/data/patients_table.txt'
+'data/patients_table.txt'
 INTO TABLE patients
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
@@ -278,7 +278,7 @@ Load data from `medications_table.txt`:
 
 ```sql
 LOAD DATA LOCAL INFILE
-'/home/ubuntu/hpdm172/assignment/data/medications_table.txt'
+'data/medications_table.txt'
 INTO TABLE medications
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
@@ -305,7 +305,7 @@ Load data from `prescriptions_table.txt`:
 
 ```sql
 LOAD DATA LOCAL INFILE
-'/home/ubuntu/hpdm172/assignment/data/prescriptions_table.txt'
+'data/prescriptions_table.txt'
 INTO TABLE prescriptions
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
@@ -330,7 +330,7 @@ Load data from `appointments_table.txt`:
 
 ```sql
 LOAD DATA LOCAL INFILE
-'/home/ubuntu/hpdm172/assignment/data/appointments_table.txt'
+'data/appointments_table.txt'
 INTO TABLE appointments
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
@@ -357,7 +357,7 @@ Load data from `lab_results_table.txt`:
 
 ```sql
 LOAD DATA LOCAL INFILE
-'/home/ubuntu/hpdm172/assignment/data/lab_results_table.txt'
+'data/lab_results_table.txt'
 INTO TABLE lab_results
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
