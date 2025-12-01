@@ -139,4 +139,4 @@ This produces the following output:
 
 ### Query 18: `query_name.sql`
 
-### Query 19: `query_name.sql`
+### Query 19: `query_name.sql`
