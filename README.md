@@ -4,15 +4,16 @@ This repository contains code to create and query a synthetic health data scienc
 
 - The directory `data_generation/` contains R and bash scripts for generating data to import into the database, along with the reulting plain text data files.
 - The directory `sql_queries/` contains SQL script files for querying the database.
+- The directory `TeamPortfolio/` contains documents relating to our development process.
 - The scripts `fetch_data_files.sh` and `generate_db_from_data_files.sql` automate the process of creating `hospitals_db` from the data files provided in this repository.
 - The SQL file `hospitals_db.sql` is a backup of `hospitals_db` created using `mysqldump`.
 
-## Steps to reproduce `hospitals_db`
+## Steps to reproduce `hospitals_db`
 
 Any MySQL user can duplicate our database, `hospitals_db`, using the data files and code provided in this repository. The steps to achieve this in three different ways are detailed below, in increasing order of the amount of user input required.
 
 - [Option 1: Restore the database from the provided backup file](#option-1-restore-the-database-from-the-provided-backup-file)
-- [Option 2: Use the provided scripts to download the data files and create the database]()
+- [Option 2: Use the provided scripts to download the data files and create the database](#option-2-use-the-provided-scripts-to-download-the-data-files-and-create-the-database)
 - [Option 3: Download the data files and create the database from scratch](#option-3-download-the-data-files-and-create-the-database-from-scratch)
 
 We also provide instructions for exporting and wiping the database once it is created.
