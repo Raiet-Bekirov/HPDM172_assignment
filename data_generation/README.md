@@ -38,7 +38,7 @@ The `hospitals_table.txt` file has seven columns:
 4. `patient_address`:
 5. `doctor_id`: 
 
-## Medications Data: `medications_table.txt`
+## Medications Data: `medications_table.txt`
 
 1. `medication_id`:
 2. `medication_name`: https://www.vumc.org/wei-lab/sites/default/files/public_files/MEDI-2_HPS.csv
