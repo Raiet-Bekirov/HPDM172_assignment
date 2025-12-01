@@ -1,7 +1,9 @@
 # SQL Queries
 
-- Query 1, `get_docs_at_hosp.sql`: Print a list of all doctors based at a particular hospital.
-- Query 2, `query_name.sql`: Print a list of all prescriptions for a particular patient, ordered by the prescription date. 
+This repository containys SQL scipt files for nineteen different queries that can be used to obtain information from `hospitals_db`.
+
+- [Query 1, `get_docs_at_hosp.sql`](#query-1-get-docs-at-hospsql): Print a list of all doctors based at a particular hospital.
+- [Query 2, `query_name.sql`](#query-2-query-namesql): Print a list of all prescriptions for a particular patient, ordered by the prescription date. 
 - Query 3, `query_name.sql`: Print a list of all prescriptions that a particular doctor has prescribed.
 - Query 4, `query_name.sql`: Print a table showing all prescriptions ordered by the patient name alphabetically.
 - Query 5, `query_name.sql`: Add a new customer to the database, including being registered with one of the doctors.
@@ -68,3 +70,9 @@ Quit MySQL:
 ```sql
 quit
 ```
+
+## Example ouputs from each query
+
+### Query 1: `get_docs_at_hosp.sql`
+
+### Query 2: `query_name.sql`
