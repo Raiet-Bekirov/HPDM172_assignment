@@ -125,8 +125,6 @@ Finally, run the bash script `generate_data.sh`:
 ./generate_data.sh
 ```
 
-# References
-
 [^1]: "[Other NHS organisations](https://digital.nhs.uk/services/organisation-data-service/data-search-and-export/csv-downloads/other-nhs-organisations)," NHS England Digital, accessed November, 30 2025.
 [^2]: NHS England Digital, "[Other NHS organisations](https://digital.nhs.uk/services/organisation-data-service/data-search-and-export/csv-downloads/other-nhs-organisations)."
 [^3]: "[Critical care and General & Acute Beds – Urgent and Emergency Care Daily Situation Reports 2025-26](https://www.england.nhs.uk/statistics/statistical-work-areas/bed-availability-and-occupancy/critical-care-and-general-acute-beds-urgent-and-emergency-care-daily-situation-reports/critical-care-and-general-acute-beds-urgent-and-emergency-care-daily-situation-reports-25-26/)," NHS England, accessed November 30, 2025.

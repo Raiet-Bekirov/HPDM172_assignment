@@ -35,13 +35,13 @@ Navigate to the created directory:
 cd /home/ubuntu/hpdm172/assignment/queries
 ```
 
-Download query .sql file from GitHub, for example:
+Download a query .sql file from GitHub, for example:
 
 ```shell
 wget https://github.com/Raiet-Bekirov/HPDM172_assignment/raw/refs/heads/main/sql_queries/get_docs_at_hosp.sql
 ```
 
-Log on to MySQL server (in the command below, replace `<USER-NAME>` with the appropriate MySQL server username):
+Log on to a MySQL server (in the command below, replace `<USER-NAME>` with the appropriate MySQL server username):
 
 ```shell
 mysql -u <USER-NAME> -p
@@ -87,10 +87,10 @@ Then, set the variable `@HospitalName` to the name of the chosen hospital:
 SET @HospitalName = "St Thomas' Hospital";
 ```
 
-Finally, run the `get_docs_at_hosp` script (In the following command, replace `/path/to/` with the appropriate file path):
+Finally, run the `get_docs_at_hosp` script (In the following command, replace `/PATH/TO/` with the appropriate file path):
 
 ```sql
-source /path/to/get_docs_at_hosp.sql 
+source /PATH/TO/get_docs_at_hosp.sql 
 ```
 
 This produces the following output:
@@ -119,7 +119,7 @@ This produces the following output:
 
 ### Query 8: `query_name.sql`
 
-### Query 9: `query_name.sql`
+### Query 9: `query_name.sql`
 
 ### Query 10: `query_name.sql`
 
