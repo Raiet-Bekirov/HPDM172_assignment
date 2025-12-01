@@ -133,7 +133,7 @@ FOREIGN KEY (doctor_id) REFERENCES doctors(doctor_id)
 );
 
 LOAD DATA LOCAL INFILE
-'/home/ubuntu/hpdm172/assignment/data/lab_results_table.txt'
+'lab_results_table.txt'
 INTO TABLE lab_results
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
