@@ -1,14 +1,16 @@
-# Data Creation for HPDM172 Group Assignment
+# Data Creation for HPDM172 Group Assignment -----------------------------------
 
 set.seed(172)
 
-# Import and process source data
+## Import and process source data ----------------------------------------------
 
-acute_trust_services <- read.csv('source_data/acute_trust_services.csv', header=TRUE)
+acute_trust_services <- read.csv('source_data/acute_trust_services.csv',
+                                 header=TRUE)
 acute_trust_services <- data.frame(
   service = acute_trust_services$Sub.domain,
   org = toupper(acute_trust_services$Trust_name),
-  type = gsub("^.{0,8}", "", acute_trust_services$Trust_subtype),
+  # Remove first eight characters reading 'Acute - '
+  type = gsub("^.{0,8}", "", acute_trust_services$Trust_subtype), 
   domain = acute_trust_services$Domain
 )
 acute_trust_services <- acute_trust_services[acute_trust_services$domain=='Access to services',]
@@ -89,9 +91,10 @@ medications <- data.frame (
   drug_name = medications$DRUG_DESCRIPTION,
   indication = medications$INDICATION_DESCRIPTION
 )
+# Change medication names to title case
 medications$drug_name <- gsub("(^|[[:space:],-])([[:alpha:]])",
                               "\\1\\U\\2", medications$drug_name,
-                                perl = TRUE)
+                                perl = TRUE) 
 medications$indication[medications$indication=='Anxiety disorder, unspecified'] <- 'Anxiety disorder'
 medications$indication[medications$indication=='Anxiety neurosis'] <- 'Anxiety disorder'
 medications$indication[medications$indication=='Unspecified atrial fibrillation'] <- 'Atrial fibrillation'
@@ -193,7 +196,7 @@ leap_year_days <- data.frame(
           sprintf("%02d", 1:31), sprintf("%02d", 1:30), sprintf("%02d", 1:31))
 )
 
-# Create utility functions for use in data generation
+## Create utility functions for use in data generation -------------------------
 
 rand_add_from_region <- function(region) {
   posts_towns <- data.frame (
@@ -315,7 +318,7 @@ rand_blood_result <- function(test_code) {
   blood_result
 }
 
-# Create hospitals table
+## Create hospitals table ------------------------------------------------------
 
 hospitals_table <- data.frame(
   hosp_id = seq(1,40),
@@ -396,23 +399,42 @@ while (in_table < req_num_hosp) {
   untried_options <- untried_options[!untried_options==opt_to_try]
 }
 
+# Change hospital names to title case
 hospitals_table$hosp_name <- gsub("(^|[[:space:],-])([[:alpha:]])",
                                  "\\1\\U\\2", hospitals_table$hosp_name,
-                                 perl = TRUE)
+                                 perl = TRUE) 
 hospitals_table$hosp_name <- gsub("Of", "of", hospitals_table$hosp_name)
+# Change hospital addresses to title case
 hospitals_table$address <- gsub("(^|[[:space:],-])([[:alpha:]])",
                                "\\1\\U\\2", hospitals_table$address,
-                               perl = TRUE)
+                               perl = TRUE) 
 hospitals_table$address <- gsub("Under", "under", hospitals_table$address)
 
-hosp_to_export <- subset(hospitals_table, select = c(hosp_id, hosp_name, address, num_beds,
-                                                    type, emergency_services, year_of_accred))
+hosp_to_export <- subset(
+  hospitals_table,
+  select = c(hosp_id,
+             hosp_name,
+             address,
+             num_beds,
+             type,
+             emergency_services,
+             year_of_accred)
+)
 
-write.table(hosp_to_export, file='hospitals_table.txt',
-            quote=FALSE, sep='\t', row.names = FALSE,
-            col.names = c('hospital_id', 'hospital_name', 'hospital_address',
-                          'no_of_beds', 'hospital_type', 'emergency_services',
-                          'accreditation_year'))
+write.table(
+  hosp_to_export,
+  file='hospitals_table.txt',
+  quote=FALSE,
+  sep='\t',
+  row.names = FALSE,
+  col.names = c('hospital_id',
+                'hospital_name',
+                'hospital_address',
+                'no_of_beds',
+                'hospital_type',
+                'emergency_services',
+                'accreditation_year')
+)
 
 # Create diseases table
 
@@ -421,11 +443,17 @@ diseases_table <- data.frame(
   dis_name = hf_high_impact_conditions
 )
 
-write.table(diseases_table, file='diseases_table.txt',
-            quote=FALSE, sep='\t', row.names = FALSE,
-            col.names = c('disease_id', 'disease_name'))
+write.table(
+  diseases_table,
+  file='diseases_table.txt',
+  quote=FALSE,
+  sep='\t',
+  row.names = FALSE,
+  col.names = c('disease_id',
+                'disease_name')
+)
 
-# Create doctors table
+## Create doctors table --------------------------------------------------------
 
 doctors_table <- data.frame(
   doc_id = seq(1,100),
@@ -436,7 +464,10 @@ doctors_table <- data.frame(
   dis_id = rep(NA,100)
 )
 
-doctors_table$doc_name <- paste(rep('Dr.', 100), sample(first_names, 100, replace=TRUE), sample(last_names, 100, replace=TRUE), sep = " ")
+doctors_table$doc_name <- paste(rep('Dr.', 100),
+                                sample(first_names, 100, replace=TRUE),
+                                sample(last_names, 100, replace=TRUE),
+                                sep = " ")
 
 possible_hospitals <- hospitals_table$hosp_id[!(hospitals_table$type == 'Specialist')]
 
@@ -449,12 +480,21 @@ for (doc in 1:100) {
   doctors_table$dis_id[doc] <- sample(diseases_table$dis_id, 1)
 }
 
-write.table(doctors_table, file='doctors_table.txt',
-            quote=FALSE, sep='\t', row.names = FALSE,
-            col.names = c('doctor_id', 'doctor_name', 'doctor_dob',
-                          'doctor_address', 'hospital_id', 'disease_id'))
+write.table(
+  doctors_table,
+  file='doctors_table.txt',
+  quote=FALSE,
+  sep='\t',
+  row.names = FALSE,
+  col.names = c('doctor_id',
+                'doctor_name',
+                'doctor_dob',
+                'doctor_address',
+                'hospital_id',
+                'disease_id')
+)
 
-# Create patients table
+## Create patients table -------------------------------------------------------
 
 patients_table <- data.frame(
   pt_id = seq(1,600),
@@ -464,7 +504,9 @@ patients_table <- data.frame(
   doc_id = rep(NA, 600)
 )
 
-patients_table$pt_name <- paste(sample(first_names, 600, replace=TRUE), sample(last_names, 600, replace=TRUE), sep = " ")
+patients_table$pt_name <- paste(sample(first_names, 600, replace=TRUE),
+                                sample(last_names, 600, replace=TRUE),
+                                sep = " ")
 
 for (pt in 1:600) {
   reg_doc_id <- sample(doctors_table$doc_id, 1)
@@ -474,12 +516,20 @@ for (pt in 1:600) {
   patients_table$doc_id[pt] <- reg_doc_id
 }
 
-write.table(patients_table, file='patients_table.txt',
-            quote=FALSE, sep='\t', row.names = FALSE,
-            col.names = c('patient_id', 'patient_name', 'patient_dob',
-                          'patient_address', 'doctor_id'))
+write.table(
+  patients_table,
+  file='patients_table.txt',
+  quote=FALSE,
+  sep='\t',
+  row.names = FALSE,
+  col.names = c('patient_id',
+                'patient_name',
+                'patient_dob',
+                'patient_address',
+                'doctor_id')
+)
 
-# Create medications table
+## Create medications table ----------------------------------------------------
 
 medication_indication_counts <- table(medications[,1])
 medications_w_one_ind_listed <- names(medication_indication_counts[medication_indication_counts == 1])
@@ -489,14 +539,22 @@ num_medications <- nrow(medications_indications)
 medications_table <- data.frame(
   medication_id = seq(1,num_medications),
   medication_name = medications_indications$drug_name,
-  disease_id =match(medications_indications$indication, hf_high_impact_conditions)
+  disease_id =match(medications_indications$indication,
+                    hf_high_impact_conditions)
 )
 
-write.table(medications_table, file='medications_table.txt',
-            quote=FALSE, sep='\t', row.names = FALSE,
-            col.names = c('medication_id', 'medication_name', 'disease_id'))
+write.table(
+  medications_table,
+  file='medications_table.txt',
+  quote=FALSE,
+  sep='\t',
+  row.names = FALSE,
+  col.names = c('medication_id',
+                'medication_name',
+                'disease_id')
+)
 
-# Create prescriptions table
+## Create prescriptions table --------------------------------------------------
 
 prescriptions_table <- data.frame(
   prs_id = seq(1,500),
@@ -523,17 +581,29 @@ for (i in 1:500) {
     prs_month <- year_days$month[prs_day_of_year]
     prs_day <- year_days$day[prs_day_of_year]
   }
-  prescriptions_table$prs_date[i] <- paste(prs_year, prs_month, prs_day, sep = "-")
+  prescriptions_table$prs_date[i] <- paste(prs_year,
+                                           prs_month,
+                                           prs_day,
+                                           sep = "-")
   prescriptions_table$medication_id[i] <- sample(medications_table$medication_id, 1)
   prescriptions_table$patient_id[i] <- pt_id
   prescriptions_table$doc_id[i] <- prescriber
 }
 
-write.table(prescriptions_table, file='prescriptions_table.txt',
-            quote=FALSE, sep='\t', row.names = FALSE,
-            col.names = c('prescription_id', 'prescription_date', 'medication_id', 'patient_id', 'doctor_id'))
+write.table(
+  prescriptions_table,
+  file='prescriptions_table.txt',
+  quote=FALSE,
+  sep='\t',
+  row.names = FALSE,
+  col.names = c('prescription_id',
+                'prescription_date',
+                'medication_id',
+                'patient_id',
+                'doctor_id')
+)
 
-# Create appointments table
+## Create appointments table ---------------------------------------------------
 
 appointments_table <- data.frame(
   apt_id = seq(1,500),
@@ -553,16 +623,22 @@ for (i in 1:500) {
   apt_day_of_year <- sample(1:365, 1)
   apt_month <- leap_year_days$month[prs_day_of_year]
   apt_day <- leap_year_days$day[prs_day_of_year]
-  appointments_table$apt_date[i] <- paste(apt_year, apt_month, apt_day, sep = "-")
+  appointments_table$apt_date[i] <- paste(apt_year,
+                                          apt_month,
+                                          apt_day,
+                                          sep = "-")
   appointments_table$patient_id[i] <- pt_id
   appointments_table$doc_id[i] <- apt_doc
 }
 
 write.table(appointments_table, file='appointments_table.txt',
             quote=FALSE, sep='\t', row.names = FALSE,
-            col.names = c('appointment_id', 'appointment_date', 'patient_id', 'doctor_id'))
+            col.names = c('appointment_id',
+                          'appointment_date',
+                          'patient_id',
+                          'doctor_id'))
  
-# Create lab results table
+## Create lab results table ----------------------------------------------------
 
 lab_results_table <- data.frame(
   lab_result_id = seq(1,500),
@@ -591,18 +667,29 @@ for (i in 1:500) {
     test_month <- year_days$month[test_day_of_year]
     test_day <- year_days$day[test_day_of_year]
   }
-  lab_results_table$test_date[i] <- paste(test_year, test_month, test_day, sep = "-")
+  lab_results_table$test_date[i] <- paste(test_year,
+                                          test_month,
+                                          test_day,
+                                          sep = "-")
   lab_results_table$test_type[i] <- blood_tests$test_name[blood_tests$test_code==test_code]
   lab_results_table$test_result[i] <- result_of_test
   lab_results_table$patient_id[i] <- pt_id
   lab_results_table$doc_id[i] <- requester
 }
 
-write.table(lab_results_table, file='lab_results_table.txt',
-            quote=FALSE, sep='\t', row.names = FALSE,
-            col.names = c('lab_result_id', 'test_date', 'test_type', 'test_result',
-                          'patient_id', 'doctor_id'))
+write.table(
+  lab_results_table,
+  file='lab_results_table.txt',
+  quote=FALSE, sep='\t',
+  row.names = FALSE,
+  col.names = c('lab_result_id',
+                'test_date',
+                'test_type',
+                'test_result',
+                'patient_id',
+                'doctor_id')
+)
                           
-# Clear global environment
+## Clear global environment ----------------------------------------------------
                           
 rm(list = ls())
