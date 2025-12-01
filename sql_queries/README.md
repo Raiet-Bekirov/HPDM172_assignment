@@ -71,7 +71,7 @@ Quit MySQL:
 quit
 ```
 
-## Example ouputs from each query
+## Example ouputs from each query
 
 ### Query 1: `get_docs_at_hosp.sql`
 
@@ -96,13 +96,13 @@ source /path/to/get_docs_at_hosp.sql
 This produces the following output:
 
 ```
-+--------------------------+
-| doctor_name              |
-+--------------------------+
-| Dr. Sara Chén            |
-| Dr. Miguel De Los Santos |
-| Dr. Ivana Bird           |
-+--------------------------+
++-----------+--------------------------+
+| doctor_id | doctor_name              |
++-----------+--------------------------+
+|        37 | Dr. Sara Chén            |
+|        53 | Dr. Miguel De Los Santos |
+|        59 | Dr. Ivana Bird           |
++-----------+--------------------------+
 ```
 
 ### Query 2: `query_name.sql`
