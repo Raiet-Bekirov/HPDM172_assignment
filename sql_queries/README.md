@@ -2,8 +2,8 @@
 
 This repository containys SQL scipt files for nineteen different queries that can be used to obtain information from `hospitals_db`.
 
-- [Query 1, `get_docs_at_hosp.sql`](#query-1-get-docs-at-hospsql): Print a list of all doctors based at a particular hospital.
-- [Query 2, `query_name.sql`](#query-2-query-namesql): Print a list of all prescriptions for a particular patient, ordered by the prescription date. 
+- [Query 1, `get_docs_at_hosp.sql`](#query-1-get_docs_at_hospsql): Print a list of all doctors based at a particular hospital.
+- [Query 2, `query_name.sql`](#query-2-query_namesql): Print a list of all prescriptions for a particular patient, ordered by the prescription date. 
 - Query 3, `query_name.sql`: Print a list of all prescriptions that a particular doctor has prescribed.
 - Query 4, `query_name.sql`: Print a table showing all prescriptions ordered by the patient name alphabetically.
 - Query 5, `query_name.sql`: Add a new customer to the database, including being registered with one of the doctors.
@@ -22,7 +22,7 @@ This repository containys SQL scipt files for nineteen different queries that ca
 - Query 18, `query_name.sql`: Print a list of all hospital names which were accredited prior to 2015 and do have Emergency Service facilities.
 - Query 19, `query_name.sql`: Print a list of patients registered with doctors who are based at hospital with <400 beds.
 
-## Steps to run any of these queries
+## Steps to download and run any of these scripts
 
 Make directory to store SQL script files, for example:
 
@@ -56,7 +56,7 @@ USE hospitals_db;
 Set any variables called by the SQL script file, for example:
 
 ```sql
-SET @HospitalName = "St Thomas' Hospital";
+SET @HospitalName = "Southmead Hospital";
 ```
 
 Execute the SQL script file, for example:
@@ -75,4 +75,68 @@ quit
 
 ### Query 1: `get_docs_at_hosp.sql`
 
+If `get_docs_at_hosp.sql` is downloaded, the following SQL code can be used to print a list of all doctors based at a particular hospital. First, select the `hospitals_db` database:
+
+```sql
+USE hospitals_db; 
+```
+
+Then, set the variable `@HospitalName` to the name of the chosen hospital:
+
+```sql
+SET @HospitalName = "St Thomas' Hospital";
+```
+
+Finally, run the `get_docs_at_hosp` script (In the following command, replace `/path/to/` with the appropriate file path):
+
+```sql
+source /path/to/get_docs_at_hosp.sql 
+```
+
+This produces the following output:
+
+```
++--------------------------+
+| doctor_name              |
++--------------------------+
+| Dr. Sara Chén            |
+| Dr. Miguel De Los Santos |
+| Dr. Ivana Bird           |
++--------------------------+
+```
+
 ### Query 2: `query_name.sql`
+
+### Query 3: `query_name.sql`
+
+### Query 4: `query_name.sql`
+
+### Query 5: `query_name.sql`
+
+### Query 6: `query_name.sql`
+
+### Query 7: `query_name.sql`
+
+### Query 8: `query_name.sql`
+
+### Query 9: `query_name.sql`
+
+### Query 10: `query_name.sql`
+
+### Query 11: `query_name.sql`
+
+### Query 12: `query_name.sql`
+
+### Query 13: `query_name.sql`
+
+### Query 14: `query_name.sql`
+
+### Query 15: `query_name.sql`
+
+### Query 16: `query_name.sql`
+
+### Query 17: `query_name.sql`
+
+### Query 18: `query_name.sql`
+
+### Query 19: `query_name.sql`
