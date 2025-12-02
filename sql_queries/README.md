@@ -87,10 +87,10 @@ Then, set the variable `@HospitalName` to the name of the chosen hospital:
 SET @HospitalName = "St Thomas' Hospital";
 ```
 
-Finally, run the `get_docs_at_hosp` script (In the following command, replace `/PATH/TO/` with the appropriate file path):
+Finally, run the `get_docs_at_hosp` script (In the following command, replace `/filepath/of/` with the appropriate file path):
 
 ```sql
-source /PATH/TO/get_docs_at_hosp.sql 
+source /filepath/of/get_docs_at_hosp.sql 
 ```
 
 This produces the following output:
