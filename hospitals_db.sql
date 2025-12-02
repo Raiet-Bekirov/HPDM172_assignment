@@ -113,8 +113,8 @@ CREATE TABLE `hospitals` (
   `hospital_name` varchar(150) DEFAULT NULL,
   `hospital_address` varchar(150) DEFAULT NULL,
   `no_of_beds` int DEFAULT NULL,
-  `hospital_type` varchar(20) DEFAULT NULL,
-  `emergency_services` varchar(10) DEFAULT NULL,
+  `hospital_type` enum('General','Specialist','Teaching') DEFAULT NULL,
+  `emergency_services` enum('Yes','No') DEFAULT NULL,
   `accreditation_year` int DEFAULT NULL,
   PRIMARY KEY (`hospital_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -260,4 +260,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-11-30 15:30:06
+-- Dump completed on 2025-12-02  9:59:26

@@ -3,8 +3,8 @@ Table hospitals {
   hospital_name varchar
   hospital_address varchar
   no_of_beds integer
-  hospital_type varchar
-  emergency_services varchar
+  hospital_type enum
+  emergency_services enum
   accreditation_year integer
 }
 

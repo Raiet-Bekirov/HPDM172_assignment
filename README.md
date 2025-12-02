@@ -172,8 +172,8 @@ hospital_id INT PRIMARY KEY,
 hospital_name VARCHAR(150),
 hospital_address VARCHAR(150),
 no_of_beds INT,
-hospital_type VARCHAR(20),
-emergency_services VARCHAR(10),
+hospital_type ENUM('General', 'Specialist', 'Teaching'),
+emergency_services ENUM('Yes', 'No'),
 accreditation_year INT
 );
 ```
