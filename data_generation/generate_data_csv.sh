@@ -40,4 +40,7 @@ mkdir generated_data_csv
 mv appointments_table.csv diseases_table.csv doctors_table.csv hospitals_table.csv \
 lab_results_table.csv medications_table.csv patients_table.csv prescriptions_table.csv generated_data_csv/
 
+rm appointments_table.txt diseases_table.txt doctors_table.txt hospitals_table.txt \
+lab_results_table.txt medications_table.txt patients_table.txt prescriptions_table.txt
+
 rm -r source_data/

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# # Script to prepare input text files with data for SQL hospitals database.
+# Script to prepare input text files with data for SQL hospitals database.
 
 curl -L -o acute_trust_services.csv https://www.england.nhs.uk/wp-content/uploads/2025/09/nhs-oversight-framework-acute-trust-data.csv
 
@@ -39,4 +39,11 @@ mkdir generated_data
 mv appointments_table.txt diseases_table.txt doctors_table.txt hospitals_table.txt \
 lab_results_table.txt medications_table.txt patients_table.txt prescriptions_table.txt generated_data/
 
+rm appointments_table.csv diseases_table.csv doctors_table.csv hospitals_table.csv \
+lab_results_table.csv medications_table.csv patients_table.csv prescriptions_table.csv
+
 rm -r source_data/
+
+cd generated_data
+
+zip -r all_data.zip . -x '.*' -x '__MACOSX'

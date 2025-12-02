@@ -10,7 +10,7 @@ acute_trust_services <- data.frame(
   service = acute_trust_services$Sub.domain,
   org = toupper(acute_trust_services$Trust_name),
   # Remove first eight characters reading 'Acute - '
-  type = gsub("^.{0,8}", "", acute_trust_services$Trust_subtype), 
+  type = gsub("^.{0,8}", "", acute_trust_services$Trust_subtype),
   domain = acute_trust_services$Domain
 )
 acute_trust_services <- acute_trust_services[acute_trust_services$domain=='Access to services',]
@@ -94,7 +94,7 @@ medications <- data.frame (
 # Change medication names to title case
 medications$drug_name <- gsub("(^|[[:space:],-])([[:alpha:]])",
                               "\\1\\U\\2", medications$drug_name,
-                                perl = TRUE) 
+                                perl = TRUE)
 medications$indication[medications$indication=='Anxiety disorder, unspecified'] <- 'Anxiety disorder'
 medications$indication[medications$indication=='Anxiety neurosis'] <- 'Anxiety disorder'
 medications$indication[medications$indication=='Unspecified atrial fibrillation'] <- 'Atrial fibrillation'
@@ -402,12 +402,12 @@ while (in_table < req_num_hosp) {
 # Change hospital names to title case
 hospitals_table$hosp_name <- gsub("(^|[[:space:],-])([[:alpha:]])",
                                  "\\1\\U\\2", hospitals_table$hosp_name,
-                                 perl = TRUE) 
+                                 perl = TRUE)
 hospitals_table$hosp_name <- gsub("Of", "of", hospitals_table$hosp_name)
 # Change hospital addresses to title case
 hospitals_table$address <- gsub("(^|[[:space:],-])([[:alpha:]])",
                                "\\1\\U\\2", hospitals_table$address,
-                               perl = TRUE) 
+                               perl = TRUE)
 hospitals_table$address <- gsub("Under", "under", hospitals_table$address)
 
 hosp_to_export <- subset(
@@ -421,24 +421,23 @@ hosp_to_export <- subset(
              year_of_accred)
 )
 
-#write.table(
-#  hosp_to_export,
-#  file='hospitals_table.txt',
-#  quote=FALSE,
-#  sep='\t',
-#  row.names = FALSE,
-#  col.names = c('hospital_id',
-     #           'hospital_name',
-    #            'hospital_address',
-   #             'no_of_beds',
-  #              'hospital_type',
- #               'emergency_services',
-#                'accreditation_year')
-#)
-
 write.csv(hosp_to_export, file = 'hospitals_table.csv',
           row.names = FALSE)
 
+write.table(
+  hosp_to_export,
+  file='hospitals_table.txt',
+  quote=FALSE,
+  sep='\t',
+  row.names = FALSE,
+  col.names = c('hospital_id',
+                'hospital_name',
+                'hospital_address',
+                'no_of_beds',
+                'hospital_type',
+                'emergency_services',
+                'accreditation_year')
+)
 
 # Create diseases table
 
@@ -447,19 +446,18 @@ diseases_table <- data.frame(
   dis_name = hf_high_impact_conditions
 )
 
-# write.table(
-#   diseases_table,
-#   file='diseases_table.txt',
-#   quote=FALSE,
-#   sep='\t',
-#   row.names = FALSE,
-#   col.names = c('disease_id',
-#                 'disease_name')
-# )
-
 write.csv(diseases_table, file = 'diseases_table.csv',
           row.names = FALSE)
-
+          
+write.table(
+    diseases_table,
+    file='diseases_table.txt',
+    quote=FALSE,
+    sep='\t',
+    row.names = FALSE,
+    col.names = c('disease_id',
+                  'disease_name')
+)
 
 ## Create doctors table --------------------------------------------------------
 
@@ -488,23 +486,22 @@ for (doc in 1:100) {
   doctors_table$dis_id[doc] <- sample(diseases_table$dis_id, 1)
 }
 
-# write.table(
-#   doctors_table,
-#   file='doctors_table.txt',
-#   quote=FALSE,
-#   sep='\t',
-#   row.names = FALSE,
-#   col.names = c('doctor_id',
-#                 'doctor_name',
-#                 'doctor_dob',
-#                 'doctor_address',
-#                 'hospital_id',
-#                 'disease_id')
-# )
-
 write.csv(doctors_table, file = 'doctors_table.csv',
           row.names = FALSE)
 
+write.table(
+    doctors_table,
+    file='doctors_table.txt',
+    quote=FALSE,
+    sep='\t',
+    row.names = FALSE,
+    col.names = c('doctor_id',
+                  'doctor_name',
+                  'doctor_dob',
+                  'doctor_address',
+                  'hospital_id',
+                  'disease_id')
+)
 
 ## Create patients table -------------------------------------------------------
 
@@ -528,18 +525,18 @@ for (pt in 1:600) {
   patients_table$doc_id[pt] <- reg_doc_id
 }
 
-# write.table(
-#   patients_table,
-#   file='patients_table.txt',
-#   quote=FALSE,
-#   sep='\t',
-#   row.names = FALSE,
-#   col.names = c('patient_id',
-#                 'patient_name',
-#                 'patient_dob',
-#                 'patient_address',
-#                 'doctor_id')
-# )
+write.table(
+    patients_table,
+    file='patients_table.txt',
+    quote=FALSE,
+    sep='\t',
+    row.names = FALSE,
+    col.names = c('patient_id',
+                  'patient_name',
+                  'patient_dob',
+                  'patient_address',
+                  'doctor_id')
+)
 
 write.csv(patients_table, file = 'patients_table.csv',
           row.names = FALSE)
@@ -559,20 +556,19 @@ medications_table <- data.frame(
                     hf_high_impact_conditions)
 )
 
-# write.table(
-#   medications_table,
-#   file='medications_table.txt',
-#   quote=FALSE,
-#   sep='\t',
-#   row.names = FALSE,
-#   col.names = c('medication_id',
-#                 'medication_name',
-#                 'disease_id')
-# )
-
 write.csv(medications_table, file = 'medications_table.csv',
           row.names = FALSE)
 
+write.table(
+    medications_table,
+    file='medications_table.txt',
+    quote=FALSE,
+    sep='\t',
+    row.names = FALSE,
+    col.names = c('medication_id',
+                  'medication_name',
+                  'disease_id')
+)
 
 ## Create prescriptions table --------------------------------------------------
 
@@ -610,22 +606,21 @@ for (i in 1:500) {
   prescriptions_table$doc_id[i] <- prescriber
 }
 
-# write.table(
-#   prescriptions_table,
-#   file='prescriptions_table.txt',
-#   quote=FALSE,
-#   sep='\t',
-#   row.names = FALSE,
-#   col.names = c('prescription_id',
-#                 'prescription_date',
-#                 'medication_id',
-#                 'patient_id',
-#                 'doctor_id')
-# )
-
 write.csv(prescriptions_table, file = 'prescriptions_table.csv',
           row.names = FALSE)
-
+          
+write.table(
+    prescriptions_table,
+    file='prescriptions_table.txt',
+    quote=FALSE,
+    sep='\t',
+    row.names = FALSE,
+    col.names = c('prescription_id',
+                  'prescription_date',
+                  'medication_id',
+                  'patient_id',
+                  'doctor_id')
+)
 
 ## Create appointments table ---------------------------------------------------
 
@@ -654,16 +649,20 @@ for (i in 1:500) {
   appointments_table$patient_id[i] <- pt_id
   appointments_table$doc_id[i] <- apt_doc
 }
-
-# write.table(appointments_table, file='appointments_table.txt',
-#             quote=FALSE, sep='\t', row.names = FALSE,
-#             col.names = c('appointment_id',
-#                           'appointment_date',
-#                           'patient_id',
-#                           'doctor_id'))
  
 write.csv(appointments_table, file = 'appointments_table.csv',
           row.names = FALSE)
+          
+write.table(appointments_table,
+            file='appointments_table.txt',
+            quote=FALSE,
+            sep='\t',
+            row.names = FALSE,
+            col.names = c('appointment_id',
+                          'appointment_date',
+                          'patient_id',
+                          'doctor_id')
+)
 
 ## Create lab results table ----------------------------------------------------
 
@@ -704,21 +703,21 @@ for (i in 1:500) {
   lab_results_table$doc_id[i] <- requester
 }
 
-# write.table(
-#   lab_results_table,
-#   file='lab_results_table.txt',
-#   quote=FALSE, sep='\t',
-#   row.names = FALSE,
-#   col.names = c('lab_result_id',
-#                 'test_date',
-#                 'test_type',
-#                 'test_result',
-#                 'patient_id',
-#                 'doctor_id')
-# )
-
 write.csv(lab_results_table, file = 'lab_results_table.csv',
           row.names = FALSE)
+          
+write.table(
+    lab_results_table,
+    file='lab_results_table.txt',
+    quote=FALSE, sep='\t',
+    row.names = FALSE,
+    col.names = c('lab_result_id',
+                  'test_date',
+                  'test_type',
+                  'test_result',
+                  'patient_id',
+                  'doctor_id')
+)
 
 ## Clear global environment ----------------------------------------------------
                           
