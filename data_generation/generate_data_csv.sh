@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# # Script to prepare input text files with data for SQL hospitals database.
+# Script to prepare input csv files with data for SQL hospitals database.
 
 curl -L -o acute_trust_services.csv https://www.england.nhs.uk/wp-content/uploads/2025/09/nhs-oversight-framework-acute-trust-data.csv
 

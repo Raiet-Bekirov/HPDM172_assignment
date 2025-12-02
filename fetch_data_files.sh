@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# # Script to download input text files with data for SQL hospitals database.
+# Script to download input text files with data for SQL hospitals database.
 
 curl -o hospitals_table.txt https://raw.githubusercontent.com/Raiet-Bekirov/HPDM172_assignment/refs/heads/main/data_generation/generated_data/hospitals_table.txt
 curl -o diseases_table.txt https://raw.githubusercontent.com/Raiet-Bekirov/HPDM172_assignment/refs/heads/main/data_generation/generated_data/diseases_table.txt
