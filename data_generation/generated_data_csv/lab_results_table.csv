@@ -1,4 +1,4 @@
-"lab_result_id","test_date","test_type","test_result","patient_id","doc_id"
+"lab_result_id","test_date","test_type","test_result","patient_id","doctor_id"
 1,"2024-01-04","Blood Test: Alkaline Phosphatase","145 IU/L",382,5
 2,"2024-06-13","Blood Test: Red Blood Cell Count","3 x 10^12/L",54,2
 3,"2024-01-13","Blood Test: Creatinine","70 umol/L",561,11

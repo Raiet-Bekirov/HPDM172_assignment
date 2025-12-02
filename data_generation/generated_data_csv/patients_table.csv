@@ -1,4 +1,4 @@
-"pt_id","pt_name","pt_dob","pt_address","doc_id"
+"patient_id","patient_name","patient_dob","patient_address","doctor_id"
 1,"Manuel Uhm","1965-06-14","69 Willow Close, Clitheroe BB7 9QJ",95
 2,"Eymen Gutiérrez","1936-05-18","73 Church Hill, Walkden M38 8FF",22
 3,"Lara Hoa","1939-06-02","26 Water Lane, Manchester M2 6ZH",46

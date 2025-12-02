@@ -5,7 +5,7 @@ set.seed(172)
 ## Import and process source data ----------------------------------------------
 
 acute_trust_services <- read.csv('source_data/acute_trust_services.csv',
-                                 header=TRUE)
+                 header=TRUE)
 acute_trust_services <- data.frame(
   service = acute_trust_services$Sub.domain,
   org = toupper(acute_trust_services$Trust_name),
@@ -18,7 +18,7 @@ acute_trust_services <- subset(acute_trust_services, select = c(service, org, ty
 acute_trust_services <- acute_trust_services[!acute_trust_services$service=='Access to services domain score',]
 acute_trust_services <- acute_trust_services[!acute_trust_services$service=='Access to services domain segment',]
 acute_trust_services$type[acute_trust_services$type %in% c('Small','Medium',
-                                                           'Large', 'Multi-Service')] <- 'General'
+                               'Large', 'Multi-Service')] <- 'General'
 
 addresses <- read.csv('source_data/addresses.csv', header=FALSE)
 addresses <- data.frame(
@@ -62,7 +62,7 @@ cqc_inspections <- data.frame(
   region = cqc_inspections$Region,
   postcode = cqc_inspections$Postcode,
   accreditation_year = substring(cqc_inspections$Date.of.latest.check,
-                                 first=8, last=11)
+                 first=8, last=11)
 )
 
 cqc_inspections$accreditation_year[cqc_inspections$accreditation_year==''] <- NA
@@ -81,10 +81,10 @@ last_names$Romanized.Name[last_names$Romanized.Name==''] <- NA
 last_names <- na.omit(last_names$Romanized.Name)
 
 hf_high_impact_conditions <- c('Anxiety disorder', 'Atrial fibrillation', 'Bowel cancer',
-                               'Chronic kidney disease', 'Chronic pain',
-                               'Chronic obstructive pulmonary disease',
-                               'Major depressive disorder', 'Heart failure', 'Lung cancer',
-                               'Type 2 diabetes')
+                              'Chronic kidney disease', 'Chronic pain',
+                              'Chronic obstructive pulmonary disease',
+                              'Major depressive disorder', 'Heart failure', 'Lung cancer',
+                              'Type 2 diabetes')
 
 medications <- read.csv('source_data/medications.csv', header=TRUE)
 medications <- data.frame (
@@ -94,7 +94,7 @@ medications <- data.frame (
 # Change medication names to title case
 medications$drug_name <- gsub("(^|[[:space:],-])([[:alpha:]])",
                               "\\1\\U\\2", medications$drug_name,
-                                perl = TRUE)
+                              perl = TRUE)
 medications$indication[medications$indication=='Anxiety disorder, unspecified'] <- 'Anxiety disorder'
 medications$indication[medications$indication=='Anxiety neurosis'] <- 'Anxiety disorder'
 medications$indication[medications$indication=='Unspecified atrial fibrillation'] <- 'Atrial fibrillation'
@@ -200,8 +200,8 @@ leap_year_days <- data.frame(
 
 rand_add_from_region <- function(region) {
   posts_towns <- data.frame (
-    postcode = uk_postcodes$postcode[uk_postcodes$region_name == region],
-    town = uk_postcodes$city[uk_postcodes$region_name == region]
+  postcode = uk_postcodes$postcode[uk_postcodes$region_name == region],
+  town = uk_postcodes$city[uk_postcodes$region_name == region]
   )
   posts_towns <- na.omit(posts_towns)
   num_options <- nrow(posts_towns)
@@ -220,15 +220,15 @@ rand_add_from_region <- function(region) {
 rand_doc_dob <- function() {
   birth_year <- sample(1950:1999, 1)
   if (birth_year%%4 == 0) {
-    birth_year <- as.character(birth_year)
-    day_of_year <- sample(1:366, 1)
-    birth_month <- leap_year_days$month[day_of_year]
-    birth_day <- leap_year_days$day[day_of_year]
+  birth_year <- as.character(birth_year)
+  day_of_year <- sample(1:366, 1)
+  birth_month <- leap_year_days$month[day_of_year]
+  birth_day <- leap_year_days$day[day_of_year]
   } else {
-    birth_year <- as.character(birth_year)
-    day_of_year <- sample(1:365, 1)
-    birth_month <- year_days$month[day_of_year]
-    birth_day <- year_days$day[day_of_year]
+  birth_year <- as.character(birth_year)
+  day_of_year <- sample(1:365, 1)
+  birth_month <- year_days$month[day_of_year]
+  birth_day <- year_days$day[day_of_year]
   }
   dob_str <- paste(birth_year, birth_month, birth_day, sep = "-")
   dob_str
@@ -237,15 +237,15 @@ rand_doc_dob <- function() {
 rand_pt_dob <- function() {
   birth_year <- sample(1929:2004, 1)
   if (birth_year%%4 == 0) {
-    birth_year <- as.character(birth_year)
-    day_of_year <- sample(1:366, 1)
-    birth_month <- leap_year_days$month[day_of_year]
-    birth_day <- leap_year_days$day[day_of_year]
+  birth_year <- as.character(birth_year)
+  day_of_year <- sample(1:366, 1)
+  birth_month <- leap_year_days$month[day_of_year]
+  birth_day <- leap_year_days$day[day_of_year]
   } else {
-    birth_year <- as.character(birth_year)
-    day_of_year <- sample(1:365, 1)
-    birth_month <- year_days$month[day_of_year]
-    birth_day <- year_days$day[day_of_year]
+  birth_year <- as.character(birth_year)
+  day_of_year <- sample(1:365, 1)
+  birth_month <- year_days$month[day_of_year]
+  birth_day <- year_days$day[day_of_year]
   }
   dob_str <- paste(birth_year, birth_month, birth_day, sep = "-")
   dob_str
@@ -253,67 +253,67 @@ rand_pt_dob <- function() {
 
 rand_blood_result <- function(test_code) {
   if (test_code=='ALB') {
-    lab_value <- round(runif(1, 20, 60), digits = 0)
-    blood_result <- paste(lab_value, 'g/L', sep = " ")
+  lab_value <- round(runif(1, 20, 60), digits = 0)
+  blood_result <- paste(lab_value, 'g/L', sep = " ")
   } else if (test_code=='ALP') {
-    lab_value <- round(runif(1, 20, 150), digits = 0)
-    blood_result <- paste(lab_value, 'IU/L', sep = " ")
+  lab_value <- round(runif(1, 20, 150), digits = 0)
+  blood_result <- paste(lab_value, 'IU/L', sep = " ")
   } else if (test_code=='BIL') {
-    lab_value <- round(runif(1, 0, 30), digits = 0)
-    blood_result <- paste(lab_value, 'umol/L', sep = " ")
+  lab_value <- round(runif(1, 0, 30), digits = 0)
+  blood_result <- paste(lab_value, 'umol/L', sep = " ")
   } else if (test_code=='CRP') {
-    lab_value <- round(runif(1, 0, 10), digits = 1)
-    blood_result <- paste(lab_value, 'mg/L', sep = " ")
+  lab_value <- round(runif(1, 0, 10), digits = 1)
+  blood_result <- paste(lab_value, 'mg/L', sep = " ")
   } else if (test_code=='CRT') {
-    lab_value <- round(runif(1, 30, 150), digits = 0)
-    blood_result <- paste(lab_value, 'umol/L', sep = " ")
+  lab_value <- round(runif(1, 30, 150), digits = 0)
+  blood_result <- paste(lab_value, 'umol/L', sep = " ")
   } else if (test_code=='GLU') {
-    lab_value <- round(runif(1, 0, 20), digits = 1)
-    blood_result <- paste(lab_value, 'mmol/L', sep = " ")
+  lab_value <- round(runif(1, 0, 20), digits = 1)
+  blood_result <- paste(lab_value, 'mmol/L', sep = " ")
   } else if (test_code=='HGB') {
-    lab_value <- round(runif(1, 50, 200), digits = 0)
-    blood_result <- paste(lab_value, 'g/L', sep = " ")
+  lab_value <- round(runif(1, 50, 200), digits = 0)
+  blood_result <- paste(lab_value, 'g/L', sep = " ")
   } else if (test_code=='HBA') {
-    lab_value <- round(runif(1, 20, 100), digits = 0)
-    blood_result <- paste(lab_value, 'mmol/mol', sep = " ")
+  lab_value <- round(runif(1, 20, 100), digits = 0)
+  blood_result <- paste(lab_value, 'mmol/mol', sep = " ")
   } else if (test_code=='HDL') {
-    lab_value <- round(runif(1, 0.5, 2), digits = 1)
-    blood_result <- paste(lab_value, 'mmol/L', sep = " ")
+  lab_value <- round(runif(1, 0.5, 2), digits = 1)
+  blood_result <- paste(lab_value, 'mmol/L', sep = " ")
   } else if (test_code=='IRN') {
-    lab_value <- round(runif(1, 5, 40), digits = 0)
-    blood_result <- paste(lab_value, 'umol/L', sep = " ")
+  lab_value <- round(runif(1, 5, 40), digits = 0)
+  blood_result <- paste(lab_value, 'umol/L', sep = " ")
   } else if (test_code=='LAC') {
-    lab_value <- round(runif(1, 0.5, 10), digits = 1)
-    blood_result <- paste(lab_value, 'mmol/L', sep = " ")
+  lab_value <- round(runif(1, 0.5, 10), digits = 1)
+  blood_result <- paste(lab_value, 'mmol/L', sep = " ")
   } else if (test_code=='LDL') {
-    lab_value <- round(runif(1, 0, 5), digits = 1)
-    blood_result <- paste(lab_value, 'mmol/L', sep = " ")
+  lab_value <- round(runif(1, 0, 5), digits = 1)
+  blood_result <- paste(lab_value, 'mmol/L', sep = " ")
   } else if (test_code=='LYM') {
-    lab_value <- round(runif(1, 0, 10), digits = 1)
-    blood_result <- paste(lab_value, 'x 10^9/L', sep = " ")
+  lab_value <- round(runif(1, 0, 10), digits = 1)
+  blood_result <- paste(lab_value, 'x 10^9/L', sep = " ")
   } else if (test_code=='MAG') {
-    lab_value <- round(runif(1, 0.5, 1.5), digits = 1)
-    blood_result <- paste(lab_value, 'mmol/L', sep = " ")
+  lab_value <- round(runif(1, 0.5, 1.5), digits = 1)
+  blood_result <- paste(lab_value, 'mmol/L', sep = " ")
   } else if (test_code=='NEU') {
-    lab_value <- round(runif(1, 1, 10), digits = 1)
-    blood_result <- paste(lab_value, 'x 10^9/L', sep = " ")
+  lab_value <- round(runif(1, 1, 10), digits = 1)
+  blood_result <- paste(lab_value, 'x 10^9/L', sep = " ")
   } else if (test_code=='POT') {
-    lab_value <- round(runif(1, 1, 10), digits = 1)
-    blood_result <- paste(lab_value, 'mmol/L', sep = " ")
+  lab_value <- round(runif(1, 1, 10), digits = 1)
+  blood_result <- paste(lab_value, 'mmol/L', sep = " ")
   } else if (test_code=='RBC') {
-    lab_value <- round(runif(1, 2, 8), digits = 1)
-    blood_result <- paste(lab_value, 'x 10^12/L', sep = " ")
+  lab_value <- round(runif(1, 2, 8), digits = 1)
+  blood_result <- paste(lab_value, 'x 10^12/L', sep = " ")
   } else if (test_code=='TRI') {
-    lab_value <- round(runif(1, 0, 5), digits = 1)
-    blood_result <- paste(lab_value, 'mmol/L', sep = " ")
+  lab_value <- round(runif(1, 0, 5), digits = 1)
+  blood_result <- paste(lab_value, 'mmol/L', sep = " ")
   } else if (test_code=='URE') {
-    lab_value <- round(runif(1, 1, 10), digits = 1)
-    blood_result <- paste(lab_value, 'mmol/L', sep = " ")
+  lab_value <- round(runif(1, 1, 10), digits = 1)
+  blood_result <- paste(lab_value, 'mmol/L', sep = " ")
   } else if (test_code=='WBC') {
-    lab_value <- round(runif(1, 0, 20), digits = 1)
-    blood_result <- paste(lab_value, 'x 10^9/L', sep = " ")
+  lab_value <- round(runif(1, 0, 20), digits = 1)
+  blood_result <- paste(lab_value, 'x 10^9/L', sep = " ")
   } else {
-    blood_result <- 'Specimen rejected'
+  blood_result <- 'Specimen rejected'
   }
   blood_result
 }
@@ -340,35 +340,35 @@ while (in_table < req_num_hosp) {
   opt_to_try <- sample(untried_options, 1)
   trust_ <- beds$org[opt_to_try]
   if (!(trust_ %in% addresses$org)) {
-    untried_options <- untried_options[!untried_options==opt_to_try]
-    next
+  untried_options <- untried_options[!untried_options==opt_to_try]
+  next
   }
   location <- addresses[addresses$org==trust_,]
   if (nrow(location) > 1) {
-    untried_options <- untried_options[!untried_options==opt_to_try]
-    next
+  untried_options <- untried_options[!untried_options==opt_to_try]
+  next
   }
   if (!(grepl('HOSPITAL',location$site))) {
-    if (!(grepl('INFIRMARY',location$site))) {
-      untried_options <- untried_options[!untried_options==opt_to_try]
-      next
-    }
+  if (!(grepl('INFIRMARY',location$site))) {
+    untried_options <- untried_options[!untried_options==opt_to_try]
+    next
+  }
   }
   if (is.na(location$street)) {
-    untried_options <- untried_options[!untried_options==opt_to_try]
-    next
+  untried_options <- untried_options[!untried_options==opt_to_try]
+  next
   }
   if (!(trust_ %in% acute_trust_services$org)) {
-    untried_options <- untried_options[!untried_options==opt_to_try]
-    next
+  untried_options <- untried_options[!untried_options==opt_to_try]
+  next
   }
   if (!(location$site %in% cqc_inspections$org)) {
-    untried_options <- untried_options[!untried_options==opt_to_try]
-    next
+  untried_options <- untried_options[!untried_options==opt_to_try]
+  next
   }
   if (!(location$postcode %in% cqc_inspections$postcode[cqc_inspections$org==location$site])) {
-    untried_options <- untried_options[!untried_options==opt_to_try]
-    next
+  untried_options <- untried_options[!untried_options==opt_to_try]
+  next
   }
   hosp_name <- location$site
   street_address <- paste(c(location$street, location$town_or_city), collapse = ', ')
@@ -376,14 +376,14 @@ while (in_table < req_num_hosp) {
   num_beds <- beds$no_of_beds[opt_to_try]
   type <- acute_trust_services$type[acute_trust_services$org==trust_][1]
   if (type == 'Specialist') {
-    emergency_services <- 'No'
+  emergency_services <- 'No'
   } else {
-    services <- acute_trust_services$service[acute_trust_services$org==trust_]
-    if ('Urgent and emergency care' %in% services) {
-      emergency_services <- 'Yes'
-    } else {
-      emergency_services <- 'No'
-    }
+  services <- acute_trust_services$service[acute_trust_services$org==trust_]
+  if ('Urgent and emergency care' %in% services) {
+    emergency_services <- 'Yes'
+  } else {
+    emergency_services <- 'No'
+  }
   }
   inspections <- cqc_inspections$accreditation_year[cqc_inspections$org==hosp_name]
   region_ <- cqc_inspections$region[cqc_inspections$org==hosp_name][1]
@@ -401,28 +401,25 @@ while (in_table < req_num_hosp) {
 
 # Change hospital names to title case
 hospitals_table$hosp_name <- gsub("(^|[[:space:],-])([[:alpha:]])",
-                                 "\\1\\U\\2", hospitals_table$hosp_name,
-                                 perl = TRUE)
+                                  "\\1\\U\\2", hospitals_table$hosp_name,
+                                  perl = TRUE)
 hospitals_table$hosp_name <- gsub("Of", "of", hospitals_table$hosp_name)
 # Change hospital addresses to title case
 hospitals_table$address <- gsub("(^|[[:space:],-])([[:alpha:]])",
-                               "\\1\\U\\2", hospitals_table$address,
-                               perl = TRUE)
+                                "\\1\\U\\2", hospitals_table$address,
+                                perl = TRUE)
 hospitals_table$address <- gsub("Under", "under", hospitals_table$address)
 
 hosp_to_export <- subset(
   hospitals_table,
   select = c(hosp_id,
-             hosp_name,
-             address,
-             num_beds,
-             type,
-             emergency_services,
-             year_of_accred)
+       hosp_name,
+       address,
+       num_beds,
+       type,
+       emergency_services,
+       year_of_accred)
 )
-
-write.csv(hosp_to_export, file = 'hospitals_table.csv',
-          row.names = FALSE)
 
 write.table(
   hosp_to_export,
@@ -446,17 +443,14 @@ diseases_table <- data.frame(
   dis_name = hf_high_impact_conditions
 )
 
-write.csv(diseases_table, file = 'diseases_table.csv',
-          row.names = FALSE)
-          
 write.table(
-    diseases_table,
-    file='diseases_table.txt',
-    quote=FALSE,
-    sep='\t',
-    row.names = FALSE,
-    col.names = c('disease_id',
-                  'disease_name')
+  diseases_table,
+  file='diseases_table.txt',
+  quote=FALSE,
+  sep='\t',
+  row.names = FALSE,
+  col.names = c('disease_id',
+                'disease_name')
 )
 
 ## Create doctors table --------------------------------------------------------
@@ -471,9 +465,9 @@ doctors_table <- data.frame(
 )
 
 doctors_table$doc_name <- paste(rep('Dr.', 100),
-                                sample(first_names, 100, replace=TRUE),
-                                sample(last_names, 100, replace=TRUE),
-                                sep = " ")
+                sample(first_names, 100, replace=TRUE),
+                sample(last_names, 100, replace=TRUE),
+                sep = " ")
 
 possible_hospitals <- hospitals_table$hosp_id[!(hospitals_table$type == 'Specialist')]
 
@@ -486,21 +480,18 @@ for (doc in 1:100) {
   doctors_table$dis_id[doc] <- sample(diseases_table$dis_id, 1)
 }
 
-write.csv(doctors_table, file = 'doctors_table.csv',
-          row.names = FALSE)
-
 write.table(
-    doctors_table,
-    file='doctors_table.txt',
-    quote=FALSE,
-    sep='\t',
-    row.names = FALSE,
-    col.names = c('doctor_id',
-                  'doctor_name',
-                  'doctor_dob',
-                  'doctor_address',
-                  'hospital_id',
-                  'disease_id')
+  doctors_table,
+  file='doctors_table.txt',
+  quote=FALSE,
+  sep='\t',
+  row.names = FALSE,
+  col.names = c('doctor_id',
+                'doctor_name',
+                'doctor_dob',
+                'doctor_address',
+                'hospital_id',
+                'disease_id')
 )
 
 ## Create patients table -------------------------------------------------------
@@ -514,8 +505,8 @@ patients_table <- data.frame(
 )
 
 patients_table$pt_name <- paste(sample(first_names, 600, replace=TRUE),
-                                sample(last_names, 600, replace=TRUE),
-                                sep = " ")
+                sample(last_names, 600, replace=TRUE),
+                sep = " ")
 
 for (pt in 1:600) {
   reg_doc_id <- sample(doctors_table$doc_id, 1)
@@ -526,21 +517,17 @@ for (pt in 1:600) {
 }
 
 write.table(
-    patients_table,
-    file='patients_table.txt',
-    quote=FALSE,
-    sep='\t',
-    row.names = FALSE,
-    col.names = c('patient_id',
-                  'patient_name',
-                  'patient_dob',
-                  'patient_address',
-                  'doctor_id')
+  patients_table,
+  file='patients_table.txt',
+  quote=FALSE,
+  sep='\t',
+  row.names = FALSE,
+  col.names = c('patient_id',
+                'patient_name',
+                'patient_dob',
+                'patient_address',
+                'doctor_id')
 )
-
-write.csv(patients_table, file = 'patients_table.csv',
-          row.names = FALSE)
-
 
 ## Create medications table ----------------------------------------------------
 
@@ -553,21 +540,18 @@ medications_table <- data.frame(
   medication_id = seq(1,num_medications),
   medication_name = medications_indications$drug_name,
   disease_id =match(medications_indications$indication,
-                    hf_high_impact_conditions)
+          hf_high_impact_conditions)
 )
 
-write.csv(medications_table, file = 'medications_table.csv',
-          row.names = FALSE)
-
 write.table(
-    medications_table,
-    file='medications_table.txt',
-    quote=FALSE,
-    sep='\t',
-    row.names = FALSE,
-    col.names = c('medication_id',
-                  'medication_name',
-                  'disease_id')
+  medications_table,
+  file='medications_table.txt',
+  quote=FALSE,
+  sep='\t',
+  row.names = FALSE,
+  col.names = c('medication_id',
+                'medication_name',
+                'disease_id')
 )
 
 ## Create prescriptions table --------------------------------------------------
@@ -589,37 +573,34 @@ for (i in 1:500) {
   drug <- sample(medications_table$medication_id)
   prs_year <- sample(2024:2025, 1)
   if (prs_year == 2024) {
-    prs_day_of_year <- sample(1:366, 1)
-    prs_month <- leap_year_days$month[prs_day_of_year]
-    prs_day <- leap_year_days$day[prs_day_of_year]
+  prs_day_of_year <- sample(1:366, 1)
+  prs_month <- leap_year_days$month[prs_day_of_year]
+  prs_day <- leap_year_days$day[prs_day_of_year]
   } else {
-    prs_day_of_year <- sample(1:333, 1)
-    prs_month <- year_days$month[prs_day_of_year]
-    prs_day <- year_days$day[prs_day_of_year]
+  prs_day_of_year <- sample(1:333, 1)
+  prs_month <- year_days$month[prs_day_of_year]
+  prs_day <- year_days$day[prs_day_of_year]
   }
   prescriptions_table$prs_date[i] <- paste(prs_year,
-                                           prs_month,
-                                           prs_day,
-                                           sep = "-")
+                       prs_month,
+                       prs_day,
+                       sep = "-")
   prescriptions_table$medication_id[i] <- sample(medications_table$medication_id, 1)
   prescriptions_table$patient_id[i] <- pt_id
   prescriptions_table$doc_id[i] <- prescriber
 }
-
-write.csv(prescriptions_table, file = 'prescriptions_table.csv',
-          row.names = FALSE)
-          
+      
 write.table(
-    prescriptions_table,
-    file='prescriptions_table.txt',
-    quote=FALSE,
-    sep='\t',
-    row.names = FALSE,
-    col.names = c('prescription_id',
-                  'prescription_date',
-                  'medication_id',
-                  'patient_id',
-                  'doctor_id')
+  prescriptions_table,
+  file='prescriptions_table.txt',
+  quote=FALSE,
+  sep='\t',
+  row.names = FALSE,
+  col.names = c('prescription_id',
+                'prescription_date',
+                'medication_id',
+                'patient_id',
+                'doctor_id')
 )
 
 ## Create appointments table ---------------------------------------------------
@@ -643,25 +624,23 @@ for (i in 1:500) {
   apt_month <- leap_year_days$month[prs_day_of_year]
   apt_day <- leap_year_days$day[prs_day_of_year]
   appointments_table$apt_date[i] <- paste(apt_year,
-                                          apt_month,
-                                          apt_day,
-                                          sep = "-")
+                      apt_month,
+                      apt_day,
+                      sep = "-")
   appointments_table$patient_id[i] <- pt_id
   appointments_table$doc_id[i] <- apt_doc
 }
- 
-write.csv(appointments_table, file = 'appointments_table.csv',
-          row.names = FALSE)
-          
-write.table(appointments_table,
-            file='appointments_table.txt',
-            quote=FALSE,
-            sep='\t',
-            row.names = FALSE,
-            col.names = c('appointment_id',
-                          'appointment_date',
-                          'patient_id',
-                          'doctor_id')
+      
+write.table(
+  appointments_table,
+  file='appointments_table.txt',
+  quote=FALSE,
+  sep='\t',
+  row.names = FALSE,
+  col.names = c('appointment_id',
+                'appointment_date',
+                'patient_id',
+                'doctor_id')
 )
 
 ## Create lab results table ----------------------------------------------------
@@ -685,40 +664,149 @@ for (i in 1:500) {
   result_of_test <- rand_blood_result(test_code)
   test_year <- sample(2024:2025, 1)
   if (test_year == 2024) {
-    test_day_of_year <- sample(1:366, 1)
-    test_month <- leap_year_days$month[test_day_of_year]
-    test_day <- leap_year_days$day[test_day_of_year]
+  test_day_of_year <- sample(1:366, 1)
+  test_month <- leap_year_days$month[test_day_of_year]
+  test_day <- leap_year_days$day[test_day_of_year]
   } else {
-    test_day_of_year <- sample(1:333, 1)
-    test_month <- year_days$month[test_day_of_year]
-    test_day <- year_days$day[test_day_of_year]
+  test_day_of_year <- sample(1:333, 1)
+  test_month <- year_days$month[test_day_of_year]
+  test_day <- year_days$day[test_day_of_year]
   }
   lab_results_table$test_date[i] <- paste(test_year,
-                                          test_month,
-                                          test_day,
-                                          sep = "-")
+                      test_month,
+                      test_day,
+                      sep = "-")
   lab_results_table$test_type[i] <- blood_tests$test_name[blood_tests$test_code==test_code]
   lab_results_table$test_result[i] <- result_of_test
   lab_results_table$patient_id[i] <- pt_id
   lab_results_table$doc_id[i] <- requester
 }
-
-write.csv(lab_results_table, file = 'lab_results_table.csv',
-          row.names = FALSE)
-          
+      
 write.table(
-    lab_results_table,
-    file='lab_results_table.txt',
-    quote=FALSE, sep='\t',
-    row.names = FALSE,
-    col.names = c('lab_result_id',
-                  'test_date',
-                  'test_type',
-                  'test_result',
-                  'patient_id',
-                  'doctor_id')
+  lab_results_table,
+  file='lab_results_table.txt',
+  quote=FALSE, sep='\t',
+  row.names = FALSE,
+  col.names = c('lab_result_id',
+                'test_date',
+                'test_type',
+                'test_result',
+                'patient_id',
+                'doctor_id')
+)
+
+## Write CSV files -------------------------------------------------------------
+
+hosp_to_export_header <- c('hospital_id',
+                           'hospital_name',
+                           'hospital_address',
+                           'no_of_beds',
+                           'hospital_type',
+                           'emergency_services',
+                           'accreditation_year')
+
+names(hosp_to_export) <- hosp_to_export_header
+
+write.csv(
+  hosp_to_export,
+  file = 'hospitals_table.csv',
+  row.names = FALSE
+)
+
+diseases_table_header <- c('disease_id',
+                           'disease_name')
+
+names(diseases_table) <- diseases_table_header
+
+write.csv(
+  diseases_table,
+  file='diseases_table.csv',
+  row.names = FALSE
+)
+
+doctors_table_header <- c('doctor_id',
+                          'doctor_name',
+                          'doctor_dob',
+                          'doctor_address',
+                          'hospital_id',
+                          'disease_id')
+
+names(doctors_table) <- doctors_table_header
+
+write.csv(
+  doctors_table,
+  file='doctors_table.csv',
+  row.names = FALSE
+)
+
+patients_table_header <- c('patient_id',
+                           'patient_name',
+                           'patient_dob',
+                           'patient_address',
+                           'doctor_id')
+
+names(patients_table) <- patients_table_header
+
+write.csv(
+  patients_table,
+  file='patients_table.csv',
+  row.names = FALSE
+)
+
+medications_table_header <- c('medication_id',
+                              'medication_name',
+                              'disease_id')
+
+names(medications_table) <- medications_table_header
+
+write.csv(
+  medications_table,
+  file='medications_table.csv',
+  row.names = FALSE
+)
+
+prescriptions_table_header <- c('prescription_id',
+                                'prescription_date',
+                                'medication_id',
+                                'patient_id',
+                                'doctor_id')
+
+names(prescriptions_table) <- prescriptions_table_header
+
+write.csv(
+  prescriptions_table,
+  file='prescriptions_table.csv',
+  row.names = FALSE
+)
+
+appointments_table_header <- c('appointment_id',
+                               'appointment_date',
+                               'patient_id',
+                               'doctor_id')
+
+names(appointments_table) <- appointments_table_header
+
+write.csv(
+  appointments_table,
+  file='appointments_table.csv',
+  row.names = FALSE
+)
+
+lab_results_table_header <- c('lab_result_id',
+                              'test_date',
+                              'test_type',
+                              'test_result',
+                              'patient_id',
+                              'doctor_id')
+
+names(lab_results_table) <- lab_results_table_header
+
+write.csv(
+  lab_results_table,
+  file='lab_results_table.csv',
+  row.names = FALSE
 )
 
 ## Clear global environment ----------------------------------------------------
-                          
+              
 rm(list = ls())

@@ -1,4 +1,4 @@
-"hosp_id","hosp_name","address","num_beds","type","emergency_services","year_of_accred"
+"hospital_id","hospital_name","hospital_address","no_of_beds","hospital_type","emergency_services","accreditation_year"
 1,"Leighton Hospital","Leighton, Crewe CW1 4QJ","495","General","Yes","2024"
 2,"Darent Valley Hospital","Darenth Wood Road, Dartford DA2 8DA","534","General","Yes","2022"
 3,"Cheltenham General Hospital","Sandford Road, Cheltenham GL53 7AN","857","General","Yes","2025"
