@@ -2,9 +2,9 @@
 
 This repository containys SQL scipt files for nineteen different queries that can be used to obtain information from `hospitals_db`.
 
-- [Query 1, `get_docs_at_hosp.sql`](#query-1-get_docs_at_hospsql): Print a list of all doctors based at a particular hospital.
-- [Query 2, `get_prescriptions_for_patient.sql`](#query-2-query_namesql): Print a list of all prescriptions for a particular patient, ordered by the prescription date. 
-- [Query 3, `query_name.sql`](#query-3-query_namesql): Print a list of all prescriptions that a particular doctor has prescribed.
+- [Query 1, `get_docs_at_hosp.sql`](#query-1-get_docs_at_hosp.sql): Print a list of all doctors based at a particular hospital.
+- [Query 2, `get_prescriptions_for_patient.sql`](#query-2-get_prescriptions_for_patient.sql): Print a list of all prescriptions for a particular patient, ordered by the prescription date. 
+- [Query 3, `get_prescriptions_from_doc.sql`](#query-3-get_prescriptions_from_doc.sql): Print a list of all prescriptions that a particular doctor has prescribed.
 - [Query 4, `query_name.sql`](#query-4-query_namesql): Print a table showing all prescriptions ordered by the patient name alphabetically.
 - [Query 5, `query_name.sql`](#query-5-query_namesql): Add a new customer to the database, including being registered with one of the doctors.
 - [Query 6, `query_name.sql`](#query-6-query_namesql): Modify address details of an existing customer.
@@ -112,12 +112,15 @@ If `get_docs_at_hosp.sql` is downloaded, the following SQL code can be used to p
 ```sql
 USE hospitals_db; 
 ```
-Then, set the variable `@PatientName` to the name of the chosen hospital:
+
+Then, set the variable `@PatientName` to the name of the chosen patient:
 
 ```sql
 SET @PatientName = 'Manuel Uhm';
 ```
+
 Finally, run the `get_prescriptions_for_patient.sql` script (In the following command, replace `/filepath/of/` with the appropriate file path):
+
 ```sql
 source /filepath/of/get_docs_at_hosp.sql 
 ```
@@ -126,12 +129,41 @@ This produces the following output:
 
 ```
 +-----------------+--------------------+-----------------+--------------------+
-| prescription_id | prescription_date  | medication_name + doctor_name        +
+| prescription_id | prescription_date  | medication_name | doctor_name        |
 +--------------------------------------+-----------------+--------------------+
-|150              | 2024-09-29         | Phenobarbital   + Dr. Kairo Savchenko+
+|150              | 2024-09-29         | Phenobarbital   | Dr. Kairo Savchenko|
 +-----------------+--------------------+-----------------+--------------------+
 ```
-### Query 3: `query_name.sql`
+### Query 3: `get_prescriptions_from_doc.sql`
+
+If `get_prescriptions_from_doc.sql` is downloaded, the following SQL code can be used to print a list of all prescriptions that a particular doctor has prescribed. First, select the `hospitals_db` database:
+
+```sql
+USE hospitals_db; 
+```
+
+Then, set the variable `@DoctorName` to the name of the chosen doctor:
+
+```sql
+SET @DoctorName = 'Dr. Kora Kelmendi'
+```
+
+Finally, run the `get_prescriptions_from_doc.sql` script (In the following command, replace `/filepath/of/` with the appropriate file path):
+
+```sql
+source /filepath/of/get_prescriptions_from_doc.sql 
+```
+
+This produces the following output:
+```
++-----------------+-------------------+-------------------+------------------+----------------------------------+
+| prescription_id | prescription_date | doctor_name       | patient_name     | medication_name                  |
++-----------------+-------------------+-------------------+------------------+----------------------------------+
+| 430             | 2024-02-15        | Dr. Kora Kelmendi | Abdallah Sharma  | Insulin, Protamine Lispro, Human |
+| 330             | 2024-10-01        | Dr. Kora Kelmendi | Marcia Lefebvre  | Clorazepate                      |
+| 299             | 2025-09-01        | Dr. Kora Kelmendi | Wen-Hsiung Huang | Aminophylline                    |
++-----------------+-------------------+-------------------+------------------+----------------------------------+
+```
 
 ### Query 4: `query_name.sql`
 
