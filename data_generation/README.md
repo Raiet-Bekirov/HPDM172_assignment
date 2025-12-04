@@ -77,7 +77,7 @@ The file `generated_data/appointments_table.txt` has four columns:
 3. `patient_id`: The ID number of the patient the appointment is for.
 4. `doctor_id`: The ID number of the doctor the appointment is with.
 
-### Lab Results: `lab_results_table.txt`
+### Lab Results Data: `lab_results_table.txt`
 
 The file `generated_data/lab_results_table.txt` has six columns:
 
