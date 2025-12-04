@@ -147,6 +147,6 @@ Finally, run the bash script `generate_data.sh`:
 [^11]:Daniel Oto‐Peralías, "[What Do Street Names Tell Us? An Application to Great Britain's Streets](https://dx.doi.org/10.2139/ssrn.3063381)," *SSRN* (2017): 3. 
 [^12]: "[UK postcodes](https://github.com/academe/UK-Postcodes)" Academe Computing Ltd, accessed November 30, 2025.
 [^13]: "[The UK postcode format](https://ideal-postcodes.co.uk/guides/uk-postcode-format)" Doaa Kurdi, accessed November 30, 2025. 
-[^14]: "[MEDI–an ensemble MEDication Indication resource](https://www.vumc.org/wei-lab/medi)" The Wei Lab, accessed November 30, 2025.https://www.vumc.org/wei-lab/medi
+[^14]: "[MEDI–an ensemble MEDication Indication resource](https://www.vumc.org/wei-lab/medi)" The Wei Lab, accessed November 30, 2025.
 [^15]: "[Biochemistry](https://www.therotherhamft.nhs.uk/services/pathology/biochemistry)" The Rotherham NHS Foundation Trust, accessed November 30, 2025. 
 [^16]: "[About HCA UK laboratories](https://www.hcahealthcare.co.uk/locations/hca-uk-laboratories)" HCA Healthcare UK, accessed November 30, 2025.
