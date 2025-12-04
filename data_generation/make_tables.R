@@ -5,7 +5,7 @@ set.seed(172)
 ## Import and process source data ----------------------------------------------
 
 acute_trust_services <- read.csv('source_data/acute_trust_services.csv',
-                 header=TRUE)
+                                 header=TRUE)
 acute_trust_services <- data.frame(
   service = acute_trust_services$Sub.domain,
   org = toupper(acute_trust_services$Trust_name),
@@ -80,11 +80,12 @@ last_names <- read.csv('source_data/last_names.csv', header=TRUE)
 last_names$Romanized.Name[last_names$Romanized.Name==''] <- NA
 last_names <- na.omit(last_names$Romanized.Name)
 
-hf_high_impact_conditions <- c('Anxiety disorder', 'Atrial fibrillation', 'Bowel cancer',
-                              'Chronic kidney disease', 'Chronic pain',
-                              'Chronic obstructive pulmonary disease',
-                              'Major depressive disorder', 'Heart failure', 'Lung cancer',
-                              'Type 2 diabetes')
+hf_high_impact_conditions <- c('Anxiety disorder', 'Atrial fibrillation',
+                               'Bowel cancer', 'Chronic kidney disease',
+                               'Chronic pain',
+                               'Chronic obstructive pulmonary disease',
+                               'Major depressive disorder', 'Heart failure',
+                               'Lung cancer', 'Type 2 diabetes')
 
 medications <- read.csv('source_data/medications.csv', header=TRUE)
 medications <- data.frame (
