@@ -218,6 +218,30 @@ The first five rows of produced table:
 
 ### Query 13: `query_name.sql`
 
+If `list_of_all_appointments_for_a_doctor.sql` is downloaded, the following SQL code can be used to print a list of all hospital names which were accredited prior to 2015 and do have Emergency Service facilities. First, select the `hospitals_db` database:
+
+```sql
+USE hospitals_db;
+```
+
+Then, run the `list_of_all_appointments_for_a_doctor.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+
+```sql
+source /filepath/of/get_emergency_hosps_accred_pre_2015.sql
+```
+
+This produces the following output:
+
+```
++---------------------+------------------+
+| patient_name        | appointment_date |
++---------------------+------------------+
+| Liam Nikolovski     | 2027-07-07       |
+| Pedro Lombardo      | 2026-07-07       |
+| Filip Uch           | 2026-07-07       |
+| Maryam Yau          | 2027-07-07       |
+| Stanisław Angelova  | 2027-07-07       |
++---------------------+------------------+
 ### Query 14: `query_name.sql`
 
 ### Query 15: `query_name.sql`
