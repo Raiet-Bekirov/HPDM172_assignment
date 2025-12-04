@@ -87,7 +87,7 @@ Then, set the variable `@HospitalName` to the name of the chosen hospital:
 SET @HospitalName = "St Thomas' Hospital";
 ```
 
-Finally, run the `get_docs_at_hosp` script (In the following command, replace `/filepath/of/` with the appropriate file path):
+Finally, run the `get_docs_at_hosp` script (in the following command, replace `/filepath/of/` with the appropriate file path):
 
 ```sql
 source /filepath/of/get_docs_at_hosp.sql
@@ -119,7 +119,7 @@ Then, set the variable `@PatientName` to the name of the chosen patient:
 SET @PatientName = 'Manuel Uhm';
 ```
 
-Finally, run the `get_prescriptions_for_patient.sql` script (In the following command, replace `/filepath/of/` with the appropriate file path):
+Finally, run the `get_prescriptions_for_patient.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
 
 ```sql
 source /filepath/of/get_prescriptions_for_patient.sql
@@ -148,7 +148,7 @@ Then, set the variable `@DoctorName` to the name of the chosen doctor:
 SET @DoctorName = 'Dr. Kora Kelmendi'
 ```
 
-Finally, run the `get_prescriptions_from_doc.sql` script (In the following command, replace `/filepath/of/` with the appropriate file path):
+Finally, run the `get_prescriptions_from_doc.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
 
 ```sql
 source /filepath/of/get_prescriptions_from_doc.sql
@@ -173,7 +173,7 @@ If `get_docs_at_hosp.sql` is downloaded, the following SQL code can be used to p
 USE hospitals_db;
 ```
 
-Then, run the `get_prescriptions_for_all_patient_alphabetical.sql` script (In the following command, replace `/filepath/of/` with the appropriate file path):
+Then, run the `get_prescriptions_for_all_patient_alphabetical.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
 
 ```sql
 source /filepath/of/get_prescriptions_for_all_patient_alphabetical.sql

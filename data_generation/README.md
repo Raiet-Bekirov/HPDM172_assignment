@@ -24,8 +24,10 @@ The `hospitals_table.txt` file has seven columns:
 
 ### Diseases Data: `diseases_table.txt`
 
-1. `disease_id`:
-2. `disease_name`: https://www.health.org.uk/reports-and-analysis/reports/health-in-2040-projected-patterns-of-illness-in-england, https://www.cancerresearchuk.org/health-professional/cancer-statistics/statistics-by-cancer-type/cancer-types-compared
+The `diseases_table.txt` file has two columns.
+
+1. `disease_id`: A unique identifier for each of the ten diseases represented in our database.
+2. `disease_name`: The name of the disease. The ten diseases we chose to include in our database were guided by the ten diseases projected by the Health Foundation to have the highest impact on health care use in the UK in 2040.[^7]  In their list they combined the third highest impact disease group, 'anxiety or depression' into one group, whereas we split it into two categories – anxiety disorder and major depressive disorder. We also chose two specific conditions – bowel cancer and lung cancer – to represent their fourth highest impact disease group, 'cancer'. Bowel and lung cancer were chosen because they were the only cancers in the top three highest incidence causes of cancer for both men and women in the UK between 2017 and 2019.[^8]  
 
 ### Doctors Data: `doctors_table.txt`
 
@@ -137,3 +139,6 @@ Finally, run the bash script `generate_data.sh`:
 [^4]: "[NHS oversight framework csv metadata file](https://www.england.nhs.uk/long-read/nhs-oversight-framework-csv-metadata-file/)," NHS England, accessed November 30, 2025.
 [^5]: NHS England, "[NHS oversight framework csv metadata file](https://www.england.nhs.uk/long-read/nhs-oversight-framework-csv-metadata-file/)."
 [^6]: "[Using CQC data](https://www.cqc.org.uk/about-us/transparency/using-cqc-data#directory)," Care Quality Commission, accessed November 30, 2025.
+Department for Energy & Climate Change, Community Energy Strategy, URN 14D/019 (The Stationery Office, 2014), 4, https://www.gov.uk/government/publications/community-energy-strategy. 
+[^7]: "[Health in 2040: projected patterns of illness in England](https://www.health.org.uk/reports-and-analysis/reports/health-in-2040-projected-patterns-of-illness-in-england)," The Health Foundation, accessed November 30, 2025. 
+[^8]: "[Incidence for common cancers](https://crukcancerintelligence.shinyapps.io/CancerStatsDataHub/_w_3fcbaae1cc564876b67093aefabcecde/_w_a3f5f2563b1946cfb4ac68cfdd7d1ac4/?_inputs_&nav=%22Incidence%20Common%20Cancers%22&app_select_Country=%22United%20Kingdom%22)," Cancer Research UK, accessed November 30, 2025.
