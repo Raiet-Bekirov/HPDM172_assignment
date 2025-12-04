@@ -242,6 +242,7 @@ This produces the following output:
 | Maryam Yau          | 2027-07-07       |
 | Stanisław Angelova  | 2027-07-07       |
 +---------------------+------------------+
+```
 ### Query 14: `query_name.sql`
 
 ### Query 15: `query_name.sql`
