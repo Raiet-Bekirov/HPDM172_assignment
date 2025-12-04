@@ -1,269 +1,714 @@
 medication_id	medication_name	disease_id
-1	Acetazolamide	8
-2	Acetylcysteine	6
-3	Albuterol	6
-4	Alprazolam	1
-5	Amiloride	8
-6	Aminophylline	6
-7	Amitriptyline	1
-8	Amobarbital	1
-9	Acetylsalicylic Acid	1
-10	Bendroflumethiazide	8
-11	Bromazepam	1
-12	Bromocriptine	10
-13	Brompheniramine	6
-14	Buprenorphine	5
-15	Buspirone	1
-16	Calcium Carbonate	4
-17	Cefaclor	6
-18	Clorazepate	1
-19	Chlordiazepoxide	1
-20	Chlorpheniramine	6
-21	Chlorpromazine	1
-22	Chlorpropamide	10
-23	Cholecalciferol	4
-24	Ciprofloxacin	6
-25	Cisplatin	9
-26	Citalopram	1
-27	Clonidine	4
-28	Clopamide	1
-29	Codeine	6
-30	Deferoxamine	4
-31	Dexamethasone	8
-32	Dextromethorphan	6
-33	Diazepam	1
-34	Diltiazem	2
-35	Disopyramide	2
-36	Doxepin	1
-37	Doxylamine	6
-38	Diprophylline	6
-39	Enalaprilat	8
-40	Epinephrine	1
-41	Amifostine	4
-42	Etoposide	9
-43	Felodipine	8
-44	Flecainide	2
-45	Fluorouracil	3
-46	Glibenclamide	10
-47	Glipizide	10
-48	Glyceryl Trinitrate	8
-49	Glycopyrrolate	6
-50	Guaifenesin	6
-51	Heparin	2
-52	Hydralazine	8
-53	Hydroxyurea	9
-54	Hydroxyzine	1
-55	Indapamide	8
-56	Isosorbide	8
-57	Isosorbide Dinitrate	8
-58	Labetalol	8
-59	Leucovorin	3
-60	Lorazepam	1
-61	Magnesium Hydroxide	4
-62	Mannitol	8
-63	Maprotiline	1
-64	Melatonin	7
-65	Meprobamate	1
-66	Metformin	10
-67	Levomepromazine	1
-68	Metoclopramide	10
-69	Metolazone	8
-70	Midazolam	1
-71	Mifepristone	10
-72	Ipratropium	6
-73	Nadolol	8
-74	Niacin	10
-75	Nitroprusside	8
-76	Nortriptyline	1
-77	Ofloxacin	6
-78	Metaproterenol	6
-79	Oxazepam	1
-80	Oxymetazoline	6
-81	Oxymorphone	1
-82	Phenobarbital	1
-83	Phentermine	10
-84	Phenylephrine	6
-85	Phenylpropanolamine	6
-86	Prazosin	8
-87	Prednisolone	8
-88	Procainamide	2
-89	Prochlorperazine	1
-90	Propafenone	2
-91	Propranolol	8
-92	Pseudoephedrine	6
-93	Quinidine	2
-94	Sotalol	2
-95	Spironolactone	8
-96	Sulfamethoxazole	6
-97	Terbutaline	6
-98	Tetracycline	6
-99	Theophylline	6
-100	Thiamine	8
-101	Timolol	8
-102	Tolazamide	10
-103	Tolbutamide	10
-104	Trazodone	1
-105	Triamterene	8
-106	Trichlormethiazide	8
-107	Trifluoperazine	1
-108	Trimethoprim	6
-109	Sulfamethoxazole / Trimethoprim	6
-110	Ubiquinone	8
-111	Warfarin	2
-112	Gemcitabine	9
-113	Fomepizole	4
-114	Acarbose	10
-115	Amlodipine	8
-116	Benazepril	8
-117	Bisoprolol	8
-118	Cefprozil	6
-119	Budesonide	6
-120	Carvedilol	8
-121	Cefpodoxime	6
-122	Ceftibuten	6
-123	Choline Theophyllinate	6
-124	Cilazapril	8
-125	Clarithromycin	6
-126	Clidinium	1
-127	Clobazam	1
-128	Coenzyme Q10	8
-129	Dexbrompheniramine	6
-130	Dexchlorpheniramine	6
-131	Dihematoporphyrin Ether	9
-132	Fenoldopam	8
-133	Iron Saccharate	4
-134	Cefixime	6
-135	Cefdinir	6
-136	Formoterol	6
-137	Glimepiride	10
-138	Lomefloxacin	6
-139	Magaldrate	4
-140	Miglitol	10
-141	Moexipril	8
-142	Nebivolol	8
-143	Oxaliplatin	3
-144	Paroxetine	1
-145	Pioglitazone	10
-146	Quinapril	8
-147	Ramipril	8
-148	Salmeterol	6
-149	Simvastatin	10
-150	Orlistat	10
-151	Tibolone	1
-152	Trandolapril	8
-153	Vinorelbine	9
-154	Venlafaxine	1
-155	Ibutilide	2
-156	Bupropion	7
-157	Fluvoxamine	7
-158	Dofetilide	2
-159	Doxazosin	8
-160	Esmolol	8
-161	Insulin, Aspart, Human	10
-162	Loteprednol Etabonate	8
-163	Milrinone	8
-164	Perindopril	8
-165	Paclitaxel	9
-166	Topotecan	9
-167	Chromium Picolinate	10
-168	Exenatide	10
-169	Somatropin	8
-170	Pemetrexed	9
-171	Ziconotide	5
-172	Tiotropium	6
-173	Docetaxel	9
-174	Repaglinide	10
-175	Paricalcitol	4
-176	Reteplase	8
-177	Levofloxacin	6
-178	Eprosartan	8
-179	Cefditoren	6
-180	Rosiglitazone	10
-181	Insulin Lispro	10
-182	Epoetin Alfa	4
-183	Trovafloxacin	6
-184	Gemifloxacin	6
-185	Moxifloxacin	6
-186	Insulin Detemir	10
-187	Pramlintide	10
-188	Colesevelam	10
-189	Capecitabine	3
-190	Calcium Acetate	4
-191	Candesartan	8
-192	Sevelamer	4
-193	Gatifloxacin	6
-194	Dronedarone	2
-195	Loteprednol	8
-196	Levalbuterol	6
-197	Insulin (human)	10
-198	Bevacizumab	9
-199	Nateglinide	10
-200	Insulin Glargine	10
-201	Perflutren	8
-202	Darbepoetin Alfa	4
-203	Fluticasone / Salmeterol	6
-204	Kava	1
-205	Eplerenone	8
-206	Arformoterol	6
-207	Insulin, Protamine Lispro, Human	10
-208	Olmesartan	8
-209	Escitalopram	1
-210	Aliskiren	8
-211	Gefitinib	9
-212	Erlotinib	9
-213	Dornase Alfa	6
-214	Insulin, Aspart Protamine, Human	10
-215	Tolvaptan	8
-216	Fenugreek Seed Preparation	6
-217	Insulin Glulisine	10
-218	Cinacalcet	4
-219	Ferumoxytol	4
-220	Liraglutide	10
-221	Butabarbital	1
-222	Sitagliptin	10
-223	Methoxy Polyethylene Glycol-Epoetin Beta	4
-224	Saxagliptin	10
-225	Dabigatran Etexilate	2
-226	Azilsartan	8
-227	Roflumilast	6
-228	Linagliptin	10
-229	Rivaroxaban	2
-230	Indacaterol	6
-231	Crizotinib	9
-232	Lorcaserin	10
-233	Aclidinium	6
-234	Regorafenib	3
-235	Apixaban	2
-236	Alogliptin	10
-237	Dabrafenib	9
-238	Trametinib	9
-239	Afatinib	9
-240	Lixisenatide	10
-241	Umeclidinium	6
-242	Albiglutide	10
-243	Ceritinib	9
-244	Ramucirumab	9
-245	Empagliflozin	10
-246	Olodaterol	6
-247	Dabigatran	2
-248	Perindoprilat	8
-249	Pembrolizumab	9
-250	Dulaglutide	10
-251	Naloxegol	5
-252	Nivolumab	9
-253	Edoxaban	2
-254	Insulin, Isophane	10
-255	Ivabradine	8
-256	Sacubitril	8
-257	Insulin Degludec	10
-258	Asfotase Alfa	4
-259	Osimertinib	9
-260	Necitumumab	9
-261	Alectinib	9
-262	Atezolizumab	9
-263	Etelcalcetide	4
-264	Naldemedine	5
-265	Durvalumab	9
-266	Brigatinib	9
-267	Semaglutide	10
-268	Ertugliflozin	10
+1	5-Hydroxytryptophan	1
+2	Acenocoumarol	2
+3	Acetazolamide	8
+4	Acetylcysteine	6
+5	Aciclovir	4
+6	Corticotropin	8
+7	Albendazole	8
+8	Albuterol	6
+9	Ethanol	10
+10	Alfentanil	4
+11	Allopurinol	4
+12	Eflornithine	3
+13	Alprazolam	1
+14	Alprostadil	10
+15	Aluminium Hydroxide	6
+16	Amantadine	10
+17	Mitomycin	9
+18	Amikacin	4
+19	Amiodarone	2
+20	Amitriptyline	1
+21	Amobarbital	1
+22	Amoxapine	1
+23	Amoxicillin	6
+24	Ampicillin	6
+25	Apomorphine	1
+26	Arginine	10
+27	Ascorbic Acid	3
+28	Aztreonam	6
+29	Bacitracin	5
+30	Benzoyl Peroxide	1
+31	Benzphetamine	10
+32	Berberine	10
+33	Betamethasone	2
+34	Biotin	10
+35	Boric Acid	6
+36	Botulinum Toxin Type A	5
+37	Bromazepam	1
+38	Bupivacaine	5
+39	Buspirone	1
+40	1,25-Dihydroxycholecalciferol	4
+41	Calcium	4
+42	Calcium Hydroxide	6
+43	Carbocisteine	6
+44	Cefaclor	6
+45	Cefotaxime	6
+46	Ceftazidime	6
+47	Cefuroxime	6
+48	Clorazepate	1
+49	Chlorcyclizine	6
+50	Chlordiazepoxide	1
+51	Chlorpromazine	1
+52	Cholesterol	10
+53	Ciprofloxacin	6
+54	Cisplatin	9
+55	Citalopram	1
+56	Citrulline	8
+57	Clindamycin	6
+58	Clonazepam	10
+59	Clopamide	1
+60	Colchicine	2
+61	Collagen	2
+62	Cortisone	8
+63	Cosyntropin	8
+64	Cyclopenthiazide	8
+65	Cyclophosphamide	9
+66	Cysteamine	4
+67	Deferoxamine	4
+68	Desmopressin	10
+69	Dexamethasone	8
+70	Dextromethorphan	6
+71	Diazepam	1
+72	Diazoxide	8
+73	Dicloxacillin	6
+74	Amfepramone	10
+75	Dihydroergotamine	6
+76	Dinoprostone	10
+77	Dopamine	4
+78	Doxapram	6
+79	Doxycycline	6
+80	Droperidol	1
+81	Diprophylline	6
+82	Enflurane	1
+83	Ephedrine	6
+84	Epirubicin	9
+85	Ergocalciferol	4
+86	Ergotamine	1
+87	Erythromycin	6
+88	Estazolam	1
+89	Ethionamide	10
+90	Ethylestrenol	4
+91	Etoposide	9
+92	Famotidine	4
+93	Flecainide	2
+94	Flumazenil	1
+95	Fluorouracil	3
+96	Flurbiprofen	8
+97	Folic Acid	10
+98	Fructose	10
+99	Gemfibrozil	10
+100	Glucagon	10
+101	Glucose	8
+102	Glutamine	10
+103	Glutathione	10
+104	Glyceryl Trinitrate	8
+105	Guaifenesin	6
+106	Heparin	2
+107	Histidine	4
+108	Hydroxyurea	9
+109	Idarubicin	8
+110	Ifosfamide	9
+111	Indometacin	8
+112	Inositol	10
+113	Inulin	10
+114	Isocarboxazid	1
+115	Isoflurane	1
+116	Isoprenaline	8
+117	Isosorbide	8
+118	Isosorbide Dinitrate	8
+119	Ketamine	5
+120	Leucovorin	3
+121	Levamisole	3
+122	Levorphanol	1
+123	Lidocaine	5
+124	Lincomycin	6
+125	Lithium	1
+126	Loperamide	6
+127	Lorazepam	1
+128	Lovastatin	10
+129	Loxapine	6
+130	Magnesium	10
+131	Magnesium Chloride	10
+132	Magnesium Sulfate	10
+133	Maprotiline	1
+134	Melatonin	7
+135	Melphalan	4
+136	Menthol	6
+137	Mephentermine	8
+138	Meprobamate	1
+139	Methotrexate	9
+140	Levomepromazine	1
+141	Metronidazole	6
+142	Metyrapone	8
+143	Mexiletine	5
+144	Midazolam	1
+145	Midodrine	10
+146	Mifepristone	10
+147	Minocycline	6
+148	Ipratropium	6
+149	Naloxone	1
+150	Naphazoline	6
+151	Naproxen	5
+152	Niacin	10
+153	Niacinamide	10
+154	Nitrazepam	1
+155	Nitrogen	9
+156	Nitroprusside	8
+157	Norepinephrine	1
+158	Octreotide	10
+159	Ofloxacin	6
+160	Orphenadrine	1
+161	Oxacillin	6
+162	Oxandrolone	5
+163	Oxymetazoline	6
+164	Pancuronium	4
+165	Benzylpenicillin	6
+166	Pentamidine	6
+167	Perphenazine	1
+168	Pheniramine	6
+169	Phentermine	10
+170	Phenylephrine	6
+171	Phenytoin	4
+172	Lecithin	1
+173	Phosphatidylethanolamines	6
+174	Phytic Acid	3
+175	Pine Tar	6
+176	Piperacillin	6
+177	Macrogol	10
+178	Potassium Iodide	6
+179	Primidone	1
+180	Probenecid	8
+181	Procainamide	2
+182	Procarbazine	9
+183	Fenofibrate	10
+184	Prochlorperazine	1
+185	Propafenone	2
+186	Propolis	6
+187	Proscillaridin	8
+188	Psyllium	10
+189	Mepyramine	6
+190	Quercetin	10
+191	Quinidine	2
+192	Ribavirin	6
+193	Roxithromycin	6
+194	Ademetionine	1
+195	Saccharomyces Cerevisiae	10
+196	Salicylamide	6
+197	Samarium	9
+198	Selegiline	1
+199	L-Serine	10
+200	Silver Preparation	10
+201	Simethicone	6
+202	Sodium Oxybate	1
+203	Streptozocin	10
+204	Sucralfate	3
+205	Sulfamethoxazole	6
+206	Sulindac	5
+207	Tannic Acid	5
+208	Teniposide	9
+209	Terbutaline	6
+210	Testosterone	6
+211	Tetracycline	6
+212	Theophylline	6
+213	Ticarcillin	6
+214	Tolnaftate	1
+215	Tramadol	5
+216	Trazodone	1
+217	Triamcinolone	8
+218	Triazolam	1
+219	Trifluoperazine	1
+220	Trifluridine	3
+221	Trimethoprim	6
+222	Sulfamethoxazole / Trimethoprim	6
+223	Trimipramine	1
+224	Ubiquinone	8
+225	Vanadium	10
+226	Vinblastine	9
+227	Vincristine	9
+228	Vitamin A	10
+229	Vitamin E	8
+230	Glucomannan	10
+231	Pamidronate	8
+232	Doxercalciferol	4
+233	Deferiprone	8
+234	Vigabatrin	6
+235	Fomepizole	4
+236	Decitabine	4
+237	Mirtazapine	1
+238	Astaxanthin	10
+239	Azithromycin	6
+240	Cefprozil	6
+241	Nesiritide	8
+242	Bromfenac	8
+243	Budesonide	6
+244	Butalbital	1
+245	Acrivastine	6
+246	Carbetapentane	6
+247	Cefepime	6
+248	Cefpodoxime	6
+249	Ceftibuten	6
+250	Choline Theophyllinate	6
+251	Cilostazol	8
+252	Cineole	6
+253	Clarithromycin	6
+254	Clidinium	1
+255	Clobazam	1
+256	Cobamamide	1
+257	Coenzyme Q10	8
+258	Decanoic Acid	10
+259	Dexbrompheniramine	6
+260	Difenoxin	1
+261	Dihematoporphyrin Ether	9
+262	Epigallocatechin Gallate	10
+263	Finasteride	1
+264	Cefixime	6
+265	Cefdinir	6
+266	Formoterol	6
+267	Guar Gum	10
+268	Homatropine	6
+269	Leflunomide	4
+270	Desflurane	1
+271	Itraconazole	9
+272	Lamotrigine	4
+273	Lofexidine	4
+274	Lomefloxacin	6
+275	Magnesium Carbonate	10
+276	Magnesium Trisilicate	10
+277	Methylnaltrexone	5
+278	Modafinil	1
+279	Paroxetine	1
+280	Clopidogrel	2
+281	Phendimetrazine	10
+282	Phenyltoloxamine	6
+283	Picosulfate Sodium	3
+284	Pirbuterol	6
+285	Potassium Bicarbonate	6
+286	Pramoxine	5
+287	Anti-D (rh) Immunoglobulin	4
+288	Royal Jelly	10
+289	Ketorolac	8
+290	Salmeterol	6
+291	Sevoflurane	1
+292	Sodium Bicarbonate	3
+293	Sodium Phosphate	3
+294	Sodium Sulfate	3
+295	Soy Proteins	10
+296	Stevioside	10
+297	Orlistat	10
+298	Tetrahydrozoline	6
+299	Theanine	1
+300	Tibolone	1
+301	Ubiquinol	8
+302	Vinorelbine	9
+303	Venlafaxine	1
+304	Carboplatin	9
+305	Fluticasone	6
+306	Fluvastatin	10
+307	Ibutilide	2
+308	Tacrolimus	10
+309	Fleroxacin	6
+310	Lithium Carbonate	1
+311	Pravastatin	10
+312	Aspartate	10
+313	Cromoglicic Acid	6
+314	Vitamin B6	8
+315	Clofarabine	1
+316	Dofetilide	2
+317	Quetiapine	10
+318	Lithium Citrate	1
+319	Loteprednol Etabonate	8
+320	Magnesium Gluconate	10
+321	Magnesium Salicylate	1
+322	Milrinone	8
+323	Pamabrom	8
+324	Potassium Acetate	6
+325	Potassium Citrate	6
+326	Sodium Polystyrene Sulfonate	4
+327	Sufentanil	5
+328	Paclitaxel	9
+329	Topotecan	9
+330	Eucalyptus Oil	6
+331	Dorzolamide	8
+332	Olanzapine	1
+333	Ursodeoxycholate	10
+334	Racepinephrine	1
+335	Lanreotide	10
+336	Filgrastim	9
+337	Pemetrexed	9
+338	Ziconotide	5
+339	Borage Oil	6
+340	Policosanol	10
+341	Zanamivir	6
+342	Aldesleukin	4
+343	Linoleate	10
+344	Ropinirole	4
+345	Docetaxel	9
+346	Tirofiban	10
+347	Paricalcitol	4
+348	Bosentan	8
+349	Reteplase	8
+350	Zoledronic Acid	10
+351	Plantago Seed	10
+352	Levofloxacin	6
+353	Saquinavir	6
+354	Cefditoren	6
+355	Ritonavir	10
+356	Montelukast	6
+357	Methscopolamine	6
+358	Witch Hazel	6
+359	Potassium Gluconate	6
+360	Iron	4
+361	Anise Oil	10
+362	Thyme Oil	6
+363	Bran	10
+364	Ispaghula Husk	10
+365	Rabeprazole	4
+366	Becaplermin	10
+367	Trovafloxacin	6
+368	Ziprasidone	10
+369	Bilberry Extract	10
+370	Cranberry Preparation	10
+371	Orange	1
+372	Olopatadine	6
+373	Sildenafil	10
+374	Gemifloxacin	6
+375	Magnesium Orotate	10
+376	Moxifloxacin	6
+377	Pramlintide	10
+378	Colesevelam	10
+379	Everolimus	9
+380	Magnesium Aspartate	10
+381	Rivastigmine	6
+382	Daclizumab	8
+383	Linezolid	4
+384	Tipranavir	10
+385	Infliximab	6
+386	Capecitabine	3
+387	Palivizumab	6
+388	Soy Protein Isolate	10
+389	Samarium Sm153	9
+390	Evening Primrose Oil	10
+391	Acetaminophen / Diphenhydramine	6
+392	Acrivastine / Pseudoephedrine	6
+393	Amiloride / Hydrochlorothiazide	8
+394	Amitriptyline / Chlordiazepoxide	1
+395	Brompheniramine / Phenylephrine	6
+396	Calcium Acetate	4
+397	Chlorpheniramine / Phenylephrine	6
+398	Codeine / Guaifenesin	6
+399	Dextromethorphan / Guaifenesin	6
+400	Doxorubicin Liposome	8
+401	Etanercept	4
+402	Guaifenesin / Pseudoephedrine	6
+403	Loperamide / Simethicone	6
+404	Magnesium Lactate	10
+405	Pseudoephedrine / Triprolidine	6
+406	Sevelamer	4
+407	Magnesium, Chelated	10
+408	Polyethylene Glycol 3350	3
+409	Chamomile Flowers	1
+410	Trastuzumab	8
+411	Echinacea Preparation	6
+412	Gatifloxacin	6
+413	Red Yeast Rice	9
+414	Lanthanum Carbonate	4
+415	Cherry	10
+416	Cynara Preparation	8
+417	Calcium Saccharate	3
+418	Magnesium Sulfate Heptahydrate	10
+419	Trospium	8
+420	Loteprednol	8
+421	Grape Seed Extract	8
+422	Levalbuterol	6
+423	Valerian Root Extract	1
+424	Peginterferon Alfa-2b	6
+425	Hops Extract	1
+426	Milk Thistle Seed Extract	10
+427	Yucca Extract	10
+428	Black Pepper Preparation	6
+429	Verbena Extract	8
+430	Echinacea Purpurea Extract	6
+431	Evening Primrose Extract	10
+432	Phenylephrine / Pyrilamine	6
+433	Skullcap Preparation	1
+434	Panitumumab	3
+435	Sodium Ascorbate	3
+436	Gallium (67ga) Citrate	9
+437	Pegvisomant	10
+438	Hawthorn Berry	8
+439	Magnesium Malate	10
+440	Perflutren	8
+441	Rasburicase	4
+442	Cider Vinegar	10
+443	Darbepoetin Alfa	4
+444	Fluticasone / Salmeterol	6
+445	Glyburide / Metformin	10
+446	Matricaria Chamomilla Extract	1
+447	Red Clover Preparation	6
+448	Apis Mellifera Preparation	10
+449	Kava	1
+450	Alfalfa Preparation	10
+451	Cinnamon Preparation	10
+452	Honey Preparation	10
+453	Soybean Preparation	10
+454	Nepafenac	8
+455	Rosuvastatin	10
+456	Arformoterol	6
+457	D-Biotin	10
+458	Egg Yolk Phospholipids	1
+459	Insulin, Protamine Lispro, Human	10
+460	Horse Chestnut Preparation	8
+461	Parsley Extract	10
+462	Cetuximab	3
+463	Broccoli Preparation	10
+464	Thyme Preparation	6
+465	Legume Preparation	10
+466	Fondaparinux	8
+467	Adalimumab	4
+468	Gefitinib	9
+469	Erlotinib	9
+470	Dornase Alfa	6
+471	Sarracenia Purpurea Preparation	10
+472	Saccharomyces Cerevisiae Allergenic Extract	10
+473	Glipizide / Metformin	10
+474	Insulin, Aspart Protamine, Human	10
+475	Natalizumab	8
+476	Sunitinib	9
+477	Tadalafil	10
+478	Apple Cider Vinegar	10
+479	Tigecycline	10
+480	Budesonide / Formoterol	6
+481	Cinacalcet	4
+482	Olive Leaf Extract	10
+483	Ferumoxytol	4
+484	Magnesium Glycinate	10
+485	Butabarbital	1
+486	Omega-3 Acid Ethyl Esters (usp)	10
+487	Magnesium Amino Acid Chelate	10
+488	Polypodium Leucotomos	6
+489	Soybean Lecithin	1
+490	Stinging Nettle Extract	10
+491	Milnacipran	1
+492	Varenicline	6
+493	Articaine	5
+494	Vildagliptin	10
+495	Chlorpheniramine / Codeine	6
+496	Acetaminophen / Guaifenesin	6
+497	Human Secretin	8
+498	Chlordiazepoxide / Clidinium	1
+499	Tocilizumab	4
+500	Gamma-Linolenate	10
+501	Gamma-Aminobutyrate	1
+502	Lubiprostone	5
+503	Wheat Dextrin	3
+504	Calcium Carbonate / Simethicone	6
+505	Ecallantide	1
+506	Green Tea Extract	10
+507	Pralatrexate	4
+508	Pyridoxine	8
+509	Diphenhydramine / Phenylephrine	6
+510	Oregano Oil	6
+511	Pazopanib	9
+512	Pomegranate Extract	6
+513	Methoxy Polyethylene Glycol-Epoetin Beta	4
+514	Desvenlafaxine	1
+515	Poliovirus Vaccine Inactivated, Type 1 (mahoney)	6
+516	Poliovirus Vaccine Inactivated, Type 2 (mef-1)	6
+517	Poliovirus Vaccine Inactivated, Type 3 (saukett)	6
+518	Hepatitis B Surface Antigen Vaccine	6
+519	Haemophilus Influenzae Type B, Capsular Polysaccharide Inactivated Tetanus Toxoid Conjugate Vaccine	6
+520	Acellular Pertussis Vaccine, Inactivated	6
+521	Diphtheria Toxoid Vaccine, Inactivated	6
+522	Clostridium Tetani Toxoid Antigen, Inactivated	6
+523	Metformin / Repaglinide	10
+524	Chlorcyclizine / Pseudoephedrine	6
+525	Albumin Human, Usp	8
+526	Acacia Pollen Extract	10
+527	Rimabotulinumtoxinb	5
+528	Pitavastatin	10
+529	Levoleucovorin	3
+530	Kidney Bean Allergenic Extract	10
+531	Lima Bean Allergenic Extract	10
+532	Soybean Allergenic Extract	10
+533	String Bean Allergenic Extract	10
+534	English Walnut Allergenic Extract	10
+535	Apple Allergenic Extract	10
+536	Carrot Allergenic Extract	10
+537	Fragaria Ananassa Allergenic Extract	8
+538	Tomato Allergenic Extract	10
+539	Citrus Aurantium Dulcis Allergenic Extract	1
+540	Potato Allergenic Extract	8
+541	Allspice Allergenic Extract	6
+542	Black Pepper Allergenic Extract	6
+543	Blackberry Allergenic Extract	10
+544	Blueberry Allergenic Extract	10
+545	Brassica Botrytis Allergenic Extract	10
+546	Buckwheat Allergenic Extract	10
+547	Cabbage Allergenic Extract	9
+548	Plum Allergenic Extract	10
+549	Cinnamon Allergenic Extract	10
+550	Cranberry Allergenic Extract	10
+551	Parsley Allergenic Extract	10
+552	Whole Wheat Allergenic Extract	10
+553	Prunus Avium Allergenic Extract	10
+554	Green Olive Allergenic Extract	10
+555	Ficus Carica Allergenic Extract	10
+556	Thyme Allergenic Extract	6
+557	Radish Allergenic Extract	6
+558	Heme Iron Polypeptide	6
+559	Citicoline	10
+560	Phenylephrine / Triprolidine	6
+561	Doxylamine / Pseudoephedrine	6
+562	Bay Leaf Allergenic Extract	10
+563	Oregano Allergenic Extract	6
+564	Horseradish Allergenic Extract	6
+565	Sour Cherry Allergenic Extract	10
+566	Wheat Bran Allergenic Extract	10
+567	Dabigatran Etexilate	2
+568	Vilazodone	1
+569	Roflumilast	6
+570	Belimumab	1
+571	Pimobendan	8
+572	Rivaroxaban	2
+573	Indacaterol	6
+574	Tolu Balsam	6
+575	Ticagrelor	6
+576	Crizotinib	9
+577	Becaplermin Topical Product	10
+578	Vismodegib	9
+579	Linagliptin / Metformin	10
+580	Ivacaftor	6
+581	Pomegranate Fruit Extract	6
+582	Pertuzumab	8
+583	Lorcaserin	10
+584	Phentermine / Topiramate	10
+585	Aclidinium	6
+586	Eucalyptus Globulus Leaf Extract	6
+587	Bergamot Oil	1
+588	Pine Needle Oil (pinus Sylvestris)	6
+589	Chinese Cinnamon Extract	10
+590	Atractylodes Japonica Root Extract	9
+591	White Mulberry Extract	10
+592	Lavandula Angustifolia Subsp. Angustifolia Flowering Top Extract	1
+593	Copaifera Officinalis Resin	6
+594	Xanthan Gum	10
+595	Tamarind Seed Extract	6
+596	Cajuput Oil	6
+597	Cedar Leaf Oil	6
+598	Sandalwood Oil	6
+599	Chamomile Extract	1
+600	Coconut Oil	6
+601	Olive Oil	10
+602	Plantago Lanceolata Leaf Extract	6
+603	Asclepias Tuberosa Root Extract	6
+604	Chia Seed Extract	10
+605	Angelica Archangelica Root Extract	1
+606	Quillaja Saponaria Bark Extract	6
+607	Medium Chain Triglycerides	10
+608	Piperine	6
+609	Raphanus Sativa Extract	6
+610	Plantago Major Extract	6
+611	Chondrus Crispus Extract	6
+612	Melissa Officinalis Extract	1
+613	Morinda Citrifolia Fruit Extract	10
+614	Quercus Alba Extract	6
+615	Regorafenib	3
+616	Ergothioneine	10
+617	Glycerol Tricaprylate	10
+618	Cardamom Extract	6
+619	Thymus Serpyllum Extract	6
+620	Equisetum Hyemale Extract	8
+621	Artemisia Vulgaris Root Extract	1
+622	Illicium Verum Seed Extract	6
+623	Fagopyrum Esculentum Extract	10
+624	Camellia Sinensis Whole Extract	10
+625	Orange Juice	1
+626	Thonzylamine	6
+627	Carnosine	10
+628	Fludeoxyglucose (18f)	8
+629	Hydroxycitronellal	6
+630	Polydextrose	10
+631	Pasireotide	10
+632	Ponatinib	10
+633	Symphytum Uplandicum Leaf Extract	6
+634	Alogliptin / Metformin	10
+635	Alogliptin / Pioglitazone	10
+636	Maritime Pine Extract	10
+637	Carrageenan	6
+638	Orange Peel Extract	1
+639	Morus Alba Extract	10
+640	Canada Balsam Extract	6
+641	Dragon's Blood Extract	10
+642	Achillea Mellefolium Extract	6
+643	Goldenseal Extract	6
+644	Lavandula Angustifolia Whole Extract	1
+645	Vilanterol	6
+646	Dabrafenib	9
+647	Sandalwood Extract	6
+648	Trametinib	9
+649	Yucca Schidigera Extract	10
+650	Lamium Album Extract	6
+651	Pimpinella Anisum Extract	10
+652	Horehound Extract	6
+653	Ophiocordyceps Sinensis Extract	9
+654	Afatinib	9
+655	Caraway Black Oil	10
+656	Levomilnacipran	1
+657	Wheat Preparation	10
+658	Doxylamine / Phenylephrine	6
+659	Sucroferric Oxyhydroxide	4
+660	White Mustard Seed Extract	6
+661	Umeclidinium	6
+662	Umeclidinium / Vilanterol	6
+663	Metreleptin	10
+664	Symphytum Officinale Whole Extract	6
+665	Ceritinib	9
+666	Artemisia Vulgaris Whole Extract	1
+667	Bergamot Orange Extract	1
+668	Canagliflozin / Metformin	10
+669	Olodaterol	6
+670	Dabigatran	2
+671	Trandolaprilat	8
+672	Fosinoprilat	8
+673	Perindoprilat	8
+674	Glycopyrronium	6
+675	Blueberry Extract	10
+676	Naloxegol	5
+677	L-Methylfolate	10
+678	Nintedanib	9
+679	Ferric Citrate	4
+680	Empagliflozin / Linagliptin	10
+681	C1 Esterase Inhibitor	1
+682	Sarracenia Purpurea Extract	10
+683	Ferric Pyrophosphate	4
+684	Ivabradine	8
+685	Sacubitril	8
+686	Sacubitril / Valsartan	8
+687	Olodaterol / Tiotropium	6
+688	Empagliflozin / Metformin	10
+689	Rebaudioside A	10
+690	Acacia	10
+691	Tipiracil	3
+692	Tipiracil / Trifluridine	3
+693	Patiromer	4
+694	Irinotecan Liposomal	3
+695	Asfotase Alfa	4
+696	Osimertinib	9
+697	Necitumumab	9
+698	Bush Mango Extract	10
+699	Alectinib	9
+700	Insulin Degludec / Liraglutide	10
+701	Dapagliflozin / Saxagliptin	10
+702	Atezolizumab	9
+703	Soy Isoflavones	10
+704	Insulin Glargine / Lixisenatide	10
+705	Etelcalcetide	4
+706	Naldemedine	5
+707	Durvalumab	9
+708	Brigatinib	9
+709	Emicizumab	8
+710	Ertugliflozin / Metformin	10
+711	Ertugliflozin / Sitagliptin	10
+712	Palmidrol	5
+713	Burosumab	10

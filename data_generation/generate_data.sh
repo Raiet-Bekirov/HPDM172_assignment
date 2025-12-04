@@ -19,7 +19,7 @@ curl -L -o first_names.csv https://raw.githubusercontent.com/sigpwned/popular-na
 
 curl -L -o last_names.csv https://raw.githubusercontent.com/sigpwned/popular-names-by-country-dataset/refs/heads/main/common-surnames-by-country.csv
 
-curl -L -o medications.csv https://www.vumc.org/wei-lab/sites/default/files/public_files/MEDI-2_HPS.csv
+curl -L -o medications.csv https://www.vumc.org/wei-lab/sites/default/files/public_files/MEDI-2.csv
 
 curl -L -o uk_postcodes.csv https://raw.githubusercontent.com/academe/UK-Postcodes/b0ec095967119671347074f44dd0a62f9e0830f1/postcodes.csv
 
@@ -42,7 +42,7 @@ lab_results_table.txt medications_table.txt patients_table.txt prescriptions_tab
 rm appointments_table.csv diseases_table.csv doctors_table.csv hospitals_table.csv \
 lab_results_table.csv medications_table.csv patients_table.csv prescriptions_table.csv
 
-rm -r source_data/
+# rm -r source_data/
 
 cd generated_data
 
