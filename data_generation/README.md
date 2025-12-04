@@ -25,7 +25,7 @@ The `hospitals_table.txt` file has seven columns:
 
 1. `doctors_id`:
 2. `doctor_name`: https://raw.githubusercontent.com/sigpwned/popular-names-by-country-dataset/refs/heads/main/common-forenames-by-country.csv, https://raw.githubusercontent.com/sigpwned/popular-names-by-country-dataset/refs/heads/main/common-surnames-by-country.csv
-3. `doctor_dob`: 
+3. `doctor_dob`:
 4. `doctor_address`: uk_postcodes.csv https://raw.githubusercontent.com/academe/UK-Postcodes/b0ec095967119671347074f44dd0a62f9e0830f1/postcodes.csv, https://data.ideal-postcodes.co.uk/incodes.csv?_gl=1*1fd2gym*_gcl_au*MTYyNjU4MTgyNS4xNzY0MzY1OTgz*_ga*OTM3MTg2NzM1LjE3NjQzNjU5ODM.*_ga_TCWN2YPGY5*czE3NjQzNjU5ODIkbzEkZzEkdDE3NjQzNjYxMTQkajYwJGwwJGgxNzA5MjcxNzE., https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3063381
 5. `hospital_id`:
 6. `disease_id`:
@@ -33,10 +33,10 @@ The `hospitals_table.txt` file has seven columns:
 ## Patients Data: `patients_table.txt`
 
 1. `patient_id`:
-2. `patient_name`: 
+2. `patient_name`:
 3. `patient_dob`:
 4. `patient_address`:
-5. `doctor_id`: 
+5. `doctor_id`:
 
 ## Medications Data: `medications_table.txt`
 
@@ -46,25 +46,25 @@ The `hospitals_table.txt` file has seven columns:
 ## Prescriptions Data: `prescriptions_table.txt`
 
 1. `prescription_id`:
-2. `prescription_date`: 
+2. `prescription_date`:
 3. `medication_id`:
 4. `patient_id`:
-5. `doctor_id`: 
+5. `doctor_id`:
 
 ## Appointments Data: `appointments_table.txt`
 
 1. `appointment_id`:
-2. `appointment_date`: 
+2. `appointment_date`:
 3. `patient_id`:
-4. `doctor_id`: 
+4. `doctor_id`:
 
 ## Lab Results: `lab_results_table.txt`
 
 1. `lab_result_id`:
-2. `test_date`: 
+2. `test_date`:
 3. `test_name`: https://www.therotherhamft.nhs.uk/services/pathology/biochemistry, https://www.hcahealthcare.co.uk/locations/hca-uk-laboratories
 4. `test_result`:
-5. `patient_id`: 
+5. `patient_id`:
 6. `doctor_id`:
 
 # Steps to Reproduce Generated Data
@@ -74,13 +74,13 @@ The `hospitals_table.txt` file has seven columns:
 Create a directory to store scripts and generated data, for example:
 
 ```shell
-mkdir /home/ubuntu/hpdm172/assignment/
+mkdir hosp_data
 ```
 
 Navigate to the created directory:
 
 ```shell
-cd /home/ubuntu/hpdm172/assignment/
+cd hosp_data
 ```
 
 Download the bash script used to generate the data:
@@ -110,7 +110,7 @@ wget https://raw.githubusercontent.com/Raiet-Bekirov/HPDM172\_assignment/refs/he
 Create a new conda environment from `data_gen_env.yml`:
 
 ```shell
-conda env create -f /home/ubuntu/hpdm172/assignment/data_gen_env.yml
+conda env create -f data_gen_env.yml
 ```
 
 Activate the conda environment `data_gen_env.yml`:

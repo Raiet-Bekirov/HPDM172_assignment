@@ -26,13 +26,13 @@ We also provide instructions for exporting and wiping the database once it is cr
 Make a directory to store the backup file, for example:
 
 ```shell
-mkdir /home/ubuntu/hpdm172/assignment/
+mkdir hosp_database
 ```
 
 Navigate to the created directory:
 
 ```shell
-cd /home/ubuntu/hpdm172/assignment/
+cd hosp_database
 ```
 
 Download the backup .sql file from GitHub:
@@ -62,7 +62,7 @@ quit
 Restore database from `hospitals_db.sql` (in the command below, replace `<USER-NAME>` with the appropriate MySQL server username):
 
 ```shell
-mysql -u <USER-NAME> -p hospitals_db < /home/ubuntu/hpdm172/assignment/hospitals_db.sql
+mysql -u <USER-NAME> -p hospitals_db < hospitals_db.sql
 ```
 
 The database should now be ready for use. See the `sql_queries/` directory for SQL scripts that can be used to extract useful information from `hospitals_db`.
@@ -72,13 +72,13 @@ The database should now be ready for use. See the `sql_queries/` directory for S
 Make a directory to store the scripts and data files, for example:
 
 ```shell
-mkdir /home/ubuntu/hpdm172/assignment/
+mkdir hosp_database
 ```
 
 Navigate to the created directory:
 
 ```shell
-cd /home/ubuntu/hpdm172/assignment/
+cd hosp_database
 ```
 
 Download the `fetch_data_files.sh` bash script from GitHub:
@@ -124,13 +124,13 @@ The database should now be ready for use. See the `sql_queries/` directory for S
 Make a directory to store input data, for example:
 
 ```shell
-mkdir /home/ubuntu/hpdm172/assignment/
+mkdir hosp_database
 ```
 
 Navigate to the created directory:
 
 ```shell
-cd /home/ubuntu/hpdm172/assignment/
+cd hosp_database
 ```
 
 Download the input data .zip file from GitHub:

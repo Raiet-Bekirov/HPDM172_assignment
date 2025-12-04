@@ -27,12 +27,12 @@ This repository containys SQL scipt files for nineteen different queries that ca
 Make directory to store SQL script files, for example:
 
 ```shell
-mkdir /home/ubuntu/hpdm172/assignment/queries
+mkdir queries
 ```
 Navigate to the created directory:
 
 ```shell
-cd /home/ubuntu/hpdm172/assignment/queries
+cd queries
 ```
 
 Download a query .sql file from GitHub, for example:
