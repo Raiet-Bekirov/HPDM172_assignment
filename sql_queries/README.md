@@ -14,7 +14,7 @@ This directory contains SQL scipt files for nineteen different queries that can 
 - [Query 10, `query_name.sql`](#query-10-query_namesql): List all doctors who specialize in a particular disease.
 - [Query 11, `query_name.sql`](#query-11-query_namesql): List all lab results for all patients over the age of 60.
 - [Query 12, `query_name.sql`](#query-12-query_namesql): Print a list of all appointments for a given patient.
-- [Query 13, `query_name.sql`](#query-13-query_namesql): Print a list of all appointments for a given doctor.
+- [Query 13, `list_of_all_appointments_for_a_doctor.sql`](#query-13-list_of_all_appointments_for_a_doctorsql): Print a list of all appointments for a given doctor.
 - [Query 14, `query_name.sql`](#query-14-query_namesql): Print all prescriptions made from a particular hospital ordered alphabetically by the name of the medication being prescribed – the output of this SQL query should include only these 4 columns: the medication name, the name of doctor who prescribed it, the name of the patient, and the name of hospital.
 - [Query 15, `query_name.sql`](#query-15-query_namesql): Print a list of all lab results from all hospitals that were accredited between 2013–2020.
 - [Query 16, `get_max_prescriber.sql`](#query-16-get_max_prescribersql): Identify which doctor has made the most prescriptions.
@@ -216,8 +216,32 @@ The first five rows of produced table:
 
 ### Query 12: `query_name.sql`
 
-### Query 13: `query_name.sql`
+### Query 13: `list_of_all_appointments_for_a_doctor.sql`
 
+If `list_of_all_appointments_for_a_doctor.sql` is downloaded, the following SQL code can be used to print a list of all appointments for a given doctor.First, select the `hospitals_db` database:
+```sql
+USE hospitals_db;
+```
+
+Then, run the `list_of_all_appointments_for_a_doctor.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+
+```sql
+source /filepath/of/list_of_all_appointments_for_a_doctor.sql
+```
+
+This produces the following output:
+
+```
++---------------------+------------------+
+| patient_name        | appointment_date |
++---------------------+------------------+
+| Liam Nikolovski     | 2027-07-07       |
+| Pedro Lombardo      | 2026-07-07       |
+| Filip Uch           | 2026-07-07       |
+| Maryam Yau          | 2027-07-07       |
+| Stanisław Angelova  | 2027-07-07       |
++---------------------+------------------+
+```
 ### Query 14: `query_name.sql`
 
 ### Query 15: `query_name.sql`
