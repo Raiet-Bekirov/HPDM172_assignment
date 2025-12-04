@@ -232,15 +232,14 @@ source /filepath/of/list_of_all_appointments_for_a_doctor.sql
 This produces the following output:
 
 ```
-+---------------------+------------------+
-| patient_name        | appointment_date |
-+---------------------+------------------+
-| Liam Nikolovski     | 2027-07-07       |
-| Pedro Lombardo      | 2026-07-07       |
-| Filip Uch           | 2026-07-07       |
-| Maryam Yau          | 2027-07-07       |
-| Stanisław Angelova  | 2027-07-07       |
-+---------------------+------------------+
++------------------+-----------------+-------------------+
+| appointment_date | patient_name    | doctor_name       |
++------------------+-----------------+-------------------+
+| 2026-07-07       | Helmi Koak      | Dr. Kora Kelmendi |
+| 2027-07-07       | Vusal Carvalho  | Dr. Kora Kelmendi |
+| 2027-07-07       | Danijel Almeida | Dr. Kora Kelmendi |
+| 2026-07-07       | Ren Ahmed       | Dr. Kora Kelmendi |
++------------------+-----------------+-------------------+
 ```
 ### Query 14: `query_name.sql`
 
