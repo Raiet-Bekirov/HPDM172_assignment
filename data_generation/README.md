@@ -12,7 +12,7 @@ We generated data according to the below entity relationship diagram.
 
 ### Hospital Data: `hospitals_table.txt`
 
-The file`generated_data/hospitals_table.txt` has seven columns:
+The file `generated_data/hospitals_table.txt` has seven columns:
 
 1. `hospital_id`: A unique identifier for each hospital.
 2. `hospital_name`: The name of each hospital. These were taken from a public csv file made available by the NHS.[^1]
