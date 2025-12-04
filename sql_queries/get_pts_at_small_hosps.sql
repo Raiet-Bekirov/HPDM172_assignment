@@ -2,7 +2,7 @@ SELECT
 	p.patient_id,
 	p.patient_name,
 	d.doctor_name,
-	h. hospital_name
+	h.hospital_name
 FROM patients p
 JOIN doctors d ON p.doctor_id = d.doctor_id
 JOIN hospitals h ON d.hospital_id = h.hospital_id
