@@ -218,8 +218,7 @@ The first five rows of produced table:
 
 ### Query 13: `query_name.sql`
 
-If `list_of_all_appointments_for_a_doctor.sql` is downloaded, the following SQL code can be used to print a list of all hospital names which were accredited prior to 2015 and do have Emergency Service facilities. First, select the `hospitals_db` database:
-
+If `list_of_all_appointments_for_a_doctor.sql` is downloaded, the following SQL code can be used to print a list of all appointments for a given doctor.First, select the `hospitals_db` database:
 ```sql
 USE hospitals_db;
 ```
@@ -227,7 +226,7 @@ USE hospitals_db;
 Then, run the `list_of_all_appointments_for_a_doctor.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
 
 ```sql
-source /filepath/of/get_emergency_hosps_accred_pre_2015.sql
+source /filepath/of/list_of_all_appointments_for_a_doctor.sql
 ```
 
 This produces the following output:
