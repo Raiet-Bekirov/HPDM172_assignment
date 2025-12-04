@@ -56,7 +56,7 @@ USE hospitals_db;
 Set any variables called by the SQL script file, for example:
 
 ```sql
-SET @HospitalID = 1;
+SET @HospitalID = 40;
 ```
 
 Execute the SQL script file, for example:
@@ -96,13 +96,13 @@ source /filepath/of/get_docs_at_hosp.sql
 This produces the following output:
 
 ```
-+---------------------+-----------+--------------------------+
-| hospital_name       | doctor_id | doctor_name              |
-+---------------------+-----------+--------------------------+
-| St Thomas' Hospital |        37 | Dr. Sara Chén            |
-| St Thomas' Hospital |        53 | Dr. Miguel De Los Santos |
-| St Thomas' Hospital |        59 | Dr. Ivana Bird           |
-+---------------------+-----------+--------------------------+
++-----------+--------------------------+---------------------+
+| doctor_id | doctor_name              | hospital_name       |
++-----------+--------------------------+---------------------+
+|        37 | Dr. Sara Chén            | St Thomas' Hospital |
+|        53 | Dr. Miguel De Los Santos | St Thomas' Hospital |
+|        59 | Dr. Ivana Bird           | St Thomas' Hospital |
++-----------+--------------------------+---------------------+
 ```
 
 ### Query 2: `get_prescriptions_for_patient.sql`
@@ -263,16 +263,16 @@ source /filepath/of/get_docs_at_biggest_hosp.sql
 This produces the following output:
 
 ```
-+-----------+------------------------+
-| doctor_id | doctor_name            |
-+-----------+------------------------+
-|        12 | Dr. Kajus Kang         |
-|        13 | Dr. Ximena Mizrachi    |
-|        19 | Dr. Elif Rossi         |
-|        21 | Dr. Vasileios Jönsson  |
-|        84 | Dr. Artiom Përmeti     |
-|        96 | Dr. Zoran Díaz         |
-+-----------+------------------------+
++-----------+------------------------+-------------------+
+| doctor_id | doctor_name            | hospital_name     |
++-----------+------------------------+-------------------+
+|        12 | Dr. Kajus Kang         | Worthing Hospital |
+|        13 | Dr. Ximena Mizrachi    | Worthing Hospital |
+|        19 | Dr. Elif Rossi         | Worthing Hospital |
+|        21 | Dr. Vasileios Jönsson  | Worthing Hospital |
+|        84 | Dr. Artiom Përmeti     | Worthing Hospital |
+|        96 | Dr. Zoran Díaz         | Worthing Hospital |
++-----------+------------------------+-------------------+
 ```
 
 ### Query 18: `get_emergency_hosps_accred_pre_2015.sql`
