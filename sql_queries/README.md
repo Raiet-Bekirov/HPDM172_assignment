@@ -1,6 +1,6 @@
-# SQL Queries
+# sql_queries
 
-This repository containys SQL scipt files for nineteen different queries that can be used to obtain information from `hospitals_db`.
+This directory contains SQL scipt files for nineteen different queries that can be used to obtain information from `hospitals_db`.
 
 - [Query 1, `get_docs_at_hosp.sql`](#query-1-get_docs_at_hospsql): Print a list of all doctors based at a particular hospital.
 - [Query 2, `get_prescriptions_for_patient.sql`](#query-2-get_prescriptions_for_patientsql): Print a list of all prescriptions for a particular patient, ordered by the prescription date.

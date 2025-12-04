@@ -16,6 +16,10 @@ Any MySQL user can duplicate our database, `hospitals_db`, using the data files 
 - [Option 2: Use the provided scripts to download the data files and create the database](#option-2-use-the-provided-scripts-to-download-the-data-files-and-create-the-database)
 - [Option 3: Download the data files and create the database from scratch](#option-3-download-the-data-files-and-create-the-database-from-scratch)
 
+Following these steps results in the creation of a MySQL relational database, with relationships between tables that correspond with those represented in the entity relationship diagram shown below.
+
+![](data_generation/hospitals_db_erd.png)
+
 We also provide instructions for exporting and wiping the database once it is created.
 
 - [Exporting the Database](#exporting-the-database)
