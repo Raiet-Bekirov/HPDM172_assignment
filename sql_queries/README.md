@@ -11,7 +11,7 @@ This directory contains SQL scipt files for nineteen different queries that can 
 - [Query 7, `query_name.sql`](#query-7-query_namesql): Print a list of all patient names and addresses for patients registered to doctors based at one particular hospital – that could be used for posting information mail to all of one hospital’s registered patients.
 - [Query 8, `query_name.sql`](#query-8-query_namesql): Print a list of all doctors based at Teaching hospitals which were accredited between 2015–2024.
 - [Query 9, `query_name.sql`](#query-9-query_namesql): List all patients who may have a particular disease based on which medication they have been prescribed.
-- [Query 10, `query_name.sql`](#query-10-query_namesql): List all doctors based at who specialize in a particular disease.
+- [Query 10, `query_name.sql`](#query-10-query_namesql): List all doctors who specialize in a particular disease.
 - [Query 11, `query_name.sql`](#query-11-query_namesql): List all lab results for all patients over the age of 60.
 - [Query 12, `query_name.sql`](#query-12-query_namesql): Print a list of all appointments for a given patient.
 - [Query 13, `query_name.sql`](#query-13-query_namesql): Print a list of all appointments for a given doctor.
