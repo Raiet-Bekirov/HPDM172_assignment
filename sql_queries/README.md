@@ -2,10 +2,10 @@
 
 This repository containys SQL scipt files for nineteen different queries that can be used to obtain information from `hospitals_db`.
 
-- [Query 1, `get_docs_at_hosp.sql`](#query-1-get_docs_at_hosp.sql): Print a list of all doctors based at a particular hospital.
-- [Query 2, `get_prescriptions_for_patient.sql`](#query-2-get_prescriptions_for_patient.sql): Print a list of all prescriptions for a particular patient, ordered by the prescription date. 
-- [Query 3, `get_prescriptions_from_doc.sql`](#query-3-get_prescriptions_from_doc.sql): Print a list of all prescriptions that a particular doctor has prescribed.
-- [Query 4, `get_prescriptions_for_all_patient_alphabetical.sql`](#query-4-get_prescriptions_for_all_patient_alphabetical.sql): Print a table showing all prescriptions ordered by the patient name alphabetically.
+- [Query 1, `get_docs_at_hosp.sql`](#query-1-get_docs_at_hospsql): Print a list of all doctors based at a particular hospital.
+- [Query 2, `get_prescriptions_for_patient.sql`](#query-2-get_prescriptions_for_patientsql): Print a list of all prescriptions for a particular patient, ordered by the prescription date. 
+- [Query 3, `get_prescriptions_from_doc.sql`](#query-3-get_prescriptions_from_docsql): Print a list of all prescriptions that a particular doctor has prescribed.
+- [Query 4, `get_prescriptions_for_all_patient_alphabetical.sql`](#query-4-get_prescriptions_for_all_patient_alphabeticalsql): Print a table showing all prescriptions ordered by the patient name alphabetically.
 - [Query 5, `query_name.sql`](#query-5-query_namesql): Add a new customer to the database, including being registered with one of the doctors.
 - [Query 6, `query_name.sql`](#query-6-query_namesql): Modify address details of an existing customer.
 - [Query 7, `query_name.sql`](#query-7-query_namesql): Print a list of all patient names and addresses for patients registered to doctors based at one particular hospital – that could be used for posting information mail to all of one hospital’s registered patients.
@@ -128,11 +128,11 @@ source /filepath/of/get_prescriptions_for_patient.sql
 This produces the following output:
 
 ```
-+-----------------+--------------------+-----------------+--------------------+
-| prescription_id | prescription_date  | medication_name | doctor_name        |
-+--------------------------------------+-----------------+--------------------+
-|150              | 2024-09-29         | Phenobarbital   | Dr. Kairo Savchenko|
-+-----------------+--------------------+-----------------+--------------------+
++-----------------+--------------------+-----------------+---------------------+
+| prescription_id | prescription_date  | medication_name | doctor_name         |
++--------------------------------------+-----------------+---------------------+
+| 150             | 2024-09-29         | Phenobarbital   | Dr. Kairo Savchenko |
++-----------------+--------------------+-----------------+---------------------+
 ```
 ### Query 3: `get_prescriptions_from_doc.sql`
 
@@ -181,13 +181,13 @@ source /filepath/of/get_prescriptions_for_all_patient_alphabetical.sql
 
 The first three rows of produced table:
 ```
-+-----------------+-----------------+-------------------+-----------------+----------------+
-| patient_name    | prescription_id | prescription_date | medication_name | doctor_name    |
-+-----------------+-----------------+-------------------+-----------------+----------------+
-| Aadhya Martínez | 427             | 2024-12-09        | Exenatide       | Dr. Sara Bai   |
-| Aadhya Martínez | 147             | 2024-12-12        | Gatifloxacin    | Dr. Sara Chén  |
-| Aadhya Martínez | 439             | 2024-12-15        | Loteprednol     | Dr. Dmytro Thy |
-+-----------------+-----------------+-------------------+-----------------+----------------+
++---------------------+-----------------+-------------------+-----------------+------------------------+
+| patient_name        | prescription_id | prescription_date | medication_name | doctor_name            |
++---------------------+-----------------+-------------------+-----------------+------------------------+
+| Ammar Abdrahmanov   |              38 | 2024-03-04        | Crizotinib      | Dr. Prem Perković      |
+| Ammar Abdrahmanov   |             326 | 2025-05-17        | Gatifloxacin    | Dr. Nikolaos Mikeladze |
+| Batkhaаn Abdullayev |              49 | 2025-05-09        | Pembrolizumab   | Dr. Zoran Díaz         |
++---------------------+-----------------+-------------------+-----------------+------------------------+
 ```
 
 ### Query 5: `query_name.sql`
