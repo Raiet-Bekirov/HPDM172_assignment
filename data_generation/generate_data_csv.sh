@@ -27,7 +27,6 @@ curl -L -o uk_postcode_ins.csv https://data.ideal-postcodes.co.uk/incodes.csv?_g
 tail -n +2 uk_postcode_ins.csv > cleaned_uk_postcode_ins.csv
 mv cleaned_uk_postcode_ins.csv uk_postcode_ins.csv
 
-
 mkdir source_data
 
 mv acute_trust_services.csv addresses.csv beds.csv cqc_inspections.csv first_names.csv \
