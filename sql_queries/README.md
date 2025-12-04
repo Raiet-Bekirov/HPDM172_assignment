@@ -218,7 +218,7 @@ The first three rows of produced table:
 
 ### Query 18: `query_name.sql`
 
-### Query 19: `query_name.sql`
+### Query 19: `get_pts_at_small_hosps.sql`
 
 If `get_pts_at_small_hosps.sql` is downloaded, the following SQL code can be used to print a list of patients registered with doctors who are based at hospital with <400 beds. First, select the `hospitals_db` database:
 
