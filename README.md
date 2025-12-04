@@ -51,7 +51,7 @@ Log on to a MySQL server (in the command below, replace `<USER-NAME>` with the a
 mysql -u <USER-NAME> -p
 ```
 
-Create new database:
+Create a new database:
 
 ```sql
 CREATE DATABASE hospitals_db;
@@ -63,13 +63,13 @@ Quit MySQL:
 quit
 ```
 
-Restore database from `hospitals_db.sql` (in the command below, replace `<USER-NAME>` with the appropriate MySQL server username):
+Restore the database from `hospitals_db.sql` (in the command below, replace `<USER-NAME>` with the appropriate MySQL server username):
 
 ```shell
 mysql -u <USER-NAME> -p hospitals_db < hospitals_db.sql
 ```
 
-The database should now be ready for use. See the `sql_queries/` directory for SQL scripts that can be used to extract useful information from `hospitals_db`.
+The database should now be ready for use. See the [`sql_queries/`](https://github.com/Raiet-Bekirov/HPDM172_assignment/tree/main/sql_queries) directory for SQL scripts that can be used to extract useful information from `hospitals_db`.
 
 ### Option 2: Use the provided scripts to download the data files and create the database
 
@@ -121,7 +121,7 @@ Execute the SQL script:
 source generate_db_from_data_files.sql
 ```
 
-The database should now be ready for use. See the `sql_queries/` directory for SQL scripts that can be used to extract useful information from `hospitals_db`.
+The database should now be ready for use. See the [`sql_queries/`](https://github.com/Raiet-Bekirov/HPDM172_assignment/tree/main/sql_queries) directory for SQL scripts that can be used to extract useful information from `hospitals_db`.
 
 ### Option 3: Download the data files and create the database from scratch
 
@@ -360,7 +360,7 @@ LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 ```
 
-The database should now be ready for use. See the `sql_queries/` directory for SQL scripts that can be used to extract useful information from `hospitals_db`.
+The database should now be ready for use. See the [`sql_queries/`](https://github.com/Raiet-Bekirov/HPDM172_assignment/tree/main/sql_queries) directory for SQL scripts that can be used to extract useful information from `hospitals_db`.
 
 ## Exporting the Database
 
