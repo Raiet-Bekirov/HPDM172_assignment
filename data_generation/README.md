@@ -12,7 +12,7 @@ We generated data according to the below entity relationship diagram.
 
 ### Hospital Data: `hospitals_table.txt`
 
-The `hospitals_table.txt` file has seven columns:
+The file`generated_data/hospitals_table.txt` has seven columns:
 
 1. `hospital_id`: A unique identifier for each hospital.
 2. `hospital_name`: The name of each hospital. These were taken from a public csv file made available by the NHS.[^1]
@@ -24,12 +24,14 @@ The `hospitals_table.txt` file has seven columns:
 
 ### Diseases Data: `diseases_table.txt`
 
-The `diseases_table.txt` file has two columns.
+The file `generated_data/diseases_table.txt` has two columns:
 
 1. `disease_id`: A unique identifier for each of the ten diseases represented in our database.
 2. `disease_name`: The name of the disease. The ten diseases we chose to include in our database were guided by the ten diseases projected by the Health Foundation to have the highest impact on health care use in the UK in 2040.[^7]  In their list they combined the third highest impact disease group, 'anxiety or depression' into one group, whereas we split it into two categories – anxiety disorder and major depressive disorder. We also chose two specific conditions – bowel cancer and lung cancer – to represent their fourth highest impact disease group, 'cancer'. Bowel and lung cancer were chosen because they were the only cancers in the top three highest incidence causes of cancer for both men and women in the UK between 2017 and 2019.[^8]   For the second highest impact condition included in their list – 'diabetes' – we chose to only include type 2 diabetes, as around 90% of people in the UK with a diabetes diagnosis have type 2 diabetes.[^9]
 
 ### Doctors Data: `doctors_table.txt`
+
+The file `generated_data/doctors_table.txt` file has six columns:
 
 1. `doctors_id`: A unique identifier for each doctor.
 2. `doctor_name`: The name of the doctor. First and last names were randomly selected from an open source dataset of popular names.[^10] 
@@ -40,6 +42,8 @@ The `diseases_table.txt` file has two columns.
 
 ### Patients Data: `patients_table.txt`
 
+The file `generated_data/patients_table.txt` file has five columns:
+
 1. `patient_id`: A unique identifier for each patient.
 2. `patient_name`: The name of the patient. Generated in the same way as the doctors' names.
 3. `patient_dob`: A randomly chosen date between 01/01/1999 and 31/12/2004.
@@ -48,11 +52,15 @@ The `diseases_table.txt` file has two columns.
 
 ### Medications Data: `medications_table.txt`
 
+The file `generated_data/medications_table.txt` file has three columns:
+
 1. `medication_id`: A unique identifier for each medication.
 2. `medication_name`: The name of the medication. Medication names and indications were derived from an open source dataset made available by Vanderbilt University Medical Center.[^14]
 3. `disease_id`: The ID number of the disease the medication is indicated for.
 
 ### Prescriptions Data: `prescriptions_table.txt`
+
+The file `generated_data/prescriptions_table.txt` has five columns:
 
 1. `prescription_id`: A unique identifier for each prescription.
 2. `prescription_date`: A randomly chosen date between 01/01/2024 and 29/11/2025.
@@ -62,12 +70,16 @@ The `diseases_table.txt` file has two columns.
 
 ### Appointments Data: `appointments_table.txt`
 
+The file `generated_data/appointments_table.txt` has four columns:
+
 1. `appointment_id`: A unique identifier for each appointment.
 2. `appointment_date`: A randomly chosen date between 01/01/2026 and 31/12/2027.
 3. `patient_id`: The ID number of the patient the appointment is for.
 4. `doctor_id`: The ID number of the doctor the appointment is with.
 
 ### Lab Results: `lab_results_table.txt`
+
+The file `generated_data/lab_results_table.txt` has six columns:
 
 1. `lab_result_id`: A unique identifier for each lab result.
 2. `test_date`: A randomly chosen date between 01/01/2024 and 29/11/2025.
