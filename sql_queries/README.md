@@ -216,7 +216,7 @@ The first five rows of produced table:
 
 ### Query 12: `query_name.sql`
 
-### Query 13: `query_name.sql`
+### Query 13: `list_of_all_appointments_for_a_doctor.sql`
 
 If `list_of_all_appointments_for_a_doctor.sql` is downloaded, the following SQL code can be used to print a list of all appointments for a given doctor.First, select the `hospitals_db` database:
 ```sql
