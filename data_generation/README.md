@@ -46,7 +46,7 @@ The file `generated_data/patients_table.txt` file has five columns:
 
 1. `patient_id`: A unique identifier for each patient.
 2. `patient_name`: The name of the patient. Generated in the same way as the doctors' names.
-3. `patient_dob`: A randomly chosen date between 01/01/1999 and 31/12/2004.
+3. `patient_dob`: A randomly chosen date between 01/01/1929 and 31/12/2004.
 4. `patient_address`: The patient's address. Generated in the same way as the doctors' addresses (except that the patient's region was taken to be the region of the hospital their registered doctor was based at).
 5. `doctor_id`: The ID number of the patient's registered doctor.
 
