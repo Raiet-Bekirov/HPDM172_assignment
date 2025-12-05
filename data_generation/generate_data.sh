@@ -42,7 +42,7 @@ lab_results_table.txt medications_table.txt patients_table.txt prescriptions_tab
 rm appointments_table.csv diseases_table.csv doctors_table.csv hospitals_table.csv \
 lab_results_table.csv medications_table.csv patients_table.csv prescriptions_table.csv
 
-# rm -r source_data/
+rm -r source_data/
 
 cd generated_data
 
