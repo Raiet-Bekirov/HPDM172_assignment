@@ -532,9 +532,9 @@ write.table(
 
 ## Create medications table ----------------------------------------------------
 
-medication_indication_counts <- table(medications[,1])
+medication_indication_counts <- table(medications$drug_name)
 medications_w_one_ind_listed <- names(medication_indication_counts[medication_indication_counts == 1])
-medications_indications <- medications[medications[,1] %in% medications_w_one_ind_listed, ]
+medications_indications <- medications[medications$drug_name %in% medications_w_one_ind_listed, ]
 num_medications <- nrow(medications_indications)
 
 medications_table <- data.frame(
