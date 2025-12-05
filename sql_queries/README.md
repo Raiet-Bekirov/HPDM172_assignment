@@ -223,7 +223,13 @@ If `list_of_all_appointments_for_a_doctor.sql` is downloaded, the following SQL 
 USE hospitals_db;
 ```
 
-Then, run the `list_of_all_appointments_for_a_doctor.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+Then, set the variable `@DoctorID` to the unique ID number of the chosen doctor:
+
+```sql
+SET @DoctorID = 5;
+```
+
+Finally, run the `list_of_all_appointments_for_a_doctor.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
 
 ```sql
 source /filepath/of/list_of_all_appointments_for_a_doctor.sql
@@ -232,15 +238,18 @@ source /filepath/of/list_of_all_appointments_for_a_doctor.sql
 This produces the following output:
 
 ```
-+---------------------+------------------+
-| patient_name        | appointment_date |
-+---------------------+------------------+
-| Liam Nikolovski     | 2027-07-07       |
-| Pedro Lombardo      | 2026-07-07       |
-| Filip Uch           | 2026-07-07       |
-| Maryam Yau          | 2027-07-07       |
-| Stanisław Angelova  | 2027-07-07       |
-+---------------------+------------------+
++------------------+------------------+--------------------+
+| appointment_date | patient_name     | doctor_name        |
++------------------+------------------+--------------------+
+| 2026-02-19       | Oliver Molnár    | Dr. Prem Perković  |
+| 2027-03-07       | Frida Ilić       | Dr. Prem Perković  |
+| 2027-07-11       | Daniela Lungu    | Dr. Prem Perković  |
+| 2027-07-15       | Angela Kola      | Dr. Prem Perković  |
+| 2027-07-21       | Naya Sin         | Dr. Prem Perković  |
+| 2027-10-02       | Riko Tóth        | Dr. Prem Perković  |
+| 2027-11-25       | Matei Ivanov     | Dr. Prem Perković  |
+| 2027-12-28       | Eliška Pedersen  | Dr. Prem Perković  |
++------------------+------------------+--------------------+
 ```
 ### Query 14: `query_name.sql`
 
