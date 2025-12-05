@@ -116,7 +116,7 @@ USE hospitals_db;
 Then, set the variable `@PatientID` to the unique ID number of the chosen patient:
 
 ```sql
-SET @PatientID = 52;
+SET @PatientID = 106;
 ```
 
 Finally, run the `get_prescriptions_for_patient.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
@@ -128,13 +128,14 @@ source /filepath/of/get_prescriptions_for_patient.sql
 This produces the following output:
 
 ```
-+-----------------+-------------------+--------------+-------------------+------------------+
-| prescription_id | prescription_date | patient_name | doctor_name       | medication_name  |
-+-----------------+-------------------+--------------+-------------------+------------------+
-|             303 | 2025-10-09        | Liam Singh   | Dr. Lara Valverde | Darbepoetin Alfa |
-|             225 | 2025-02-24        | Liam Singh   | Dr. Ali Imai      | Ceritinib        |
-|              92 | 2025-02-04        | Liam Singh   | Dr. Lara Valverde | Flecainide       |
-+-----------------+-------------------+--------------+-------------------+------------------+
++-----------------+-------------------+------------------+------------------------+-----------------------+
+| prescription_id | prescription_date | patient_name     | doctor_name            | medication_name       |
++-----------------+-------------------+------------------+------------------------+-----------------------+
+|             483 | 2024-11-23        | Regina Kobayashi | Dr. Zoran Díaz         | Cefuroxime            |
+|              69 | 2024-08-13        | Regina Kobayashi | Dr. Vasileios Jönsson  | Potassium Bicarbonate |
+|             324 | 2024-04-03        | Regina Kobayashi | Dr. Malak Takeuchi     | Mexiletine            |
+|              67 | 2024-03-22        | Regina Kobayashi | Dr. Jelena van Dijk    | Necitumumab           |
++-----------------+-------------------+------------------+------------------------+-----------------------+
 ```
 ### Query 3: `get_prescriptions_from_doc.sql`
 
@@ -147,7 +148,7 @@ USE hospitals_db;
 Then, set the variable `@DoctorID` to the unique ID number of the chosen doctor:
 
 ```sql
-SET @DoctorID = 100
+SET @DoctorID = 100;
 ```
 
 Finally, run the `get_prescriptions_from_doc.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
@@ -158,19 +159,16 @@ source /filepath/of/get_prescriptions_from_doc.sql
 
 This produces the following output:
 ```
-+-----------------+-------------------+------------------+--------------+------------------+
-| prescription_id | prescription_date | patient_name     | doctor_name  | medication_name  |
-+-----------------+-------------------+------------------+--------------+------------------+
-|             137 | 2025-10-19        | Anna Eriksson    | Dr. Ali Imai | Fomepizole       |
-|              28 | 2025-10-11        | Shaikha Araya    | Dr. Ali Imai | Prazosin         |
-|             214 | 2025-07-27        | Mariam Huang     | Dr. Ali Imai | Doxylamine       |
-|              62 | 2025-06-21        | Alejandro Robles | Dr. Ali Imai | Buspirone        |
-|             225 | 2025-02-24        | Liam Singh       | Dr. Ali Imai | Ceritinib        |
-|              29 | 2025-02-09        | Lillie Kimura    | Dr. Ali Imai | Chlordiazepoxide |
-|             272 | 2024-10-11        | Sophie Murati    | Dr. Ali Imai | Dabigatran       |
-|             178 | 2024-05-13        | Hashem Benedetti | Dr. Ali Imai | Hydralazine      |
-|             454 | 2024-02-09        | Mariam Choy      | Dr. Ali Imai | Mannitol         |
-+-----------------+-------------------+------------------+--------------+------------------+
++-----------------+-------------------+------------------+--------------+---------------------------+
+| prescription_id | prescription_date | patient_name     | doctor_name  | medication_name           |
++-----------------+-------------------+------------------+--------------+---------------------------+
+|              11 | 2025-08-22        | Luka Spiteri     | Dr. Ali Imai | Phosphatidylethanolamines |
+|             248 | 2025-05-25        | Emma Jeong       | Dr. Ali Imai | Borage Oil                |
+|              77 | 2025-02-16        | Saliha Bertrand  | Dr. Ali Imai | Witch Hazel               |
+|             308 | 2024-11-27        | Alexander Fekete | Dr. Ali Imai | Linagliptin / Metformin   |
+|             297 | 2024-04-28        | Maya Molnár      | Dr. Ali Imai | Fluticasone               |
+|             323 | 2024-02-12        | Ali Rebane       | Dr. Ali Imai | Lithium                   |
++-----------------+-------------------+------------------+--------------+---------------------------+
 ```
 
 ### Query 4: `get_prescriptions_for_all_patient_alphabetical.sql`
@@ -189,15 +187,15 @@ source /filepath/of/get_prescriptions_for_all_patient_alphabetical.sql
 
 The first five rows of produced table:
 ```
-+-----------------+-------------------+-----------------------+--------------------------+----------------------------------+
-| prescription_id | prescription_date | patient_name          | doctor_name              | medication_name                  |
-+-----------------+-------------------+-----------------------+--------------------------+----------------------------------+
-|             326 | 2025-05-17        | Ammar Abdrahmanov     | Dr. Nikolaos Mikeladze   | Gatifloxacin                     |
-|              38 | 2024-03-04        | Ammar Abdrahmanov     | Dr. Prem Perković        | Crizotinib                       |
-|             479 | 2025-06-28        | Batkhaаn Abdullayev   | Dr. Ariana Murat         | Bromazepam                       |
-|              49 | 2025-05-09        | Batkhaаn Abdullayev   | Dr. Zoran Díaz           | Pembrolizumab                    |
-|             100 | 2025-10-04        | Mustafa Aguilar       | Dr. Kairo Savchenko      | Milrinone                        |
-+-----------------+-------------------+-----------------------+--------------------------+----------------------------------+
++-----------------+-------------------+-----------------------+--------------------------+--------------------------------------------------+
+| prescription_id | prescription_date | patient_name          | doctor_name              | medication_name                                  |
++-----------------+-------------------+-----------------------+--------------------------+--------------------------------------------------+
+|             170 | 2025-05-01        | Ammar Abdrahmanov     | Dr. Titaina Božić        | Pegvisomant                                      |
+|             168 | 2024-01-14        | Batkhaan Abdullayev   | Dr. Vasileios Jönsson    | Fluvastatin                                      |
+|             327 | 2025-04-03        | Amir Acosta           | Dr. Fernanda Castillo    | Bosentan                                         |
+|             411 | 2025-07-18        | Tapuarii Ahmetov      | Dr. Míngzé O'Ryan        | Ephedrine                                        |
+|             292 | 2025-04-13        | Tapuarii Ahmetov      | Dr. Santiago Kılıç       | Bromazepam                                       |
++-----------------+-------------------+-----------------------+--------------------------+--------------------------------------------------+
 ```
 
 ### Query 5: `query_name.sql`
