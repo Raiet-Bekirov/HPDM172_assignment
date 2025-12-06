@@ -15,8 +15,8 @@ This directory contains SQL scipt files for nineteen different queries that can 
 - [Query 11, `query_name.sql`](#query-11-query_namesql): List all lab results for all patients over the age of 60.
 - [Query 12, `query_name.sql`](#query-12-query_namesql): Print a list of all appointments for a given patient.
 - [Query 13, `list_of_all_appointments_for_a_doctor.sql`](#query-13-list_of_all_appointments_for_a_doctorsql): Print a list of all appointments for a given doctor.
-- [Query 14, `query_name.sql`](#query-14-query_namesql): Print all prescriptions made from a particular hospital ordered alphabetically by the name of the medication being prescribed – the output of this SQL query should include only these 4 columns: the medication name, the name of doctor who prescribed it, the name of the patient, and the name of hospital.
-- [Query 15, `query_name.sql`](#query-15-query_namesql): Print a list of all lab results from all hospitals that were accredited between 2013–2020.
+- [Query 14, `get_hosp_prescriptions.sql`](#query-14-get_hosp_prescriptionssql): Print all prescriptions made from a particular hospital ordered alphabetically by the name of the medication being prescribed – the output of this SQL query should include only these 4 columns: the medication name, the name of doctor who prescribed it, the name of the patient, and the name of hospital.
+- [Query 15, ``get_lab_results_at_hosp_accred_btwn_2013_2020.sql`](#query-15-get_lab_results_at_hosp_accred_btwn_2013_2020sql): Print a list of all lab results from all hospitals that were accredited between 2013–2020.
 - [Query 16, `get_max_prescriber.sql`](#query-16-get_max_prescribersql): Identify which doctor has made the most prescriptions.
 - [Query 17, `get_docs_at_biggest_hosp.sql`](#query-17-get_docs_at_biggest_hospsql): Print a list of all doctors at the hospital with biggest size (number of beds).
 - [Query 18, `get_emergency_hosps_accred_pre_2015.sql`](#query-18-get_emergency_hosps_accred_pre_2015sql): Print a list of all hospital names which were accredited prior to 2015 and do have Emergency Service facilities.
@@ -249,9 +249,153 @@ This produces the following output:
 | 2027-12-28       | Eliška Pedersen  | Dr. Prem Perković  |
 +------------------+------------------+--------------------+
 ```
-### Query 14: `query_name.sql`
+### Query 14: `get_hosp_prescriptions.sql`
 
-### Query 15: `query_name.sql`
+If `get_hosp_prescriptions.sql` is downloaded, the following SQL code can be used to print all prescriptions made from a particular hospital ordered alphabetically by the name of the medication being prescribed. First, select the `hospitals_db` database:
+
+```sql
+USE hospitals_db;
+```
+
+Then, set the variable `@HospitalID` to the unique ID number of the chosen hospital:
+
+```sql
+SET @HosptialID = 10;
+```
+
+Finally, run the `get_hosp_prescriptions.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+
+```sql
+ source /filepath/of/get_hosp_prescriptions.sql
+```
+
+This produces the following output:
+
+```
++-----------------------------+-------------------+----------------------+--------------------------+
+| medication_name             | doctor_name       | patient_name         | hospital_name            |
++-----------------------------+-------------------+----------------------+--------------------------+
+| Atezolizumab                | Dr. Gogo Lín      | Lucía Rodríguez      | Queen Elizabeth Hospital |
+| Echinacea Purpurea Extract  | Dr. Lara Valverde | Charbel Tremblay     | Queen Elizabeth Hospital |
+| Ertugliflozin / Sitagliptin | Dr. Gogo Lín      | Gabor Popović        | Queen Elizabeth Hospital |
+| Fleroxacin                  | Dr. Gogo Lín      | Julia Kobayashi      | Queen Elizabeth Hospital |
+| Isosorbide                  | Dr. Gogo Lín      | Melissa Fontana      | Queen Elizabeth Hospital |
+| Lorcaserin                  | Dr. Lara Valverde | Liam Singh           | Queen Elizabeth Hospital |
+| Mephentermine               | Dr. Lara Valverde | Mùchén Rodriguez     | Queen Elizabeth Hospital |
+| Naldemedine                 | Dr. Gogo Lín      | Oscar Muñoz          | Queen Elizabeth Hospital |
+| Niacin                      | Dr. Gogo Lín      | Alexander Fekete     | Queen Elizabeth Hospital |
+| Pertuzumab                  | Dr. Gogo Lín      | Goran Yokoyama       | Queen Elizabeth Hospital |
+| Pirbuterol                  | Dr. Gogo Lín      | Victoria Ryan        | Queen Elizabeth Hospital |
+| Tannic Acid                 | Dr. Lara Valverde | Patricia Díaz        | Queen Elizabeth Hospital |
+| Trifluridine                | Dr. Lara Valverde | Maya Petek           | Queen Elizabeth Hospital |
+| Trovafloxacin               | Dr. Gogo Lín      | Melissa Fontana      | Queen Elizabeth Hospital |
+| Yucca Schidigera Extract    | Dr. Gogo Lín      | Juliana delos Santos | Queen Elizabeth Hospital |
++-----------------------------+-------------------+----------------------+--------------------------+
+```
+
+### Query 15: `get_lab_results_at_hosp_accred_btwn_2013_2020.sql`
+
+If `get_lab_results_at_hosp_accred_btwn_2013_2020.sql` is downloaded, the following SQL code can be used to dentify which doctor has made the most prescriptions. First, select the `hospitals_db` database:
+
+```sql
+USE hospitals_db;
+```
+
+Then, run the `get_lab_results_at_hosp_accred_btwn_2013_2020.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+
+```sql
+source /filepath/of/get_lab_results_at_hosp_accred_btwn_2013_2020.sql
+```
+
+This produces the following output:
+
+```
++------------+------------------------------------+---------------+----------------------+----------------------+---------------------------------+--------------------+
+| test_date  | test_type                          | test_result   | patient_name         | doctor_name          | hospital_name                   | accreditation_year |
++------------+------------------------------------+---------------+----------------------+----------------------+---------------------------------+--------------------+
+| 2025-11-26 | Blood Test: Neutrophils            | 3.7 x 10^9/L  | Nazanin-Zahra Katō   | Dr. Sunita Valente   | Westmorland General Hospital    |               2013 |
+| 2025-11-26 | Blood Test: Iron                   | 23 umol/L     | Tarita Chu           | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
+| 2025-11-11 | Blood Test: Creatinine             | 87 umol/L     | Ana Jovanović        | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
+| 2025-11-06 | Blood Test: Haemoglobin            | 95 g/L        | Elmar Martirosyan    | Dr. İnci Todorova    | Amersham Hospital               |               2013 |
+| 2025-11-02 | Blood Test: LDL Cholesterol        | 4.1 mmol/L    | Melissa Fontana      | Dr. Seo-yun Iwasaki  | North Tyneside General Hospital |               2019 |
+| 2025-10-31 | Blood Test: White Blood Cell Count | 19.7 x 10^9/L | Ali Rebane           | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
+| 2025-10-24 | Blood Test: HDL Cholesterol        | 1.5 mmol/L    | Jovana Barbosa       | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
+| 2025-10-23 | Blood Test: Alkaline Phosphatase   | 22 IU/L       | Hasan Murphy         | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
+| 2025-10-06 | Blood Test: Triglycerides          | 3.5 mmol/L    | Noah Lîm             | Dr. Sunita Valente   | Westmorland General Hospital    |               2013 |
+| 2025-09-04 | Blood Test: Potassium              | 9.2 mmol/L    | Emma Novak           | Dr. Peter Tep        | Westmorland General Hospital    |               2013 |
+| 2025-09-02 | Blood Test: Urea                   | 2.8 mmol/L    | Maxim Klein          | Dr. Mio Cruz         | North Tyneside General Hospital |               2019 |
+| 2025-08-31 | Blood Test: LDL Cholesterol        | 4.9 mmol/L    | Gunel Dizon          | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
+| 2025-08-28 | Blood Test: Potassium              | 9 mmol/L      | Adam Hoxha           | Dr. Peter Tep        | Westmorland General Hospital    |               2013 |
+| 2025-08-24 | Blood Test: Glucose                | 14.4 mmol/L   | Olivia Morales       | Dr. Nur Santos       | Torbay Hospital                 |               2014 |
+| 2025-08-22 | Blood Test: Iron                   | 20 umol/L     | Mark Ueno            | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
+| 2025-08-18 | Blood Test: Lymphocytes            | 1 x 10^9/L    | Daniel Montes        | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
+| 2025-08-03 | Blood Test: Glucose                | 4.2 mmol/L    | Mila Gashi           | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
+| 2025-07-04 | Blood Test: Bilirubin              | 1 umol/L      | Grace Hoti           | Dr. Peter Tep        | Westmorland General Hospital    |               2013 |
+| 2025-06-30 | Blood Test: LDL Cholesterol        | 3.1 mmol/L    | Chloe Dương          | Dr. İnci Todorova    | Amersham Hospital               |               2013 |
+| 2025-06-27 | Blood Test: Red Blood Cell Count   | 5 x 10^12/L   | Marcia Lefebvre      | Dr. Maddi Gallagher  | Torbay Hospital                 |               2014 |
+| 2025-06-21 | Blood Test: C-Reactive Protein     | 7 mg/L        | Ian Jukić            | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
+| 2025-06-18 | Blood Test: Neutrophils            | 7.8 x 10^9/L  | Mia Tang             | Dr. Maddi Gallagher  | Torbay Hospital                 |               2014 |
+| 2025-06-01 | Blood Test: Triglycerides          | 0.7 mmol/L    | Petar Mortensen      | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
+| 2025-05-28 | Blood Test: Albumin                | 43 g/L        | Thiago Andreassen    | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
+| 2025-05-19 | Blood Test: HbA1c                  | 52 mmol/mol   | Juliana delos Santos | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
+| 2025-04-30 | Blood Test: HbA1c                  | 97 mmol/mol   | Daniel Wagner        | Dr. Maddi Gallagher  | Torbay Hospital                 |               2014 |
+| 2025-04-21 | Blood Test: Red Blood Cell Count   | 2.7 x 10^12/L | Jack Rojas           | Dr. Maddi Gallagher  | Torbay Hospital                 |               2014 |
+| 2025-04-21 | Blood Test: Haemoglobin            | 139 g/L       | Michal Wagner        | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
+| 2025-04-11 | Blood Test: Lymphocytes            | 6.2 x 10^9/L  | Luka Spiteri         | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
+| 2025-04-10 | Blood Test: Magnesium              | 0.6 mmol/L    | Ahmad Benedetti      | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
+| 2025-04-02 | Blood Test: Red Blood Cell Count   | 2.8 x 10^12/L | Hassan Pavlovski     | Dr. Mio Cruz         | North Tyneside General Hospital |               2019 |
+| 2025-03-24 | Blood Test: Potassium              | 1.1 mmol/L    | Margarida Molina     | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
+| 2025-03-22 | Blood Test: HbA1c                  | 52 mmol/mol   | Maryam Morales       | Dr. İnci Todorova    | Amersham Hospital               |               2013 |
+| 2025-03-13 | Blood Test: Albumin                | 36 g/L        | Sofie Popov          | Dr. Leyla Sasaki     | Torbay Hospital                 |               2014 |
+| 2025-03-12 | Blood Test: C-Reactive Protein     | 7.6 mg/L      | Mila Gashi           | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
+| 2025-03-01 | Blood Test: Iron                   | 30 umol/L     | Zeynep Hovhannisyan  | Dr. Seo-yun Iwasaki  | North Tyneside General Hospital |               2019 |
+| 2025-02-20 | Blood Test: Urea                   | 6.2 mmol/L    | Mateo Takaki         | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
+| 2025-02-18 | Blood Test: Albumin                | 44 g/L        | Emma García          | Dr. İnci Todorova    | Amersham Hospital               |               2013 |
+| 2025-02-16 | Blood Test: Potassium              | 2.6 mmol/L    | Mateo Takaki         | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
+| 2025-02-15 | Blood Test: Albumin                | 47 g/L        | Emma Novak           | Dr. Peter Tep        | Westmorland General Hospital    |               2013 |
+| 2025-02-01 | Blood Test: Alkaline Phosphatase   | 109 IU/L      | Lucía Soria          | Dr. Leyla Sasaki     | Torbay Hospital                 |               2014 |
+| 2025-01-29 | Blood Test: Lactate                | 9.2 mmol/L    | Gabriel Rosario      | Dr. Seo-yun Iwasaki  | North Tyneside General Hospital |               2019 |
+| 2025-01-23 | Blood Test: Neutrophils            | 6.6 x 10^9/L  | Reema Aguilera       | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
+| 2025-01-04 | Blood Test: Magnesium              | 1.3 mmol/L    | Josefa Đoàn          | Dr. Nur Santos       | Torbay Hospital                 |               2014 |
+| 2025-01-02 | Blood Test: HDL Cholesterol        | 0.9 mmol/L    | Tommaso Kozłowski    | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
+| 2024-12-26 | Blood Test: HbA1c                  | 50 mmol/mol   | Katla Lehtinen       | Dr. Nur Santos       | Torbay Hospital                 |               2014 |
+| 2024-12-26 | Blood Test: Creatinine             | 102 umol/L    | Nazanin-Zahra Katō   | Dr. Sunita Valente   | Westmorland General Hospital    |               2013 |
+| 2024-12-23 | Blood Test: HbA1c                  | 24 mmol/mol   | Lilit Bravo          | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
+| 2024-12-22 | Blood Test: White Blood Cell Count | 0.5 x 10^9/L  | Michal Wagner        | Dr. Mio Cruz         | North Tyneside General Hospital |               2019 |
+| 2024-12-16 | Blood Test: Potassium              | 6.3 mmol/L    | Kaia Castillo        | Dr. Leyla Sasaki     | Torbay Hospital                 |               2014 |
+| 2024-12-11 | Blood Test: Bilirubin              | 28 umol/L     | Reema Aguilera       | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
+| 2024-12-07 | Blood Test: White Blood Cell Count | 12.3 x 10^9/L | Emma Davidov         | Dr. Leyla Sasaki     | Torbay Hospital                 |               2014 |
+| 2024-12-05 | Blood Test: LDL Cholesterol        | 3.6 mmol/L    | Aysel Watanabe       | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
+| 2024-12-02 | Blood Test: Alkaline Phosphatase   | 41 IU/L       | Luka Spiteri         | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
+| 2024-11-28 | Blood Test: Alkaline Phosphatase   | 87 IU/L       | Luka Spiteri         | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
+| 2024-11-28 | Blood Test: White Blood Cell Count | 11.6 x 10^9/L | Luca Riquelme        | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
+| 2024-11-16 | Blood Test: Albumin                | 60 g/L        | Anastasiya Kinoshita | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
+| 2024-11-11 | Blood Test: Albumin                | 34 g/L        | María Gonzalez       | Dr. Nur Santos       | Torbay Hospital                 |               2014 |
+| 2024-10-20 | Blood Test: Triglycerides          | 2.6 mmol/L    | Aleksandr Ông        | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
+| 2024-10-18 | Blood Test: Lactate                | 7 mmol/L      | Mùchén Rodriguez     | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
+| 2024-10-12 | Blood Test: Glucose                | 16.6 mmol/L   | Maya Coi             | Dr. Mio Cruz         | North Tyneside General Hospital |               2019 |
+| 2024-09-18 | Blood Test: Creatinine             | 116 umol/L    | Lucía Rodríguez      | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
+| 2024-09-17 | Blood Test: C-Reactive Protein     | 4 mg/L        | Manuel Uhm           | Dr. Peter Tep        | Westmorland General Hospital    |               2013 |
+| 2024-09-12 | Blood Test: Magnesium              | 0.7 mmol/L    | Naïm Wong            | Dr. İnci Todorova    | Amersham Hospital               |               2013 |
+| 2024-08-24 | Blood Test: HDL Cholesterol        | 1.7 mmol/L    | Barbara Johnson      | Dr. İnci Todorova    | Amersham Hospital               |               2013 |
+| 2024-08-13 | Blood Test: Albumin                | 25 g/L        | Dmitry Masuda        | Dr. Mio Cruz         | North Tyneside General Hospital |               2019 |
+| 2024-08-07 | Blood Test: Alkaline Phosphatase   | 79 IU/L       | Bruno Kurt           | Dr. Peter Tep        | Westmorland General Hospital    |               2013 |
+| 2024-07-27 | Blood Test: Haemoglobin            | 96 g/L        | Karine Martínez      | Dr. Asja Song        | Westmorland General Hospital    |               2013 |
+| 2024-07-23 | Blood Test: Lactate                | 0.8 mmol/L    | Aleksandr Ông        | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
+| 2024-07-15 | Blood Test: Creatinine             | 127 umol/L    | Theo Kovács          | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
+| 2024-06-28 | Blood Test: Lymphocytes            | 8.8 x 10^9/L  | Dunja Chang          | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
+| 2024-06-22 | Blood Test: Iron                   | 16 umol/L     | Adam Scheving        | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
+| 2024-06-09 | Blood Test: Triglycerides          | 1.9 mmol/L    | Ali Morales          | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
+| 2024-05-25 | Blood Test: Red Blood Cell Count   | 6.9 x 10^12/L | Eva Naidu            | Dr. Asja Song        | Westmorland General Hospital    |               2013 |
+| 2024-05-17 | Blood Test: Albumin                | 55 g/L        | Aadhya Torres        | Dr. Nur Santos       | Torbay Hospital                 |               2014 |
+| 2024-04-18 | Blood Test: Triglycerides          | 4.8 mmol/L    | Emmanuel Aivaliotis  | Dr. Nur Santos       | Torbay Hospital                 |               2014 |
+| 2024-03-28 | Blood Test: Urea                   | 5 mmol/L      | Gamalat Özdemir      | Dr. İnci Todorova    | Amersham Hospital               |               2013 |
+| 2024-03-09 | Blood Test: Red Blood Cell Count   | 6.5 x 10^12/L | Dunja Chang          | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
+| 2024-03-03 | Blood Test: White Blood Cell Count | 2.4 x 10^9/L  | Aron Díaz            | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
+| 2024-02-12 | Blood Test: Magnesium              | 0.7 mmol/L    | Viktor Benítez       | Dr. Nur Santos       | Torbay Hospital                 |               2014 |
+| 2024-01-07 | Blood Test: Creatinine             | 36 umol/L     | Oisin Prasad         | Dr. Mio Cruz         | North Tyneside General Hospital |               2019 |
++------------+------------------------------------+---------------+----------------------+----------------------+---------------------------------+--------------------+
+```
 
 ### Query 16: `get_max_prescriber.sql`
 
@@ -264,7 +408,7 @@ USE hospitals_db;
 Then, run the `get_max_prescriber.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
 
 ```sql
-source /filepath/of/get_max_prescriber.sql.sql
+source /filepath/of/get_max_prescriber.sql
 ```
 
 This produces the following output:
