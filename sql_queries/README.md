@@ -16,7 +16,7 @@ This directory contains SQL scipt files for nineteen different queries that can 
 - [Query 12, `query_name.sql`](#query-12-query_namesql): Print a list of all appointments for a given patient.
 - [Query 13, `list_of_all_appointments_for_a_doctor.sql`](#query-13-list_of_all_appointments_for_a_doctorsql): Print a list of all appointments for a given doctor.
 - [Query 14, `get_hosp_prescriptions.sql`](#query-14-get_hosp_prescriptionssql): Print all prescriptions made from a particular hospital ordered alphabetically by the name of the medication being prescribed – the output of this SQL query should include only these 4 columns: the medication name, the name of doctor who prescribed it, the name of the patient, and the name of hospital.
-- [Query 15, ``get_lab_results_at_hosp_accred_btwn_2013_2020.sql`](#query-15-get_lab_results_at_hosp_accred_btwn_2013_2020sql): Print a list of all lab results from all hospitals that were accredited between 2013–2020.
+- [Query 15, `get_lab_results_at_hosp_accred_btwn_2013_2020.sql`](#query-15-get_lab_results_at_hosp_accred_btwn_2013_2020sql): Print a list of all lab results from all hospitals that were accredited between 2013–2020.
 - [Query 16, `get_max_prescriber.sql`](#query-16-get_max_prescribersql): Identify which doctor has made the most prescriptions.
 - [Query 17, `get_docs_at_biggest_hosp.sql`](#query-17-get_docs_at_biggest_hospsql): Print a list of all doctors at the hospital with biggest size (number of beds).
 - [Query 18, `get_emergency_hosps_accred_pre_2015.sql`](#query-18-get_emergency_hosps_accred_pre_2015sql): Print a list of all hospital names which were accredited prior to 2015 and do have Emergency Service facilities.
