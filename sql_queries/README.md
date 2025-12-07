@@ -13,7 +13,7 @@ This directory contains SQL scipt files for nineteen different queries that can 
 - [Query 9, `get_patients_and_medication_from_diseaseID.sql`](#query-9-get_patients_and_medication_from_diseaseID.sql): List all patients who may have a particular disease based on which medication they have been prescribed.
 - [Query 10, `query_name.sql`](#query-10-query_namesql): List all doctors who specialize in a particular disease.
 - [Query 11, `query_name.sql`](#query-11-query_namesql): List all lab results for all patients over the age of 60.
-- [Query 12, `query_name.sql`](#query-12-query_namesql): Print a list of all appointments for a given patient.
+- [Query 12, `list_of_all_appointments_for_a_patient.sql`](#query-12-list_of_all_appointments_for_a_patientsql): Print a list of all appointments for a given patient.
 - [Query 13, `list_of_all_appointments_for_a_doctor.sql`](#query-13-list_of_all_appointments_for_a_doctorsql): Print a list of all appointments for a given doctor.
 - [Query 14, `get_hosp_prescriptions.sql`](#query-14-get_hosp_prescriptionssql): Print all prescriptions made from a particular hospital ordered alphabetically by the name of the medication being prescribed – the output of this SQL query should include only these 4 columns: the medication name, the name of doctor who prescribed it, the name of the patient, and the name of hospital.
 - [Query 15, `get_lab_results_at_hosp_accred_btwn_2013_2020.sql`](#query-15-get_lab_results_at_hosp_accred_btwn_2013_2020sql): Print a list of all lab results from all hospitals that were accredited between 2013–2020.
@@ -323,7 +323,7 @@ This produces the following output:
 ```
 ### Query 13: `list_of_all_appointments_for_a_doctor.sql`
 
-If `list_of_all_appointments_for_a_doctor.sql` is downloaded, the following SQL code can be used to print a list of all appointments for a given doctor.First, select the `hospitals_db` database:
+If `list_of_all_appointments_for_a_doctor.sql` is downloaded, the following SQL code can be used to print a list of all appointments for a given doctor. First, select the `hospitals_db` database:
 ```sql
 USE hospitals_db;
 ```
