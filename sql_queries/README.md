@@ -12,7 +12,7 @@ This directory contains SQL scipt files for nineteen different queries that can 
 - [Query 8, `get_docs_from_accredited_hospitals.sql`](#query-8-get_docs_from_accredited_hospitals.sql): Print a list of all doctors based at Teaching hospitals which were accredited between 2015–2024.
 - [Query 9, `get_patients_and_medication_from_diseaseID.sql`](#query-9-get_patients_and_medication_from_diseaseID.sql): List all patients who may have a particular disease based on which medication they have been prescribed.
 - [Query 10, `query_name.sql`](#query-10-query_namesql): List all doctors who specialize in a particular disease.
-- [Query 11, `query_name.sql`](#query-11-query_namesql): List all lab results for all patients over the age of 60.
+- [Query 11, `lab_results_for_all_patients_over_the_age_of_60.sql`](#query-11-lab_results_for_all_patients_over_the_age_of_60sql): List all lab results for all patients over the age of 60.
 - [Query 12, `list_of_all_appointments_for_a_patient.sql`](#query-12-list_of_all_appointments_for_a_patientsql): Print a list of all appointments for a given patient.
 - [Query 13, `list_of_all_appointments_for_a_doctor.sql`](#query-13-list_of_all_appointments_for_a_doctorsql): Print a list of all appointments for a given doctor.
 - [Query 14, `get_hosp_prescriptions.sql`](#query-14-get_hosp_prescriptionssql): Print all prescriptions made from a particular hospital ordered alphabetically by the name of the medication being prescribed – the output of this SQL query should include only these 4 columns: the medication name, the name of doctor who prescribed it, the name of the patient, and the name of hospital.
@@ -292,7 +292,279 @@ This produces the following output:
 
 ### Query 10: `query_name.sql`
 
-### Query 11: `query_name.sql`
+### Query 11: `lab_results_for_all_patients_over_the_age_of_60.sql`
+
+If `lab_results_for_all_patients_over_the_age_of_60.sql` is downloaded, the following SQL code can be used to print a list of all appointments for a given patient.First, select the `hospitals_db` database:
+```sql
+USE hospitals_db;
+```
+Finally, run the `list_of_all_appointments_for_a_patient.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+
+```sql
+source /filepath/of/lab_results_for_all_patients_over_the_age_of_60.sql
+```
+
+This produces the following output:
+
+```
++---------------+------------+------------------------------------+---------------+------------+
+| lab_result_id | test_date  | test_type                          | test_result   | patient_id |
++---------------+------------+------------------------------------+---------------+------------+
+|            42 | 2025-11-28 | Blood Test: C-Reactive Protein     | 1.1 mg/L      |         18 |
+|           394 | 2025-11-26 | Blood Test: Iron                   | 23 umol/L     |         34 |
+|           211 | 2025-11-25 | Blood Test: C-Reactive Protein     | 8.9 mg/L      |        356 |
+|           300 | 2025-11-20 | Blood Test: Glucose                | 19.2 mmol/L   |        562 |
+|            79 | 2025-11-11 | Blood Test: HbA1c                  | 93 mmol/mol   |        434 |
+|           464 | 2025-11-06 | Blood Test: Magnesium              | 1 mmol/L      |        299 |
+|           331 | 2025-11-06 | Blood Test: Haemoglobin            | 95 g/L        |        506 |
+|           278 | 2025-10-31 | Blood Test: White Blood Cell Count | 19.7 x 10^9/L |        286 |
+|           188 | 2025-10-30 | Blood Test: Triglycerides          | 0.1 mmol/L    |        485 |
+|           143 | 2025-10-28 | Blood Test: Red Blood Cell Count   | 2.5 x 10^12/L |        295 |
+|           385 | 2025-10-24 | Blood Test: HDL Cholesterol        | 1.5 mmol/L    |        224 |
+|           174 | 2025-10-23 | Blood Test: Alkaline Phosphatase   | 22 IU/L       |         23 |
+|           373 | 2025-10-23 | Blood Test: Urea                   | 5.5 mmol/L    |        473 |
+|           305 | 2025-10-06 | Blood Test: Triglycerides          | 3.5 mmol/L    |        512 |
+|           165 | 2025-10-03 | Blood Test: Bilirubin              | 23 umol/L     |          3 |
+|           195 | 2025-10-01 | Blood Test: Albumin                | 22 g/L        |         33 |
+|           298 | 2025-09-30 | Blood Test: Neutrophils            | 1.9 x 10^9/L  |        307 |
+|            53 | 2025-09-29 | Blood Test: HbA1c                  | 39 mmol/mol   |         48 |
+|           129 | 2025-09-20 | Blood Test: Magnesium              | 1.5 mmol/L    |        338 |
+|           450 | 2025-09-20 | Blood Test: Bilirubin              | 22 umol/L     |        518 |
+|            92 | 2025-09-19 | Blood Test: Iron                   | 12 umol/L     |        356 |
+|            29 | 2025-09-17 | Blood Test: Magnesium              | 1.3 mmol/L    |        472 |
+|           244 | 2025-09-15 | Blood Test: Alkaline Phosphatase   | 90 IU/L       |        419 |
+|            54 | 2025-09-12 | Blood Test: Creatinine             | 40 umol/L     |        513 |
+|           218 | 2025-09-09 | Blood Test: Lymphocytes            | 2.2 x 10^9/L  |        156 |
+|           353 | 2025-09-02 | Blood Test: Urea                   | 2.8 mmol/L    |        156 |
+|           260 | 2025-08-31 | Blood Test: LDL Cholesterol        | 4.9 mmol/L    |        206 |
+|           216 | 2025-08-28 | Blood Test: Potassium              | 9 mmol/L      |        233 |
+|           339 | 2025-08-28 | Blood Test: Haemoglobin            | 131 g/L       |        331 |
+|           219 | 2025-08-26 | Blood Test: Magnesium              | 1 mmol/L      |        346 |
+|           200 | 2025-08-24 | Blood Test: HDL Cholesterol        | 1 mmol/L      |         60 |
+|           418 | 2025-08-24 | Blood Test: Glucose                | 14.4 mmol/L   |        256 |
+|            93 | 2025-08-20 | Blood Test: HbA1c                  | 38 mmol/mol   |         65 |
+|           242 | 2025-08-20 | Blood Test: Urea                   | 1.2 mmol/L    |        529 |
+|           229 | 2025-08-16 | Blood Test: Alkaline Phosphatase   | 140 IU/L      |        591 |
+|           314 | 2025-08-14 | Blood Test: HDL Cholesterol        | 1.9 mmol/L    |        252 |
+|           267 | 2025-08-14 | Blood Test: Bilirubin              | 12 umol/L     |        401 |
+|           232 | 2025-08-13 | Blood Test: Alkaline Phosphatase   | 94 IU/L       |        101 |
+|           286 | 2025-08-13 | Blood Test: C-Reactive Protein     | 3.1 mg/L      |        479 |
+|           368 | 2025-08-07 | Blood Test: Alkaline Phosphatase   | 93 IU/L       |         83 |
+|           139 | 2025-08-06 | Blood Test: Lactate                | 5.2 mmol/L    |        272 |
+|           128 | 2025-08-06 | Blood Test: Glucose                | 17.8 mmol/L   |        274 |
+|           142 | 2025-08-05 | Blood Test: Creatinine             | 92 umol/L     |        511 |
+|           292 | 2025-08-03 | Blood Test: Glucose                | 4.2 mmol/L    |        147 |
+|            19 | 2025-07-28 | Blood Test: Neutrophils            | 8.3 x 10^9/L  |        265 |
+|           196 | 2025-07-28 | Blood Test: Lactate                | 3.1 mmol/L    |        291 |
+|            44 | 2025-07-26 | Blood Test: White Blood Cell Count | 0.5 x 10^9/L  |        243 |
+|           377 | 2025-07-22 | Blood Test: Magnesium              | 0.8 mmol/L    |        470 |
+|           316 | 2025-07-16 | Blood Test: Potassium              | 2.8 mmol/L    |         55 |
+|           113 | 2025-07-15 | Blood Test: Creatinine             | 101 umol/L    |        146 |
+|           125 | 2025-07-14 | Blood Test: Lymphocytes            | 8.9 x 10^9/L  |        335 |
+|           424 | 2025-07-11 | Blood Test: Red Blood Cell Count   | 4.4 x 10^12/L |        472 |
+|           149 | 2025-07-10 | Blood Test: C-Reactive Protein     | 7 mg/L        |          1 |
+|           277 | 2025-07-07 | Blood Test: Creatinine             | 37 umol/L     |        219 |
+|           199 | 2025-07-04 | Blood Test: Bilirubin              | 1 umol/L      |         55 |
+|            11 | 2025-07-04 | Blood Test: HDL Cholesterol        | 1.9 mmol/L    |        240 |
+|           407 | 2025-06-30 | Blood Test: Creatinine             | 102 umol/L    |        241 |
+|           233 | 2025-06-27 | Blood Test: Red Blood Cell Count   | 5 x 10^12/L   |        388 |
+|           280 | 2025-06-26 | Blood Test: HDL Cholesterol        | 1.4 mmol/L    |        560 |
+|           264 | 2025-06-24 | Blood Test: Magnesium              | 1 mmol/L      |         18 |
+|           386 | 2025-06-21 | Blood Test: Lymphocytes            | 4.1 x 10^9/L  |        454 |
+|           390 | 2025-06-18 | Blood Test: Neutrophils            | 7.8 x 10^9/L  |        358 |
+|           245 | 2025-06-15 | Blood Test: Bilirubin              | 29 umol/L     |        470 |
+|           496 | 2025-06-13 | Blood Test: Albumin                | 28 g/L        |        490 |
+|           362 | 2025-06-07 | Blood Test: Lymphocytes            | 1.1 x 10^9/L  |        113 |
+|           168 | 2025-06-07 | Blood Test: Lymphocytes            | 7.7 x 10^9/L  |        495 |
+|           234 | 2025-06-02 | Blood Test: Alkaline Phosphatase   | 97 IU/L       |        479 |
+|           342 | 2025-06-01 | Blood Test: HDL Cholesterol        | 1.6 mmol/L    |         73 |
+|           212 | 2025-05-15 | Blood Test: Creatinine             | 142 umol/L    |        244 |
+|           304 | 2025-05-09 | Blood Test: Albumin                | 33 g/L        |        556 |
+|            66 | 2025-05-03 | Blood Test: Haemoglobin            | 175 g/L       |        598 |
+|           396 | 2025-04-30 | Blood Test: HbA1c                  | 97 mmol/mol   |        446 |
+|             4 | 2025-04-26 | Blood Test: Red Blood Cell Count   | 4.2 x 10^12/L |        573 |
+|           271 | 2025-04-24 | Blood Test: Iron                   | 35 umol/L     |        321 |
+|            59 | 2025-04-17 | Blood Test: Albumin                | 46 g/L        |        208 |
+|           159 | 2025-04-16 | Blood Test: Neutrophils            | 8.3 x 10^9/L  |        365 |
+|           415 | 2025-04-15 | Blood Test: Urea                   | 9.7 mmol/L    |        322 |
+|           350 | 2025-04-11 | Blood Test: Lymphocytes            | 6.2 x 10^9/L  |        501 |
+|           225 | 2025-04-10 | Blood Test: LDL Cholesterol        | 3.6 mmol/L    |        387 |
+|           492 | 2025-04-06 | Blood Test: Haemoglobin            | 78 g/L        |        193 |
+|            23 | 2025-04-02 | Blood Test: Red Blood Cell Count   | 2.8 x 10^12/L |        568 |
+|            46 | 2025-03-24 | Blood Test: Potassium              | 1.1 mmol/L    |        523 |
+|           481 | 2025-03-22 | Blood Test: HbA1c                  | 52 mmol/mol   |        492 |
+|           431 | 2025-03-12 | Blood Test: C-Reactive Protein     | 7.6 mg/L      |        147 |
+|           187 | 2025-03-11 | Blood Test: White Blood Cell Count | 0.2 x 10^9/L  |        459 |
+|           423 | 2025-03-11 | Blood Test: Alkaline Phosphatase   | 121 IU/L      |        594 |
+|           150 | 2025-03-04 | Blood Test: Potassium              | 4.3 mmol/L    |        489 |
+|            16 | 2025-02-28 | Blood Test: Red Blood Cell Count   | 6.4 x 10^12/L |        533 |
+|           330 | 2025-02-25 | Blood Test: Alkaline Phosphatase   | 88 IU/L       |        161 |
+|            80 | 2025-02-21 | Blood Test: Bilirubin              | 24 umol/L     |        572 |
+|           324 | 2025-02-20 | Blood Test: LDL Cholesterol        | 4.9 mmol/L    |        262 |
+|           356 | 2025-02-19 | Blood Test: Bilirubin              | 21 umol/L     |        494 |
+|           428 | 2025-02-13 | Blood Test: Red Blood Cell Count   | 7 x 10^12/L   |        260 |
+|           205 | 2025-02-12 | Blood Test: C-Reactive Protein     | 1.9 mg/L      |        228 |
+|           132 | 2025-02-11 | Blood Test: Haemoglobin            | 91 g/L        |         55 |
+|           162 | 2025-02-11 | Blood Test: C-Reactive Protein     | 7.8 mg/L      |        577 |
+|           176 | 2025-02-09 | Blood Test: Bilirubin              | 8 umol/L      |        416 |
+|           468 | 2025-02-06 | Blood Test: White Blood Cell Count | 17.5 x 10^9/L |        513 |
+|           274 | 2025-02-01 | Blood Test: Alkaline Phosphatase   | 109 IU/L      |        220 |
+|           306 | 2025-01-29 | Blood Test: Lactate                | 9.2 mmol/L    |        288 |
+|           337 | 2025-01-27 | Blood Test: Creatinine             | 130 umol/L    |        495 |
+|            74 | 2025-01-26 | Blood Test: Alkaline Phosphatase   | 98 IU/L       |        233 |
+|           283 | 2025-01-24 | Blood Test: HbA1c                  | 23 mmol/mol   |        366 |
+|           372 | 2025-01-23 | Blood Test: Neutrophils            | 6.6 x 10^9/L  |        164 |
+|           317 | 2025-01-23 | Blood Test: White Blood Cell Count | 6 x 10^9/L    |        166 |
+|            13 | 2025-01-22 | Blood Test: Neutrophils            | 5.1 x 10^9/L  |          9 |
+|           261 | 2025-01-17 | Blood Test: Magnesium              | 1.3 mmol/L    |         13 |
+|           147 | 2025-01-17 | Blood Test: Iron                   | 31 umol/L     |        347 |
+|           480 | 2025-01-15 | Blood Test: Urea                   | 1.7 mmol/L    |        170 |
+|           482 | 2025-01-12 | Blood Test: White Blood Cell Count | 14.9 x 10^9/L |        259 |
+|           427 | 2025-01-09 | Blood Test: HbA1c                  | 86 mmol/mol   |        299 |
+|           192 | 2025-01-08 | Blood Test: Glucose                | 10.8 mmol/L   |        416 |
+|           435 | 2025-01-05 | Blood Test: Lactate                | 7.3 mmol/L    |         13 |
+|           321 | 2025-01-03 | Blood Test: Bilirubin              | 17 umol/L     |        572 |
+|           295 | 2024-12-25 | Blood Test: Iron                   | 38 umol/L     |        493 |
+|            88 | 2024-12-21 | Blood Test: Red Blood Cell Count   | 7.9 x 10^12/L |        327 |
+|            55 | 2024-12-16 | Blood Test: Potassium              | 6.3 mmol/L    |        454 |
+|           349 | 2024-12-15 | Blood Test: Potassium              | 8.1 mmol/L    |        246 |
+|           171 | 2024-12-14 | Blood Test: HbA1c                  | 60 mmol/mol   |        271 |
+|           420 | 2024-12-13 | Blood Test: Iron                   | 39 umol/L     |        132 |
+|           182 | 2024-12-12 | Blood Test: Magnesium              | 1.4 mmol/L    |         13 |
+|           475 | 2024-12-11 | Blood Test: Bilirubin              | 28 umol/L     |        164 |
+|           498 | 2024-12-07 | Blood Test: White Blood Cell Count | 12.3 x 10^9/L |        162 |
+|           453 | 2024-12-05 | Blood Test: LDL Cholesterol        | 3.6 mmol/L    |        150 |
+|           223 | 2024-12-03 | Blood Test: Bilirubin              | 1 umol/L      |        459 |
+|            25 | 2024-12-02 | Blood Test: Haemoglobin            | 87 g/L        |        149 |
+|           397 | 2024-12-02 | Blood Test: Potassium              | 7.4 mmol/L    |        464 |
+|           248 | 2024-12-02 | Blood Test: Alkaline Phosphatase   | 41 IU/L       |        501 |
+|            34 | 2024-11-28 | Blood Test: White Blood Cell Count | 11.6 x 10^9/L |        431 |
+|           346 | 2024-11-28 | Blood Test: Alkaline Phosphatase   | 87 IU/L       |        501 |
+|            68 | 2024-11-27 | Blood Test: White Blood Cell Count | 15.4 x 10^9/L |        556 |
+|           382 | 2024-11-26 | Blood Test: Red Blood Cell Count   | 6.7 x 10^12/L |        295 |
+|           287 | 2024-11-24 | Blood Test: Albumin                | 31 g/L        |         66 |
+|           485 | 2024-11-21 | Blood Test: C-Reactive Protein     | 3.6 mg/L      |        591 |
+|            50 | 2024-11-12 | Blood Test: Red Blood Cell Count   | 2.9 x 10^12/L |        471 |
+|           257 | 2024-11-08 | Blood Test: Magnesium              | 1.1 mmol/L    |        394 |
+|           440 | 2024-11-06 | Blood Test: Lymphocytes            | 7.5 x 10^9/L  |        591 |
+|           275 | 2024-11-04 | Blood Test: Urea                   | 3.4 mmol/L    |        545 |
+|            47 | 2024-11-03 | Blood Test: Triglycerides          | 4.5 mmol/L    |        324 |
+|           175 | 2024-10-20 | Blood Test: Triglycerides          | 2.6 mmol/L    |        405 |
+|           363 | 2024-10-18 | Blood Test: Lactate                | 7 mmol/L      |        343 |
+|           436 | 2024-10-13 | Blood Test: Triglycerides          | 1.6 mmol/L    |         34 |
+|           208 | 2024-10-09 | Blood Test: Magnesium              | 1.3 mmol/L    |         81 |
+|           403 | 2024-10-08 | Blood Test: Creatinine             | 113 umol/L    |        229 |
+|             1 | 2024-10-04 | Blood Test: LDL Cholesterol        | 4 mmol/L      |        228 |
+|           392 | 2024-09-30 | Blood Test: Bilirubin              | 15 umol/L     |        434 |
+|           177 | 2024-09-29 | Blood Test: Urea                   | 7.8 mmol/L    |        273 |
+|           389 | 2024-09-26 | Blood Test: Urea                   | 6.4 mmol/L    |        191 |
+|            48 | 2024-09-26 | Blood Test: C-Reactive Protein     | 9.6 mg/L      |        277 |
+|           246 | 2024-09-18 | Blood Test: Creatinine             | 116 umol/L    |        276 |
+|           307 | 2024-09-17 | Blood Test: C-Reactive Protein     | 4 mg/L        |          1 |
+|            73 | 2024-09-10 | Blood Test: Albumin                | 28 g/L        |        265 |
+|           411 | 2024-09-06 | Blood Test: Alkaline Phosphatase   | 103 IU/L      |         81 |
+|           426 | 2024-09-06 | Blood Test: Neutrophils            | 1.4 x 10^9/L  |        395 |
+|           210 | 2024-09-06 | Blood Test: Haemoglobin            | 120 g/L       |        468 |
+|           158 | 2024-08-27 | Blood Test: HDL Cholesterol        | 1 mmol/L      |        533 |
+|            85 | 2024-08-24 | Blood Test: Albumin                | 34 g/L        |        133 |
+|            86 | 2024-08-24 | Blood Test: HDL Cholesterol        | 1.7 mmol/L    |        200 |
+|           101 | 2024-08-24 | Blood Test: Triglycerides          | 1.6 mmol/L    |        383 |
+|             3 | 2024-08-23 | Blood Test: HDL Cholesterol        | 0.7 mmol/L    |         34 |
+|           419 | 2024-08-18 | Blood Test: Potassium              | 7.9 mmol/L    |        560 |
+|           312 | 2024-08-16 | Blood Test: Magnesium              | 1.4 mmol/L    |        181 |
+|           333 | 2024-08-13 | Blood Test: Iron                   | 15 umol/L     |        567 |
+|           144 | 2024-08-13 | Blood Test: Albumin                | 25 g/L        |        584 |
+|           311 | 2024-08-12 | Blood Test: Glucose                | 11.2 mmol/L   |        204 |
+|           433 | 2024-08-12 | Blood Test: Lymphocytes            | 2 x 10^9/L    |        238 |
+|            87 | 2024-08-08 | Blood Test: Lymphocytes            | 9.7 x 10^9/L  |         26 |
+|           365 | 2024-08-07 | Blood Test: Alkaline Phosphatase   | 79 IU/L       |        472 |
+|            40 | 2024-08-06 | Blood Test: C-Reactive Protein     | 5.3 mg/L      |         38 |
+|           364 | 2024-08-03 | Blood Test: Lactate                | 5.6 mmol/L    |        186 |
+|           116 | 2024-08-03 | Blood Test: White Blood Cell Count | 10.5 x 10^9/L |        373 |
+|            57 | 2024-07-31 | Blood Test: HDL Cholesterol        | 1.9 mmol/L    |        231 |
+|           445 | 2024-07-31 | Blood Test: Creatinine             | 78 umol/L     |        564 |
+|           399 | 2024-07-28 | Blood Test: HbA1c                  | 26 mmol/mol   |         62 |
+|           180 | 2024-07-25 | Blood Test: Alkaline Phosphatase   | 144 IU/L      |        196 |
+|           406 | 2024-07-23 | Blood Test: Lactate                | 0.8 mmol/L    |        405 |
+|           378 | 2024-07-22 | Blood Test: Alkaline Phosphatase   | 102 IU/L      |        265 |
+|           253 | 2024-07-20 | Blood Test: Lactate                | 9.3 mmol/L    |        472 |
+|           268 | 2024-07-16 | Blood Test: White Blood Cell Count | 6.7 x 10^9/L  |        152 |
+|           409 | 2024-07-15 | Blood Test: Iron                   | 38 umol/L     |        353 |
+|           134 | 2024-07-14 | Blood Test: Albumin                | 34 g/L        |         31 |
+|           327 | 2024-07-12 | Blood Test: Lactate                | 7.1 mmol/L    |        265 |
+|           308 | 2024-07-08 | Blood Test: Albumin                | 26 g/L        |        538 |
+|           194 | 2024-07-07 | Blood Test: LDL Cholesterol        | 0.7 mmol/L    |        389 |
+|           388 | 2024-07-06 | Blood Test: Albumin                | 23 g/L        |        256 |
+|            96 | 2024-07-06 | Blood Test: HDL Cholesterol        | 1.3 mmol/L    |        345 |
+|           155 | 2024-06-30 | Blood Test: Iron                   | 12 umol/L     |         57 |
+|            97 | 2024-06-26 | Blood Test: LDL Cholesterol        | 2.5 mmol/L    |        554 |
+|           290 | 2024-06-23 | Blood Test: Alkaline Phosphatase   | 136 IU/L      |         23 |
+|             9 | 2024-06-21 | Blood Test: HbA1c                  | 76 mmol/mol   |        389 |
+|           228 | 2024-06-09 | Blood Test: Triglycerides          | 1.9 mmol/L    |        237 |
+|           153 | 2024-06-07 | Blood Test: White Blood Cell Count | 15.1 x 10^9/L |        122 |
+|           421 | 2024-06-07 | Blood Test: Bilirubin              | 25 umol/L     |        464 |
+|             5 | 2024-06-05 | Blood Test: HDL Cholesterol        | 1.9 mmol/L    |         32 |
+|           442 | 2024-06-05 | Blood Test: Magnesium              | 0.6 mmol/L    |        547 |
+|           126 | 2024-06-03 | Blood Test: HbA1c                  | 93 mmol/mol   |         15 |
+|           348 | 2024-06-02 | Blood Test: Albumin                | 59 g/L        |        545 |
+|           106 | 2024-06-01 | Blood Test: Urea                   | 7.9 mmol/L    |        292 |
+|           357 | 2024-05-31 | Blood Test: Potassium              | 7.7 mmol/L    |        470 |
+|            76 | 2024-05-20 | Blood Test: Red Blood Cell Count   | 6.3 x 10^12/L |        563 |
+|           102 | 2024-05-19 | Blood Test: Iron                   | 7 umol/L      |        217 |
+|           352 | 2024-05-17 | Blood Test: Lymphocytes            | 8.3 x 10^9/L  |        426 |
+|           296 | 2024-05-17 | Blood Test: Albumin                | 55 g/L        |        573 |
+|           297 | 2024-05-12 | Blood Test: Alkaline Phosphatase   | 55 IU/L       |        271 |
+|            77 | 2024-05-11 | Blood Test: LDL Cholesterol        | 0.1 mmol/L    |         55 |
+|           354 | 2024-05-10 | Blood Test: Magnesium              | 0.9 mmol/L    |        464 |
+|           123 | 2024-05-09 | Blood Test: LDL Cholesterol        | 2.1 mmol/L    |         74 |
+|           497 | 2024-05-09 | Blood Test: C-Reactive Protein     | 8.4 mg/L      |        394 |
+|            36 | 2024-05-06 | Blood Test: Neutrophils            | 2.3 x 10^9/L  |         23 |
+|            10 | 2024-05-02 | Blood Test: Red Blood Cell Count   | 2.9 x 10^12/L |        598 |
+|           100 | 2024-05-01 | Blood Test: Haemoglobin            | 85 g/L        |        168 |
+|           138 | 2024-04-30 | Blood Test: HbA1c                  | 38 mmol/mol   |         20 |
+|           457 | 2024-04-27 | Blood Test: Glucose                | 1.2 mmol/L    |        300 |
+|           400 | 2024-04-23 | Blood Test: Bilirubin              | 3 umol/L      |        426 |
+|           170 | 2024-04-21 | Blood Test: Bilirubin              | 25 umol/L     |        153 |
+|           471 | 2024-04-18 | Blood Test: Triglycerides          | 4.8 mmol/L    |        300 |
+|           186 | 2024-04-17 | Blood Test: HDL Cholesterol        | 1.6 mmol/L    |        147 |
+|           338 | 2024-04-13 | Blood Test: Urea                   | 1.9 mmol/L    |        286 |
+|            38 | 2024-04-12 | Blood Test: Urea                   | 5.6 mmol/L    |        238 |
+|           462 | 2024-04-07 | Blood Test: Glucose                | 4.4 mmol/L    |          6 |
+|           456 | 2024-04-05 | Blood Test: Neutrophils            | 9.3 x 10^9/L  |        402 |
+|           469 | 2024-03-28 | Blood Test: Red Blood Cell Count   | 7.4 x 10^12/L |         10 |
+|            70 | 2024-03-19 | Blood Test: Bilirubin              | 11 umol/L     |        152 |
+|            78 | 2024-03-19 | Blood Test: Creatinine             | 133 umol/L    |        198 |
+|            71 | 2024-03-19 | Blood Test: Creatinine             | 119 umol/L    |        486 |
+|           236 | 2024-03-17 | Blood Test: White Blood Cell Count | 16.5 x 10^9/L |        494 |
+|            84 | 2024-03-12 | Blood Test: C-Reactive Protein     | 3.8 mg/L      |        288 |
+|           326 | 2024-03-10 | Blood Test: Albumin                | 59 g/L        |        181 |
+|           146 | 2024-03-08 | Blood Test: Triglycerides          | 2.3 mmol/L    |         95 |
+|           110 | 2024-02-23 | Blood Test: LDL Cholesterol        | 2.2 mmol/L    |         26 |
+|           332 | 2024-02-23 | Blood Test: Lactate                | 7.1 mmol/L    |        461 |
+|           323 | 2024-02-22 | Blood Test: Iron                   | 36 umol/L     |        531 |
+|           163 | 2024-02-21 | Blood Test: White Blood Cell Count | 15.6 x 10^9/L |        526 |
+|            12 | 2024-02-20 | Blood Test: Haemoglobin            | 157 g/L       |        493 |
+|           181 | 2024-02-16 | Blood Test: Alkaline Phosphatase   | 59 IU/L       |        471 |
+|           293 | 2024-02-13 | Blood Test: Urea                   | 9.4 mmol/L    |        454 |
+|           276 | 2024-02-11 | Blood Test: Potassium              | 7.7 mmol/L    |        185 |
+|           197 | 2024-02-11 | Blood Test: Glucose                | 11.1 mmol/L   |        542 |
+|           201 | 2024-02-09 | Blood Test: Bilirubin              | 13 umol/L     |         83 |
+|           270 | 2024-02-09 | Blood Test: Potassium              | 1.4 mmol/L    |        594 |
+|           220 | 2024-02-02 | Blood Test: Neutrophils            | 6.7 x 10^9/L  |        322 |
+|           124 | 2024-01-30 | Blood Test: Magnesium              | 0.9 mmol/L    |        401 |
+|           204 | 2024-01-30 | Blood Test: Lymphocytes            | 6.2 x 10^9/L  |        466 |
+|            17 | 2024-01-29 | Blood Test: Alkaline Phosphatase   | 51 IU/L       |        271 |
+|           484 | 2024-01-18 | Blood Test: Bilirubin              | 15 umol/L     |        249 |
+|           289 | 2024-01-16 | Blood Test: White Blood Cell Count | 13.2 x 10^9/L |        454 |
+|           369 | 2024-01-12 | Blood Test: Glucose                | 13.9 mmol/L   |         93 |
+|           193 | 2024-01-12 | Blood Test: Lactate                | 7.4 mmol/L    |        133 |
+|           455 | 2024-01-07 | Blood Test: Creatinine             | 36 umol/L     |        269 |
+|           167 | 2024-01-01 | Blood Test: Glucose                | 9.8 mmol/L    |        122 |
++---------------+------------+------------------------------------+---------------+------------+
+
+```
+
+
 
 ### Query 12: `list_of_all_appointments_for_a_patient.sql`
 
