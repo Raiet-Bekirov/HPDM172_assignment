@@ -10,7 +10,7 @@ This directory contains SQL scipt files for nineteen different queries that can 
 - [Query 6, `query_name.sql`](#query-6-query_namesql): Modify address details of an existing customer.
 - [Query 7, `query_name.sql`](#query-7-query_namesql): Print a list of all patient names and addresses for patients registered to doctors based at one particular hospital – that could be used for posting information mail to all of one hospital’s registered patients.
 - [Query 8, `get_docs_from_accredited_hospitals.sql`](#query-8-get_docs_from_accredited_hospitals.sql): Print a list of all doctors based at Teaching hospitals which were accredited between 2015–2024.
-- [Query 9, `query_name.sql`](#query-9-query_namesql): List all patients who may have a particular disease based on which medication they have been prescribed.
+- [Query 9, `get_patients_and_medication_from_diseaseID.sql`](#query-9-get_patients_and_medication_from_diseaseID.sql): List all patients who may have a particular disease based on which medication they have been prescribed.
 - [Query 10, `query_name.sql`](#query-10-query_namesql): List all doctors who specialize in a particular disease.
 - [Query 11, `query_name.sql`](#query-11-query_namesql): List all lab results for all patients over the age of 60.
 - [Query 12, `query_name.sql`](#query-12-query_namesql): Print a list of all appointments for a given patient.
@@ -248,7 +248,47 @@ This produces the following output:
 +-----------+--------------------------+---------------------------+--------------------+
 ```
 
-### Query 9: `query_name.sql`
+### Query 9: `get_patients_and_medication_from_diseaseID.sql`
+
+If `get_patients_and_medication_from_diseaseID.sql` is downloaded, the following SQL code can be used to print a list of all doctors based at a particular hospital. First, select the `hospitals_db` database:
+
+```sql
+USE hospitals_db;
+```
+
+Then, set the variable `@HospitalID` to the unique ID number of the chosen hospital:
+
+```sql
+SET @DiseaseId = 3;
+```
+
+Finally, run the `get_patients_and_medication_from_diseaseID.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+
+```sql
+source /filepath/of/get_patients_and_medication_from_diseaseID.sql
+```
+
+This produces the following output:
+
+```
++------------+--------------------+--------------+----------------------+
+| patient_id | patient_name       | disease_name | medication_name      |
++------------+--------------------+--------------+----------------------+
+| 278        | Vedant Todorova    | Bowel cancer | Fluorouracil         |
+| 101        | Maya Petek         | Bowel cancer | Trifluridine         |
+| 155        | Sofiya Jiménez     | Bowel cancer | Trifluridine         |
+| 213        | Theodore Ivanovski | Bowel cancer | Picosulfate Sodium   |
+| 558        | Maeva Vázquez      | Bowel cancer | Sodium Bicarbonate   |
+| 358        | Mia Tang           | Bowel cancer | Sodium Sulfate       |
+| 440        | Ali Cavalcante     | Bowel cancer | Capecitabine         |
+| 70         | Maria Moser        | Bowel cancer | Panitumumab          |
+| 534        | Dylan Subotić      | Bowel cancer | Levoleucovorin       |
+| 272        | Martín Rivero      | Bowel cancer | Irinotecan Liposomal |
+| 178        | Nika Pak           | Bowel cancer | Irinotecan Liposomal |
+| 62         | Kyra Rusu          | Bowel cancer | Irinotecan Liposomal |
+| 365        | Kairo Klein        | Bowel cancer | Irinotecan Liposomal |
++------------+--------------------+--------------+----------------------+
+```
 
 ### Query 10: `query_name.sql`
 
