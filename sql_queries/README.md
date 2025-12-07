@@ -296,13 +296,38 @@ This produces the following output:
 
 ### Query 12: `query_name.sql`
 
+If `list_of_all_appointments_for_a_patient.sql` is downloaded, the following SQL code can be used to print a list of all appointments for a given patient.First, select the `hospitals_db` database:
+```sql
+USE hospitals_db;
+```
+Then, set the variable `@PatientID` to the unique ID number of the chosen patient:  
+
+```sql
+SET @DPatientID = 35;
+```
+Finally, run the `list_of_all_appointments_for_a_patient.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+
+```sql
+source /filepath/of/list_of_all_appointments_for_a_patient.sql
+```
+
+This produces the following output:
+
+```
+
 ### Query 13: `list_of_all_appointments_for_a_doctor.sql`
 
 If `list_of_all_appointments_for_a_doctor.sql` is downloaded, the following SQL code can be used to print a list of all appointments for a given doctor.First, select the `hospitals_db` database:
 ```sql
 USE hospitals_db;
 ```
-
++------------------+--------------+------------------------+
+| appointment_date | patient_name | doctor_name            |
++------------------+--------------+------------------------+
+| 2026-01-21       | Noor Ali     | Dr. Vasileios Jönsson  |
+| 2026-12-16       | Noor Ali     | Dr. Siti Gouw          |
++------------------+--------------+------------------------+
+```
 Then, set the variable `@DoctorID` to the unique ID number of the chosen doctor:
 
 ```sql
