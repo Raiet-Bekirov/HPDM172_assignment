@@ -9,7 +9,7 @@ This directory contains SQL scipt files for nineteen different queries that can 
 - [Query 5, `query_name.sql`](#query-5-query_namesql): Add a new customer to the database, including being registered with one of the doctors.
 - [Query 6, `query_name.sql`](#query-6-query_namesql): Modify address details of an existing customer.
 - [Query 7, `query_name.sql`](#query-7-query_namesql): Print a list of all patient names and addresses for patients registered to doctors based at one particular hospital – that could be used for posting information mail to all of one hospital’s registered patients.
-- [Query 8, `query_name.sql`](#query-8-query_namesql): Print a list of all doctors based at Teaching hospitals which were accredited between 2015–2024.
+- [Query 8, `get_docs_from_accredited_hospitals.sql`](#query-8-get_docs_from_accredited_hospitals.sql): Print a list of all doctors based at Teaching hospitals which were accredited between 2015–2024.
 - [Query 9, `query_name.sql`](#query-9-query_namesql): List all patients who may have a particular disease based on which medication they have been prescribed.
 - [Query 10, `query_name.sql`](#query-10-query_namesql): List all doctors who specialize in a particular disease.
 - [Query 11, `query_name.sql`](#query-11-query_namesql): List all lab results for all patients over the age of 60.
@@ -204,7 +204,49 @@ The first five rows of produced table:
 
 ### Query 7: `query_name.sql`
 
-### Query 8: `query_name.sql`
+### Query 8: `get_docs_from_accredited_hospitals.sql`
+
+If `get_docs_from_accredited_hospitals.sql` is downloaded, the following SQL code can be used to print a list of all doctors based at a particular hospital. First, select the `hospitals_db` database:
+
+```sql
+USE hospitals_db;
+```
+
+Finally, run the `get_docs_from_accredited_hospitals.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+
+```sql
+source /filepath/of/get_docs_from_accredited_hospitals.sql
+```
+
+This produces the following output:
+
+```
++-----------+--------------------------+---------------------------+--------------------+
+| doctor_id | doctor_name              | hospital_name             | accreditation_year |
++-----------+--------------------------+---------------------------+--------------------+
+| 88        | Dr. Aarav Benítez        | Northwick Park Hospital   | 2022               |
+| 100       | Dr. Ali Imai             | Freeman Hospital          | 2024               |
+| 66        | Dr. Arthur Szabó         | Leicester Royal Infirmary | 2024               |
+| 65        | Dr. Ava Sohn             | Bradford Royal Infirmary  | 2024               |
+| 92        | Dr. Aylin Jakobsson      | Northwick Park Hospital   | 2022               |
+| 2         | Dr. Dmytro Thy           | Northwick Park Hospital   | 2022               |
+| 50        | Dr. Eliška Nieminen      | Leicester Royal Infirmary | 2024               |
+| 76        | Dr. Emiliya Mamedovi     | Leicester Royal Infirmary | 2024               |
+| 43        | Dr. Emir García          | Warrington Hospital       | 2024               |
+| 59        | Dr. Ivana Bird           | St Thomas' Hospital       | 2022               |
+| 90        | Dr. Julia Pavlov         | Northern General Hospital | 2022               |
+| 81        | Dr. Leo Pino             | Bradford Royal Infirmary  | 2024               |
+| 39        | Dr. Malak Müller         | Bradford Royal Infirmary  | 2024               |
+| 60        | Dr. Malthe Herath        | Leicester Royal Infirmary | 2024               |
+| 53        | Dr. Miguel De Los Santos | St Thomas' Hospital       | 2022               |
+| 27        | Dr. Mohammad Shala       | Bradford Royal Infirmary  | 2024               |
+| 79        | Dr. Muhammed López       | Leicester Royal Infirmary | 2024               |
+| 82        | Dr. Sara Bai             | Northwick Park Hospital   | 2022               |
+| 37        | Dr. Sara Chén            | St Thomas' Hospital       | 2022               |
+| 51        | Dr. Titaina Božić        | Warrington Hospital       | 2024               |
+| 15        | Dr. Turki Maeda          | Warrington Hospital       | 2024               |
++-----------+--------------------------+---------------------------+--------------------+
+```
 
 ### Query 9: `query_name.sql`
 
