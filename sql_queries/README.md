@@ -11,7 +11,7 @@ This directory contains SQL scipt files for nineteen different queries that can 
 - [Query 7, `query_name.sql`](#query-7-query_namesql): Print a list of all patient names and addresses for patients registered to doctors based at one particular hospital – that could be used for posting information mail to all of one hospital’s registered patients.
 - [Query 8, `get_docs_from_accredited_hospitals.sql`](#query-8-get_docs_from_accredited_hospitals.sql): Print a list of all doctors based at Teaching hospitals which were accredited between 2015–2024.
 - [Query 9, `get_patients_and_medication_from_diseaseID.sql`](#query-9-get_patients_and_medication_from_diseaseID.sql): List all patients who may have a particular disease based on which medication they have been prescribed.
-- [Query 10, `query_name.sql`](#query-10-query_namesql): List all doctors who specialize in a particular disease.
+- [Query 10, `get_docs_for_disease.sql`](#query-10-get_docs_for_diseasesql): List all doctors who specialize in a particular disease.
 - [Query 11, `lab_results_for_all_patients_over_the_age_of_60.sql`](#query-11-lab_results_for_all_patients_over_the_age_of_60sql): List all lab results for all patients over the age of 60.
 - [Query 12, `list_of_all_appointments_for_a_patient.sql`](#query-12-list_of_all_appointments_for_a_patientsql): Print a list of all appointments for a given patient.
 - [Query 13, `list_of_all_appointments_for_a_doctor.sql`](#query-13-list_of_all_appointments_for_a_doctorsql): Print a list of all appointments for a given doctor.
@@ -290,7 +290,47 @@ This produces the following output:
 +------------+--------------------+--------------+----------------------+
 ```
 
-### Query 10: `query_name.sql`
+### Query 10: `get_docs_for_disease.sql`
+
+If `get_docs_for_disease.sql` is downloaded, the following SQL code can be used to print a list of doctors who specialize in a particular disease. First, select the `hospitals_db` database:
+```sql
+USE hospitals_db;
+```
+
+Then, set the variable `@DiseaseID` to the unique ID number of the chosen disease:
+
+```sql
+SET @DiseaseID = 4;
+```
+
+
+Finally, run the `get_docs_for_disease.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+
+```sql
+source /filepath/of/get_docs_for_disease.sql
+```
+
+This produces the following output:
+
+```
++-----------+-------------------------+------------------------+
+| doctor_id | doctor_name             | disease_name           |
++-----------+-------------------------+------------------------+
+|         4 | Dr. Lara Valverde       | Chronic kidney disease |
+|        32 | Dr. Farrah Jakobsson    | Chronic kidney disease |
+|        37 | Dr. Sara Chén           | Chronic kidney disease |
+|        41 | Dr. Kairo Savchenko     | Chronic kidney disease |
+|        42 | Dr. Varvara Karunaratne | Chronic kidney disease |
+|        48 | Dr. Nikolaos Mikeladze  | Chronic kidney disease |
+|        68 | Dr. Halim Edri          | Chronic kidney disease |
+|        77 | Dr. Ahmed Mao           | Chronic kidney disease |
+|        85 | Dr. Mia Pereyra         | Chronic kidney disease |
+|        97 | Dr. Haruma Phạm         | Chronic kidney disease |
++-----------+-------------------------+------------------------+
+
+```
+
+
 
 ### Query 11: `lab_results_for_all_patients_over_the_age_of_60.sql`
 
