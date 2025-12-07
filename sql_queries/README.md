@@ -294,7 +294,7 @@ This produces the following output:
 
 ### Query 11: `query_name.sql`
 
-### Query 12: `query_name.sql`
+### Query 12: `list_of_all_appointments_for_a_patient.sql`
 
 If `list_of_all_appointments_for_a_patient.sql` is downloaded, the following SQL code can be used to print a list of all appointments for a given patient.First, select the `hospitals_db` database:
 ```sql
