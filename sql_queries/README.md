@@ -12,9 +12,9 @@ This directory contains SQL scipt files for nineteen different queries that can 
 - [Query 8, `get_docs_from_accredited_hospitals.sql`](#query-8-get_docs_from_accredited_hospitals.sql): Print a list of all doctors based at Teaching hospitals which were accredited between 2015–2024.
 - [Query 9, `get_patients_and_medication_from_diseaseID.sql`](#query-9-get_patients_and_medication_from_diseaseID.sql): List all patients who may have a particular disease based on which medication they have been prescribed.
 - [Query 10, `get_docs_for_disease.sql`](#query-10-get_docs_for_diseasesql): List all doctors who specialize in a particular disease.
-- [Query 11, `lab_results_for_all_patients_over_the_age_of_60.sql`](#query-11-lab_results_for_all_patients_over_the_age_of_60sql): List all lab results for all patients over the age of 60.
-- [Query 12, `list_of_all_appointments_for_a_patient.sql`](#query-12-list_of_all_appointments_for_a_patientsql): Print a list of all appointments for a given patient.
-- [Query 13, `list_of_all_appointments_for_a_doctor.sql`](#query-13-list_of_all_appointments_for_a_doctorsql): Print a list of all appointments for a given doctor.
+- [Query 11, `get_lab_results_over_60.sql`](#query-11-get_lab_results_over_60sql): List all lab results for all patients over the age of 60.
+- [Query 12, `get_appointments_for_patient.sql`](#query-12-get_appointments_for_patientsql): Print a list of all appointments for a given patient.
+- [Query 13, `get_appointments_for_doctor.sql`](#query-13-get_appointments_for_doctorsql): Print a list of all appointments for a given doctor.
 - [Query 14, `get_hosp_prescriptions.sql`](#query-14-get_hosp_prescriptionssql): Print all prescriptions made from a particular hospital ordered alphabetically by the name of the medication being prescribed – the output of this SQL query should include only these 4 columns: the medication name, the name of doctor who prescribed it, the name of the patient, and the name of hospital.
 - [Query 15, `get_lab_results_at_hosp_accred_btwn_2013_2020.sql`](#query-15-get_lab_results_at_hosp_accred_btwn_2013_2020sql): Print a list of all lab results from all hospitals that were accredited between 2013–2020.
 - [Query 16, `get_max_prescriber.sql`](#query-16-get_max_prescribersql): Identify which doctor has made the most prescriptions.
@@ -332,16 +332,16 @@ This produces the following output:
 
 
 
-### Query 11: `lab_results_for_all_patients_over_the_age_of_60.sql`
+### Query 11: `get_lab_results_over_60.sql`
 
-If `lab_results_for_all_patients_over_the_age_of_60.sql` is downloaded, the following SQL code can be used to print a list of lab results for all patients over the age of 60. First, select the `hospitals_db` database:
+If `get_lab_results_over_60.sql` is downloaded, the following SQL code can be used to print a list of lab results for all patients over the age of 60. First, select the `hospitals_db` database:
 ```sql
 USE hospitals_db;
 ```
-Finally, run the `list_of_all_appointments_for_a_patient.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+Finally, run the `get_lab_results_over_60.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
 
 ```sql
-source /filepath/of/lab_results_for_all_patients_over_the_age_of_60.sql
+source /filepath/of/get_lab_results_over_60.sql
 ```
 
 This produces the following output:
@@ -606,9 +606,9 @@ This produces the following output:
 
 
 
-### Query 12: `list_of_all_appointments_for_a_patient.sql`
+### Query 12: `get_appointments_for_patient.sql`
 
-If `list_of_all_appointments_for_a_patient.sql` is downloaded, the following SQL code can be used to print a list of all appointments for a given patient.First, select the `hospitals_db` database:
+If `get_appointments_for_patient.sql` is downloaded, the following SQL code can be used to print a list of all appointments for a given patient.First, select the `hospitals_db` database:
 ```sql
 USE hospitals_db;
 ```
@@ -617,10 +617,10 @@ Then, set the variable `@PatientID` to the unique ID number of the chosen patien
 ```sql
 SET @PatientID = 35;
 ```
-Finally, run the `list_of_all_appointments_for_a_patient.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+Finally, run the `get_appointments_for_patient.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
 
 ```sql
-source /filepath/of/list_of_all_appointments_for_a_patient.sql
+source /filepath/of/get_appointments_for_patient.sql
 ```
 
 This produces the following output:
@@ -633,9 +633,9 @@ This produces the following output:
 | 2026-12-16       | Noor Ali     | Dr. Siti Gouw          |
 +------------------+--------------+------------------------+
 ```
-### Query 13: `list_of_all_appointments_for_a_doctor.sql`
+### Query 13: `get_appointments_for_doctor.sql`
 
-If `list_of_all_appointments_for_a_doctor.sql` is downloaded, the following SQL code can be used to print a list of all appointments for a given doctor. First, select the `hospitals_db` database:
+If `get_appointments_for_doctor.sql` is downloaded, the following SQL code can be used to print a list of all appointments for a given doctor. First, select the `hospitals_db` database:
 ```sql
 USE hospitals_db;
 ```
@@ -646,10 +646,10 @@ Then, set the variable `@DoctorID` to the unique ID number of the chosen doctor:
 SET @DoctorID = 5;
 ```
 
-Finally, run the `list_of_all_appointments_for_a_doctor.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+Finally, run the `get_appointments_for_doctor.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
 
 ```sql
-source /filepath/of/list_of_all_appointments_for_a_doctor.sql
+source /filepath/of/get_appointments_for_doctor.sql
 ```
 
 This produces the following output:
