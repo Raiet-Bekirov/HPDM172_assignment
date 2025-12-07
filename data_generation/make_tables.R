@@ -622,8 +622,8 @@ for (i in 1:500) {
   drug <- sample(medications_table$medication_id)
   apt_year <- sample(2026:2027, 1)
   apt_day_of_year <- sample(1:365, 1)
-  apt_month <- leap_year_days$month[apt_day_of_year]
-  apt_day <- leap_year_days$day[apt_day_of_year]
+  apt_month <- year_days$month[apt_day_of_year]
+  apt_day <- year_days$day[apt_day_of_year]
   appointments_table$apt_date[i] <- paste(apt_year,
                       apt_month,
                       apt_day,
