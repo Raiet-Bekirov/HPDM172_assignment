@@ -1,5 +1,5 @@
 Table hospitals {
-  hospital_id integer [primary key]
+  hospital_id integer [primary key, not null]
   hospital_name varchar
   hospital_address varchar
   no_of_beds integer
@@ -9,12 +9,12 @@ Table hospitals {
 }
 
 Table diseases {
-  disease_id integer [primary key]
+  disease_id integer [primary key, not null]
   disease_name varchar
 }
 
 Table doctors {
-  doctor_id integer [primary key]
+  doctor_id integer [primary key, not null]
   doctor_name varchar
   doctor_dob date
   doctor_address varchar
@@ -23,7 +23,7 @@ Table doctors {
 }
 
 Table patients {
-  patient_id integer [primary key]
+  patient_id integer [primary key, not null]
   patient_name varchar
   patient_dob date
   patient_address varchar
@@ -31,13 +31,13 @@ Table patients {
 }
 
 Table medications {
-  medication_id integer [primary key]
+  medication_id integer [primary key, not null]
   medication_name varchar
   disease_id int [ref: > diseases.disease_id, not null]
 }
 
 Table prescriptions {
-  prescription_id integer [primary key]
+  prescription_id integer [primary key, not null]
   prescription_date date
   medication_id int [ref: > medications.medication_id, not null]
   patient_id int [ref: > patients.patient_id, not null]
@@ -45,14 +45,14 @@ Table prescriptions {
 }
 
 Table appointments {
-  appointment_id integer [primary key]
+  appointment_id integer [primary key, not null]
   appointment_date date
   patient_id int [ref: > patients.patient_id, not null]
   doctor_id int [ref: > doctors.doctor_id, not null]
 }
 
 Table lab_results {
-  lab_result_id integer [primary key]
+  lab_result_id integer [primary key, not null]
   test_date date
   test_type varchar
   test_result varchar
