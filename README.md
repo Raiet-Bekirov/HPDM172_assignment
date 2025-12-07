@@ -8,7 +8,7 @@ This repository contains code to create and query a synthetic health data scienc
 - The scripts [`fetch_data_files.sh`](https://github.com/Raiet-Bekirov/HPDM172_assignment/blob/main/fetch_data_files.sh) and [`generate_db_from_data_files.sql`](https://github.com/Raiet-Bekirov/HPDM172_assignment/blob/main/generate_db_from_data_files.sql) automate the process of creating `hospitals_db` from the data files provided in this repository.
 - The SQL file [`hospitals_db.sql`](https://github.com/Raiet-Bekirov/HPDM172_assignment/blob/main/hospitals_db.sql) is a backup of `hospitals_db` created using `mysqldump`.
 
-## Steps to reproduce `hospitals_db`s
+## Steps to Reproduce `hospitals_db`
 
 Any MySQL user can duplicate our database, `hospitals_db`, using the data files and code provided in this repository. The steps to achieve this in three different ways are detailed below, in increasing order of the amount of user input required.
 
