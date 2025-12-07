@@ -294,7 +294,7 @@ This produces the following output:
 
 ### Query 11: `lab_results_for_all_patients_over_the_age_of_60.sql`
 
-If `lab_results_for_all_patients_over_the_age_of_60.sql` is downloaded, the following SQL code can be used to print a list of all appointments for a given patient.First, select the `hospitals_db` database:
+If `lab_results_for_all_patients_over_the_age_of_60.sql` is downloaded, the following SQL code can be used to print a list of lab results for all patients over the age of 60. First, select the `hospitals_db` database:
 ```sql
 USE hospitals_db;
 ```
