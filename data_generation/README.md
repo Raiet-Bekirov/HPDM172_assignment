@@ -1,6 +1,6 @@
 # data_generation
 
-This directory contains the R and bash scripts we used in order to generate data to import into our `hospitals_db` database, along with the reulting plain text data files.
+This directory contains the R and bash scripts we used in order to generate data to import into our `hospitals_db` database, along with the resulting plain text data files.
 
 ## Explanation of the Generated Data
 
