@@ -6,8 +6,8 @@ This directory contains SQL scipt files for nineteen different queries that can 
 - [Query 2, `get_prescriptions_for_patient.sql`](#query-2-get_prescriptions_for_patientsql): Print a list of all prescriptions for a particular patient, ordered by the prescription date.
 - [Query 3, `get_prescriptions_from_doc.sql`](#query-3-get_prescriptions_from_docsql): Print a list of all prescriptions that a particular doctor has prescribed.
 - [Query 4, `get_prescriptions_for_all_patient_alphabetical.sql`](#query-4-get_prescriptions_for_all_patient_alphabeticalsql): Print a table showing all prescriptions ordered by the patient name alphabetically.
-- [Query 5, `query_name.sql`](#query-5-query_namesql): Add a new customer to the database, including being registered with one of the doctors.
-- [Query 6, `query_name.sql`](#query-6-query_namesql): Modify address details of an existing customer.
+- [Query 5, `add_new_patient.sql`](#query-5-add_new_patientsql): Add a new customer to the database, including being registered with one of the doctors.
+- [Query 6, `update_existing_patient_address.sql`](#query-6-update_existing_patient_addresssql): Modify address details of an existing customer.
 - [Query 7, `query_name.sql`](#query-7-query_namesql): Print a list of all patient names and addresses for patients registered to doctors based at one particular hospital – that could be used for posting information mail to all of one hospital’s registered patients.
 - [Query 8, `get_docs_from_accredited_hospitals.sql`](#query-8-get_docs_from_accredited_hospitals.sql): Print a list of all doctors based at Teaching hospitals which were accredited between 2015–2024.
 - [Query 9, `get_patients_and_medication_from_diseaseID.sql`](#query-9-get_patients_and_medication_from_diseaseID.sql): List all patients who may have a particular disease based on which medication they have been prescribed.
@@ -198,9 +198,56 @@ The first five rows of produced table:
 +-----------------+-------------------+-----------------------+--------------------------+--------------------------------------------------+
 ```
 
-### Query 5: `query_name.sql`
+### Query 5: `add_new_patient.sql`
+If `add_new_patient.sql` is downloaded, the following SQL code can be used to add new patient to the existing patients table. First, select the `hospitals_db` database:
 
-### Query 6: `query_name.sql`
+```sql
+USE hospitals_db;
+```
+Finally, run the `add_new_patient.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+
+```sql
+source /filepath/of/add_new_pateint.sql
+```
+
+This produces the following output:
+
+```
++------------+--------------+-------------+---------------------------------------------+-----------+
+| patient_id | patient_name | patient_dob | patient_address                             | doctor_id |
++------------+--------------+-------------+---------------------------------------------+-----------+
+|        601 | Alice Brown  | 1998-12-12  | 17 Milverton court, Leamington spa CV32 5JA |        23 |
++------------+--------------+-------------+---------------------------------------------+-----------+
+```
+### Query 6: `update_existing_patient_address.sql`
+If `update_existing_patient_address.sql` is downloaded, the following SQL code can be used to update existing patient address data. First, select the `hospitals_db` database:
+
+```sql
+USE hospitals_db;
+```
+Finally, run the `update_existing_patient_address.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+
+```sql
+source /filepath/of/update_existing_patient_address.sql
+```
+
+This produces the following output:
+
+```
+before update:
++---------------------------------+
+| patient_address                 |
++---------------------------------+
+| 20 London Road, Urmston M41 9JN |
++---------------------------------+
+
+after update:
++----------------------------+
+| patient_address            |
++----------------------------+
+| 35 Wembley, London M43 4NJ |
++----------------------------+
+```
 
 ### Query 7: `query_name.sql`
 
