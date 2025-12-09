@@ -8,7 +8,7 @@ This directory contains SQL scipt files for nineteen different queries that can 
 - [Query 4, `get_prescriptions_for_all_patient_alphabetical.sql`](#query-4-get_prescriptions_for_all_patient_alphabeticalsql): Print a table showing all prescriptions ordered by the patient name alphabetically.
 - [Query 5, `add_new_patient.sql`](#query-5-add_new_patientsql): Add a new customer to the database, including being registered with one of the doctors.
 - [Query 6, `update_existing_patient_address.sql`](#query-6-update_existing_patient_addresssql): Modify address details of an existing customer.
-- [Query 7, `query_name.sql`](#query-7-query_namesql): Print a list of all patient names and addresses for patients registered to doctors based at one particular hospital – that could be used for posting information mail to all of one hospital’s registered patients.
+- [Query 7, `get_patients_from_hospital.sql`](#query-7-get_patients_from_hospital.sql): Print a list of all patient names and addresses for patients registered to doctors based at one particular hospital – that could be used for posting information mail to all of one hospital’s registered patients.
 - [Query 8, `get_docs_from_accredited_hospitals.sql`](#query-8-get_docs_from_accredited_hospitals.sql): Print a list of all doctors based at Teaching hospitals which were accredited between 2015–2024.
 - [Query 9, `get_patients_and_medication_from_diseaseID.sql`](#query-9-get_patients_and_medication_from_diseaseID.sql): List all patients who may have a particular disease based on which medication they have been prescribed.
 - [Query 10, `get_docs_for_disease.sql`](#query-10-get_docs_for_diseasesql): List all doctors who specialize in a particular disease.
@@ -249,7 +249,53 @@ after update:
 +----------------------------+
 ```
 
-### Query 7: `query_name.sql`
+### Query 7: `get_patients_from_hospital.sql`
+
+If `get_patients_from_hospital.sql` is downloaded, the following SQL code can be used to print a list of all doctors based at a particular hospital. First, select the `hospitals_db` database:
+
+```sql
+USE hospitals_db;
+```
+
+Then, set the variable `@HospitalID` to the unique ID number of the chosen hospital:
+
+```sql
+SET @HospitalId = 33;
+```
+
+Finally, run the `get_patients_from_hospital.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+
+```sql
+source /filepath/of/get_patients_from_hospital.sql
+```
+
+This produces the following output:
+
+```
++-------------------+----------------------------------------+
+| patient_name      | patient_address                        |
++-------------------+----------------------------------------+
+| Agnes Hé          | 94 Union Street, Ealing W3 4RS         |
+| Ahmed Laine       | 61 Bridge Street, Islington EC1M 0US   |
+| Ali Bernardi      | 21 Church Lane, Camberwell SE16 5DX    |
+| Amelija Hysi      | 63 New Street, Brent HA0 5BA           |
+| Ammar Chhetri     | 98 The Avenue, Hillingdon TW6 3LP      |
+| Artem Lynch       | 67 Charles Street, Hammersmith SW6 5EZ |
+| Bismah Díaz       | 26 Sandy Lane, Camberwell SE24 8XX     |
+| Dylan Chetry      | 12 Manor Close, Stratford E12 2DW      |
+| George Rose       | 83 Water Lane, Southall UB5 1ER        |
+| Lydia Yu          | 92 Park View, Wandsworth SW12 2ES      |
+| Mariam Phạm       | 20 Station Road, Camberwell SE15 2AA   |
+| Matteo Pereyra    | 7 Park Road, Hillingdon UB4 3ZU        |
+| Milena Gjika      | 72 Hill Street, Camberwell SE5 6TQ     |
+| Qillaq Murati     | 22 The Paddock, Croydon CR7 3HD        |
+| Raul Saavedra     | 83 North Road, Hillingdon UB4 3AQ      |
+| Samantha Martínez | 52 Silver Street, Romford RM5 3WW      |
+| Shaimaa Cortés    | 18 Main Street, Camden Town WC1A 7ES   |
+| Sienna Babić      | 50 Mill Road, Lewisham SE6 3GU         |
+| Wilson Villa      | 44 Sycamore Close, Westminster W1J 0EG |
++-------------------+----------------------------------------+
+```
 
 ### Query 8: `get_docs_from_accredited_hospitals.sql`
 
