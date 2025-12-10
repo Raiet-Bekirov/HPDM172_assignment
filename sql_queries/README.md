@@ -199,7 +199,7 @@ The first five rows of the produced table are as follows:
 ```
 
 ### Query 5: `add_new_patient.sql`
-If `add_new_patient.sql` is downloaded, the following SQL code can be used to add new patient to the existing patients table. First, select the `hospitals_db` database:
+If `add_new_patient.sql` is downloaded, the following SQL code can be used to add a new patient to the existing patients table. First, select the `hospitals_db` database:
 
 ```sql
 USE hospitals_db;
@@ -250,7 +250,7 @@ This produces the following output:
 
 ### Query 6: `update_existing_patient_address.sql`
 
-If `update_existing_patient_address.sql` is downloaded, the following SQL code can be used to update existing patient address data. First, select the `hospitals_db` database:
+If `update_existing_patient_address.sql` is downloaded, the following SQL code can be used to update an existing patient's address data. First, select the `hospitals_db` database:
 
 ```sql
 USE hospitals_db;
@@ -599,7 +599,7 @@ This produces the following output:
 
 ### Query 15: `get_lab_results_at_hospitals_accred_btwn_2013_2020.sql`
 
-If `get_lab_results_at_hospitals_accred_btwn_2013_2020.sql` is downloaded, the following SQL code can be used to dentify which doctor has made the most prescriptions. First, select the `hospitals_db` database:
+If `get_lab_results_at_hospitals_accred_btwn_2013_2020.sql` is downloaded, the following SQL code can be used to print a list of lab results from all hospitals that were accredited between 2013–2020. First, select the `hospitals_db` database:
 
 ```sql
 USE hospitals_db;

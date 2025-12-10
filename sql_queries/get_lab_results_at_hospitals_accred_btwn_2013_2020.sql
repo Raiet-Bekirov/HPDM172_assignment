@@ -1,4 +1,4 @@
-SELECT 
+SELECT
     l.test_date,
     l.test_type,
     l.test_result,
