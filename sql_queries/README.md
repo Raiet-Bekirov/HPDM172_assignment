@@ -10,7 +10,7 @@ This directory contains SQL scipt files for nineteen different queries that can 
 - [Query 6, `update_existing_patient_address.sql`](#query-6-update_existing_patient_addresssql): Modify address details of an existing customer.
 - [Query 7, `get_patients_from_hospital.sql`](#query-7-get_patients_from_hospitalsql): Print a list of all patient names and addresses for patients registered to doctors based at one particular hospital – that could be used for posting information mail to all of one hospital’s registered patients.
 - [Query 8, `get_docs_at_teaching_hospitals_accred_btwn_2015_2024.sql`](#query-8-get_docs_at_teaching_hospitals_accred_btwn_2015_2024sql): Print a list of all doctors based at Teaching hospitals which were accredited between 2015–2024.
-- [Query 9, `get_patients_and_medication_from_diseaseID.sql`](#query-9-get_patients_and_medication_from_diseaseID.sql): List all patients who may have a particular disease based on which medication they have been prescribed.
+- [Query 9, `get_patients_and_medication_from_disease.sql`](#query-9-get_patients_and_medication_from_diseasesql): List all patients who may have a particular disease based on which medication they have been prescribed.
 - [Query 10, `get_docs_for_disease.sql`](#query-10-get_docs_for_diseasesql): List all doctors who specialize in a particular disease.
 - [Query 11, `get_lab_results_over_60.sql`](#query-11-get_lab_results_over_60sql): List all lab results for all patients over the age of 60.
 - [Query 12, `get_appointments_for_patient.sql`](#query-12-get_appointments_for_patientsql): Print a list of all appointments for a given patient.
@@ -380,9 +380,9 @@ This produces the following output:
 +-----------+--------------------------+---------------------------+--------------------+
 ```
 
-### Query 9: `get_patients_and_medication_from_diseaseID.sql`
+### Query 9: `get_patients_and_medication_from_disease.sql`
 
-If `get_patients_and_medication_from_diseaseID.sql` is downloaded, the following SQL code can be used to print a list of all patients who may have a particular disease based on which medication they have been prescribed. First, select the `hospitals_db` database:
+If `get_patients_and_medication_from_disease.sql` is downloaded, the following SQL code can be used to print a list of all patients who may have a particular disease based on which medication they have been prescribed. First, select the `hospitals_db` database:
 
 ```sql
 USE hospitals_db;
@@ -394,10 +394,10 @@ Then, set the variable `@DiseaseID` to the unique ID number of the chosen diseas
 SET @DiseaseId = 3;
 ```
 
-Finally, run the `get_patients_and_medication_from_diseaseID.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+Finally, run the `get_patients_and_medication_from_disease.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
 
 ```sql
-source /filepath/of/get_patients_and_medication_from_diseaseID.sql
+source /filepath/of/get_patients_and_medication_from_disease.sql
 ```
 
 This produces the following output:
