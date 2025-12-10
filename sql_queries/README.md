@@ -227,7 +227,7 @@ SET @NewPtDocID = 28;
 Finally, run the `add_new_patient.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
 
 ```sql
-source /filepath/of/add_new_pateint.sql
+source /filepath/of/add_new_patient.sql
 ```
 
 This adds the patient to the `patients` table. Use the following SQL comand to confirm the change:
