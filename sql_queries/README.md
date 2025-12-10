@@ -611,7 +611,7 @@ Then, run the `get_lab_results_at_hospitals_accred_btwn_2013_2020.sql` script (i
 source /filepath/of/get_lab_results_at_hospitals_accred_btwn_2013_2020.sql
 ```
 
-This produces the following output:
+The first five rows of the produced table are as follows:
 
 ```
 +------------+------------------------------------+---------------+----------------------+----------------------+---------------------------------+--------------------+
@@ -622,82 +622,6 @@ This produces the following output:
 | 2025-11-11 | Blood Test: Creatinine             | 87 umol/L     | Ana Jovanović        | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
 | 2025-11-06 | Blood Test: Haemoglobin            | 95 g/L        | Elmar Martirosyan    | Dr. İnci Todorova    | Amersham Hospital               |               2013 |
 | 2025-11-02 | Blood Test: LDL Cholesterol        | 4.1 mmol/L    | Melissa Fontana      | Dr. Seo-yun Iwasaki  | North Tyneside General Hospital |               2019 |
-| 2025-10-31 | Blood Test: White Blood Cell Count | 19.7 x 10^9/L | Ali Rebane           | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
-| 2025-10-24 | Blood Test: HDL Cholesterol        | 1.5 mmol/L    | Jovana Barbosa       | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
-| 2025-10-23 | Blood Test: Alkaline Phosphatase   | 22 IU/L       | Hasan Murphy         | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
-| 2025-10-06 | Blood Test: Triglycerides          | 3.5 mmol/L    | Noah Lîm             | Dr. Sunita Valente   | Westmorland General Hospital    |               2013 |
-| 2025-09-04 | Blood Test: Potassium              | 9.2 mmol/L    | Emma Novak           | Dr. Peter Tep        | Westmorland General Hospital    |               2013 |
-| 2025-09-02 | Blood Test: Urea                   | 2.8 mmol/L    | Maxim Klein          | Dr. Mio Cruz         | North Tyneside General Hospital |               2019 |
-| 2025-08-31 | Blood Test: LDL Cholesterol        | 4.9 mmol/L    | Gunel Dizon          | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
-| 2025-08-28 | Blood Test: Potassium              | 9 mmol/L      | Adam Hoxha           | Dr. Peter Tep        | Westmorland General Hospital    |               2013 |
-| 2025-08-24 | Blood Test: Glucose                | 14.4 mmol/L   | Olivia Morales       | Dr. Nur Santos       | Torbay Hospital                 |               2014 |
-| 2025-08-22 | Blood Test: Iron                   | 20 umol/L     | Mark Ueno            | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
-| 2025-08-18 | Blood Test: Lymphocytes            | 1 x 10^9/L    | Daniel Montes        | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
-| 2025-08-03 | Blood Test: Glucose                | 4.2 mmol/L    | Mila Gashi           | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
-| 2025-07-04 | Blood Test: Bilirubin              | 1 umol/L      | Grace Hoti           | Dr. Peter Tep        | Westmorland General Hospital    |               2013 |
-| 2025-06-30 | Blood Test: LDL Cholesterol        | 3.1 mmol/L    | Chloe Dương          | Dr. İnci Todorova    | Amersham Hospital               |               2013 |
-| 2025-06-27 | Blood Test: Red Blood Cell Count   | 5 x 10^12/L   | Marcia Lefebvre      | Dr. Maddi Gallagher  | Torbay Hospital                 |               2014 |
-| 2025-06-21 | Blood Test: C-Reactive Protein     | 7 mg/L        | Ian Jukić            | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
-| 2025-06-18 | Blood Test: Neutrophils            | 7.8 x 10^9/L  | Mia Tang             | Dr. Maddi Gallagher  | Torbay Hospital                 |               2014 |
-| 2025-06-01 | Blood Test: Triglycerides          | 0.7 mmol/L    | Petar Mortensen      | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
-| 2025-05-28 | Blood Test: Albumin                | 43 g/L        | Thiago Andreassen    | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
-| 2025-05-19 | Blood Test: HbA1c                  | 52 mmol/mol   | Juliana delos Santos | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
-| 2025-04-30 | Blood Test: HbA1c                  | 97 mmol/mol   | Daniel Wagner        | Dr. Maddi Gallagher  | Torbay Hospital                 |               2014 |
-| 2025-04-21 | Blood Test: Red Blood Cell Count   | 2.7 x 10^12/L | Jack Rojas           | Dr. Maddi Gallagher  | Torbay Hospital                 |               2014 |
-| 2025-04-21 | Blood Test: Haemoglobin            | 139 g/L       | Michal Wagner        | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
-| 2025-04-11 | Blood Test: Lymphocytes            | 6.2 x 10^9/L  | Luka Spiteri         | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
-| 2025-04-10 | Blood Test: Magnesium              | 0.6 mmol/L    | Ahmad Benedetti      | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
-| 2025-04-02 | Blood Test: Red Blood Cell Count   | 2.8 x 10^12/L | Hassan Pavlovski     | Dr. Mio Cruz         | North Tyneside General Hospital |               2019 |
-| 2025-03-24 | Blood Test: Potassium              | 1.1 mmol/L    | Margarida Molina     | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
-| 2025-03-22 | Blood Test: HbA1c                  | 52 mmol/mol   | Maryam Morales       | Dr. İnci Todorova    | Amersham Hospital               |               2013 |
-| 2025-03-13 | Blood Test: Albumin                | 36 g/L        | Sofie Popov          | Dr. Leyla Sasaki     | Torbay Hospital                 |               2014 |
-| 2025-03-12 | Blood Test: C-Reactive Protein     | 7.6 mg/L      | Mila Gashi           | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
-| 2025-03-01 | Blood Test: Iron                   | 30 umol/L     | Zeynep Hovhannisyan  | Dr. Seo-yun Iwasaki  | North Tyneside General Hospital |               2019 |
-| 2025-02-20 | Blood Test: Urea                   | 6.2 mmol/L    | Mateo Takaki         | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
-| 2025-02-18 | Blood Test: Albumin                | 44 g/L        | Emma García          | Dr. İnci Todorova    | Amersham Hospital               |               2013 |
-| 2025-02-16 | Blood Test: Potassium              | 2.6 mmol/L    | Mateo Takaki         | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
-| 2025-02-15 | Blood Test: Albumin                | 47 g/L        | Emma Novak           | Dr. Peter Tep        | Westmorland General Hospital    |               2013 |
-| 2025-02-01 | Blood Test: Alkaline Phosphatase   | 109 IU/L      | Lucía Soria          | Dr. Leyla Sasaki     | Torbay Hospital                 |               2014 |
-| 2025-01-29 | Blood Test: Lactate                | 9.2 mmol/L    | Gabriel Rosario      | Dr. Seo-yun Iwasaki  | North Tyneside General Hospital |               2019 |
-| 2025-01-23 | Blood Test: Neutrophils            | 6.6 x 10^9/L  | Reema Aguilera       | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
-| 2025-01-04 | Blood Test: Magnesium              | 1.3 mmol/L    | Josefa Đoàn          | Dr. Nur Santos       | Torbay Hospital                 |               2014 |
-| 2025-01-02 | Blood Test: HDL Cholesterol        | 0.9 mmol/L    | Tommaso Kozłowski    | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
-| 2024-12-26 | Blood Test: HbA1c                  | 50 mmol/mol   | Katla Lehtinen       | Dr. Nur Santos       | Torbay Hospital                 |               2014 |
-| 2024-12-26 | Blood Test: Creatinine             | 102 umol/L    | Nazanin-Zahra Katō   | Dr. Sunita Valente   | Westmorland General Hospital    |               2013 |
-| 2024-12-23 | Blood Test: HbA1c                  | 24 mmol/mol   | Lilit Bravo          | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
-| 2024-12-22 | Blood Test: White Blood Cell Count | 0.5 x 10^9/L  | Michal Wagner        | Dr. Mio Cruz         | North Tyneside General Hospital |               2019 |
-| 2024-12-16 | Blood Test: Potassium              | 6.3 mmol/L    | Kaia Castillo        | Dr. Leyla Sasaki     | Torbay Hospital                 |               2014 |
-| 2024-12-11 | Blood Test: Bilirubin              | 28 umol/L     | Reema Aguilera       | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
-| 2024-12-07 | Blood Test: White Blood Cell Count | 12.3 x 10^9/L | Emma Davidov         | Dr. Leyla Sasaki     | Torbay Hospital                 |               2014 |
-| 2024-12-05 | Blood Test: LDL Cholesterol        | 3.6 mmol/L    | Aysel Watanabe       | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
-| 2024-12-02 | Blood Test: Alkaline Phosphatase   | 41 IU/L       | Luka Spiteri         | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
-| 2024-11-28 | Blood Test: Alkaline Phosphatase   | 87 IU/L       | Luka Spiteri         | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
-| 2024-11-28 | Blood Test: White Blood Cell Count | 11.6 x 10^9/L | Luca Riquelme        | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
-| 2024-11-16 | Blood Test: Albumin                | 60 g/L        | Anastasiya Kinoshita | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
-| 2024-11-11 | Blood Test: Albumin                | 34 g/L        | María Gonzalez       | Dr. Nur Santos       | Torbay Hospital                 |               2014 |
-| 2024-10-20 | Blood Test: Triglycerides          | 2.6 mmol/L    | Aleksandr Ông        | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
-| 2024-10-18 | Blood Test: Lactate                | 7 mmol/L      | Mùchén Rodriguez     | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
-| 2024-10-12 | Blood Test: Glucose                | 16.6 mmol/L   | Maya Coi             | Dr. Mio Cruz         | North Tyneside General Hospital |               2019 |
-| 2024-09-18 | Blood Test: Creatinine             | 116 umol/L    | Lucía Rodríguez      | Dr. Mykhaylo Fischer | North Tyneside General Hospital |               2019 |
-| 2024-09-17 | Blood Test: C-Reactive Protein     | 4 mg/L        | Manuel Uhm           | Dr. Peter Tep        | Westmorland General Hospital    |               2013 |
-| 2024-09-12 | Blood Test: Magnesium              | 0.7 mmol/L    | Naïm Wong            | Dr. İnci Todorova    | Amersham Hospital               |               2013 |
-| 2024-08-24 | Blood Test: HDL Cholesterol        | 1.7 mmol/L    | Barbara Johnson      | Dr. İnci Todorova    | Amersham Hospital               |               2013 |
-| 2024-08-13 | Blood Test: Albumin                | 25 g/L        | Dmitry Masuda        | Dr. Mio Cruz         | North Tyneside General Hospital |               2019 |
-| 2024-08-07 | Blood Test: Alkaline Phosphatase   | 79 IU/L       | Bruno Kurt           | Dr. Peter Tep        | Westmorland General Hospital    |               2013 |
-| 2024-07-27 | Blood Test: Haemoglobin            | 96 g/L        | Karine Martínez      | Dr. Asja Song        | Westmorland General Hospital    |               2013 |
-| 2024-07-23 | Blood Test: Lactate                | 0.8 mmol/L    | Aleksandr Ông        | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
-| 2024-07-15 | Blood Test: Creatinine             | 127 umol/L    | Theo Kovács          | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
-| 2024-06-28 | Blood Test: Lymphocytes            | 8.8 x 10^9/L  | Dunja Chang          | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
-| 2024-06-22 | Blood Test: Iron                   | 16 umol/L     | Adam Scheving        | Dr. Jakob Prifti     | North Tyneside General Hospital |               2019 |
-| 2024-06-09 | Blood Test: Triglycerides          | 1.9 mmol/L    | Ali Morales          | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
-| 2024-05-25 | Blood Test: Red Blood Cell Count   | 6.9 x 10^12/L | Eva Naidu            | Dr. Asja Song        | Westmorland General Hospital    |               2013 |
-| 2024-05-17 | Blood Test: Albumin                | 55 g/L        | Aadhya Torres        | Dr. Nur Santos       | Torbay Hospital                 |               2014 |
-| 2024-04-18 | Blood Test: Triglycerides          | 4.8 mmol/L    | Emmanuel Aivaliotis  | Dr. Nur Santos       | Torbay Hospital                 |               2014 |
-| 2024-03-28 | Blood Test: Urea                   | 5 mmol/L      | Gamalat Özdemir      | Dr. İnci Todorova    | Amersham Hospital               |               2013 |
-| 2024-03-09 | Blood Test: Red Blood Cell Count   | 6.5 x 10^12/L | Dunja Chang          | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
-| 2024-03-03 | Blood Test: White Blood Cell Count | 2.4 x 10^9/L  | Aron Díaz            | Dr. Isabel Bustos    | North Tyneside General Hospital |               2019 |
-| 2024-02-12 | Blood Test: Magnesium              | 0.7 mmol/L    | Viktor Benítez       | Dr. Nur Santos       | Torbay Hospital                 |               2014 |
-| 2024-01-07 | Blood Test: Creatinine             | 36 umol/L     | Oisin Prasad         | Dr. Mio Cruz         | North Tyneside General Hospital |               2019 |
 +------------+------------------------------------+---------------+----------------------+----------------------+---------------------------------+--------------------+
 ```
 
@@ -795,7 +719,7 @@ Then, run the `get_patients_at_small_hospitals.sql` script (in the following com
 source /filepath/of/get_patients_at_small_hospitals.sql
 ```
 
-This produces the following output:
+The first five rows of the produced table are as follows:
 
 ```
 +------------+---------------------+-----------+--------------------------+-----------------------------+
@@ -806,79 +730,5 @@ This produces the following output:
 |         31 | Lara Delemović      |        32 | Dr. Farrah Jakobsson     | Harrogate District Hospital |
 |         85 | Abdullo Pang        |        55 | Dr. Elizaveta Svobodová  | Harrogate District Hospital |
 |         91 | Emma Bairamovi      |        32 | Dr. Farrah Jakobsson     | Harrogate District Hospital |
-|        103 | Julia Garcia        |        89 | Dr. Noah Nguyen          | Harrogate District Hospital |
-|        125 | Ida Nikolla         |        32 | Dr. Farrah Jakobsson     | Harrogate District Hospital |
-|        227 | Elyas Huáng         |        32 | Dr. Farrah Jakobsson     | Harrogate District Hospital |
-|        241 | Finn Balogh         |        32 | Dr. Farrah Jakobsson     | Harrogate District Hospital |
-|        247 | Mädïna Lín          |        55 | Dr. Elizaveta Svobodová  | Harrogate District Hospital |
-|        248 | Paraskevi Vuković   |        55 | Dr. Elizaveta Svobodová  | Harrogate District Hospital |
-|        330 | Elizabeth Ramírez   |        55 | Dr. Elizaveta Svobodová  | Harrogate District Hospital |
-|        369 | Evens Lie           |        55 | Dr. Elizaveta Svobodová  | Harrogate District Hospital |
-|        469 | Maryam Yau          |        32 | Dr. Farrah Jakobsson     | Harrogate District Hospital |
-|        480 | Brahim Polishchuk   |        32 | Dr. Farrah Jakobsson     | Harrogate District Hospital |
-|        510 | Sophia Perera       |        32 | Dr. Farrah Jakobsson     | Harrogate District Hospital |
-|        511 | Liam Hodžić         |        89 | Dr. Noah Nguyen          | Harrogate District Hospital |
-|        530 | Archie Torres       |        89 | Dr. Noah Nguyen          | Harrogate District Hospital |
-|        549 | Juan Saitō          |        55 | Dr. Elizaveta Svobodová  | Harrogate District Hospital |
-|        566 | Marti Lou           |        89 | Dr. Noah Nguyen          | Harrogate District Hospital |
-|        586 | Vasilisa Wright     |        32 | Dr. Farrah Jakobsson     | Harrogate District Hospital |
-|        598 | Isabella Jiménez    |        55 | Dr. Elizaveta Svobodová  | Harrogate District Hospital |
-|         24 | James Sánchez       |        29 | Dr. Matej Maldonado      | Dorset County Hospital      |
-|         39 | Andrej Welter       |         1 | Dr. Kora Kelmendi        | Dorset County Hospital      |
-|        115 | Helmi Koak          |        29 | Dr. Matej Maldonado      | Dorset County Hospital      |
-|        174 | Lydia Mkrtchyan     |         1 | Dr. Kora Kelmendi        | Dorset County Hospital      |
-|        214 | Filip Morel         |        29 | Dr. Matej Maldonado      | Dorset County Hospital      |
-|        300 | Emmanuel Aivaliotis |         1 | Dr. Kora Kelmendi        | Dorset County Hospital      |
-|        318 | Ivan Hur            |         1 | Dr. Kora Kelmendi        | Dorset County Hospital      |
-|        320 | Mohammad Santos     |         1 | Dr. Kora Kelmendi        | Dorset County Hospital      |
-|        336 | Aya Farkas          |         1 | Dr. Kora Kelmendi        | Dorset County Hospital      |
-|        376 | Nikolaos Kawano     |         1 | Dr. Kora Kelmendi        | Dorset County Hospital      |
-|        408 | Frida Muñoz         |        29 | Dr. Matej Maldonado      | Dorset County Hospital      |
-|        446 | Daniel Wagner       |         1 | Dr. Kora Kelmendi        | Dorset County Hospital      |
-|        509 | Lorenzo Gallagher   |        29 | Dr. Matej Maldonado      | Dorset County Hospital      |
-|        557 | Ali Kastrati        |         1 | Dr. Kora Kelmendi        | Dorset County Hospital      |
-|        582 | Mariami Kelmendi    |        29 | Dr. Matej Maldonado      | Dorset County Hospital      |
-|          6 | Ivan Nand           |        80 | Dr. Willow Morales       | Airedale General Hospital   |
-|         14 | Pedro Lombardo      |        80 | Dr. Willow Morales       | Airedale General Hospital   |
-|         64 | Mikołaj Tan         |        30 | Dr. Anna Urbonienė       | Airedale General Hospital   |
-|         74 | Ambre López         |         6 | Dr. Alexander Iskakov    | Airedale General Hospital   |
-|         79 | Stanisław Angelova  |         6 | Dr. Alexander Iskakov    | Airedale General Hospital   |
-|         82 | Oliver Djurhuus     |        30 | Dr. Anna Urbonienė       | Airedale General Hospital   |
-|        130 | Mila Muñoz          |        35 | Dr. Willow Karlsen       | Airedale General Hospital   |
-|        165 | Zahra Trajanovski   |        35 | Dr. Willow Karlsen       | Airedale General Hospital   |
-|        178 | Nika Pak            |        20 | Dr. Lile Kļaviņš         | Airedale General Hospital   |
-|        186 | Emely Lynch         |        30 | Dr. Anna Urbonienė       | Airedale General Hospital   |
-|        199 | Lea Prakash         |         6 | Dr. Alexander Iskakov    | Airedale General Hospital   |
-|        226 | Islande Estrada     |         6 | Dr. Alexander Iskakov    | Airedale General Hospital   |
-|        246 | Maria Sepúlveda     |        80 | Dr. Willow Morales       | Airedale General Hospital   |
-|        281 | Umar Orellana       |        35 | Dr. Willow Karlsen       | Airedale General Hospital   |
-|        290 | Lethabo Carter      |        80 | Dr. Willow Morales       | Airedale General Hospital   |
-|        301 | Konul Wood          |         6 | Dr. Alexander Iskakov    | Airedale General Hospital   |
-|        303 | Oscar Díaz          |        80 | Dr. Willow Morales       | Airedale General Hospital   |
-|        315 | Gabriel Shevchuk    |        30 | Dr. Anna Urbonienė       | Airedale General Hospital   |
-|        328 | Moussa Lương        |        80 | Dr. Willow Morales       | Airedale General Hospital   |
-|        347 | Sōma Sharma         |        20 | Dr. Lile Kļaviņš         | Airedale General Hospital   |
-|        367 | Hugo Lovrić         |        20 | Dr. Lile Kļaviņš         | Airedale General Hospital   |
-|        370 | Mihail Bailey       |        80 | Dr. Willow Morales       | Airedale General Hospital   |
-|        371 | Tomás Lee           |        20 | Dr. Lile Kļaviņš         | Airedale General Hospital   |
-|        429 | Farah Markoski      |        80 | Dr. Willow Morales       | Airedale General Hospital   |
-|        441 | Ali Schmidt         |         6 | Dr. Alexander Iskakov    | Airedale General Hospital   |
-|        443 | Daria Ko            |        30 | Dr. Anna Urbonienė       | Airedale General Hospital   |
-|        455 | Annie Sánchez       |        20 | Dr. Lile Kļaviņš         | Airedale General Hospital   |
-|        467 | Nora Weerasinghe    |         6 | Dr. Alexander Iskakov    | Airedale General Hospital   |
-|        477 | Sofía Correia       |        80 | Dr. Willow Morales       | Airedale General Hospital   |
-|        478 | Konstantinos Bustos |        30 | Dr. Anna Urbonienė       | Airedale General Hospital   |
-|        488 | Djeneba Díaz        |        20 | Dr. Lile Kļaviņš         | Airedale General Hospital   |
-|        518 | Celine Rodríguez    |        80 | Dr. Willow Morales       | Airedale General Hospital   |
-|        580 | Roghayyeh Sousa     |        20 | Dr. Lile Kļaviņš         | Airedale General Hospital   |
-|        581 | Joel Rojas          |        35 | Dr. Willow Karlsen       | Airedale General Hospital   |
-|        600 | Damian Gutiérrez    |         6 | Dr. Alexander Iskakov    | Airedale General Hospital   |
-|        137 | Aleksandra Ibraev   |        18 | Dr. İnci Todorova        | Amersham Hospital           |
-|        139 | Oisín Sánchez       |        18 | Dr. İnci Todorova        | Amersham Hospital           |
-|        192 | Naïm Wong           |        18 | Dr. İnci Todorova        | Amersham Hospital           |
-|        196 | Heitor Popescu      |        18 | Dr. İnci Todorova        | Amersham Hospital           |
-|        200 | Barbara Johnson     |        18 | Dr. İnci Todorova        | Amersham Hospital           |
-|        309 | Nuka Scheving       |        18 | Dr. İnci Todorova        | Amersham Hospital           |
-|        439 | Gamalat Özdemir     |        18 | Dr. İnci Todorova        | Amersham Hospital           |
 +------------+---------------------+-----------+--------------------------+-----------------------------+
 ```
