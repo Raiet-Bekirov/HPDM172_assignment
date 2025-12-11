@@ -204,7 +204,7 @@ If `add_new_patient.sql` is downloaded, the following SQL code can be used to ad
 ```sql
 USE hospitals_db;
 ```
-Then, set the variables `@NewPtName`, `@NewPtDOB`, and `@NewPtAddress` to the name, date of birth, and a address of the new patient:
+Then, set the variables `@NewPtName`, `@NewPtDOB`, and `@NewPtAddress` to the name, date of birth, and address of the new patient:
 
 ```sql
 SET @NewPtName = 'Paul Dirac';
@@ -230,7 +230,7 @@ Finally, run the `add_new_patient.sql` script (in the following command, replace
 source /filepath/of/add_new_patient.sql
 ```
 
-This adds the patient to the `patients` table. Use the following SQL comand to confirm the change:
+This adds the patient to the `patients` table. Use the following SQL comand to confirm the addition has been successful:
 
 ```sql
 SELECT * FROM patients
