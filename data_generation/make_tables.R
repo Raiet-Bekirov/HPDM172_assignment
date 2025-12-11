@@ -18,7 +18,7 @@ acute_trust_services <- subset(acute_trust_services, select = c(service, org, ty
 acute_trust_services <- acute_trust_services[!acute_trust_services$service=='Access to services domain score',]
 acute_trust_services <- acute_trust_services[!acute_trust_services$service=='Access to services domain segment',]
 acute_trust_services$type[acute_trust_services$type %in% c('Small','Medium',
-                               'Large', 'Multi-Service')] <- 'General'
+                                                           'Large', 'Multi-Service')] <- 'General'
 
 addresses <- read.csv('source_data/addresses.csv', header=FALSE)
 addresses <- data.frame(
