@@ -20,10 +20,7 @@ Following these steps results in the creation of a MySQL relational database, wi
 
 ![](data_generation/hospitals_db_erd.png)
 
-We also provide instructions for exporting and wiping the database once it is created.
-
-- [Exporting the Database](#exporting-the-database)
-- [Wiping the Database](#wiping-the-database)
+We also provide instructions for [exporting](#exporting-the-database) and [wiping](#wiping-the-database) the database once it is created.
 
 ### Option 1: Restore the database from the provided backup file
 
