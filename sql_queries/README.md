@@ -627,7 +627,7 @@ The first five rows of the produced table are as follows:
 
 ### Query 16: `get_max_prescriber.sql`
 
-If `get_max_prescriber.sql` is downloaded, the following SQL code can be used to dentify which doctor has made the most prescriptions. First, select the `hospitals_db` database:
+If `get_max_prescriber.sql` is downloaded, the following SQL code can be used to identify which doctor has made the most prescriptions. First, select the `hospitals_db` database:
 
 ```sql
 USE hospitals_db;
