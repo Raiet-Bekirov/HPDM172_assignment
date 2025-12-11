@@ -583,9 +583,9 @@ for (i in 1:500) {
   prs_day <- year_days$day[prs_day_of_year]
   }
   prescriptions_table$prs_date[i] <- paste(prs_year,
-                       prs_month,
-                       prs_day,
-                       sep = "-")
+                                           prs_month,
+                                           prs_day,
+                                           sep = "-")
   prescriptions_table$medication_id[i] <- sample(medications_table$medication_id, 1)
   prescriptions_table$patient_id[i] <- pt_id
   prescriptions_table$doc_id[i] <- prescriber
@@ -625,9 +625,9 @@ for (i in 1:500) {
   apt_month <- year_days$month[apt_day_of_year]
   apt_day <- year_days$day[apt_day_of_year]
   appointments_table$apt_date[i] <- paste(apt_year,
-                      apt_month,
-                      apt_day,
-                      sep = "-")
+                                          apt_month,
+                                          apt_day,
+                                          sep = "-")
   appointments_table$patient_id[i] <- pt_id
   appointments_table$doc_id[i] <- apt_doc
 }
@@ -674,9 +674,9 @@ for (i in 1:500) {
   test_day <- year_days$day[test_day_of_year]
   }
   lab_results_table$test_date[i] <- paste(test_year,
-                      test_month,
-                      test_day,
-                      sep = "-")
+                                          test_month,
+                                          test_day,
+                                          sep = "-")
   lab_results_table$test_type[i] <- blood_tests$test_name[blood_tests$test_code==test_code]
   lab_results_table$test_result[i] <- result_of_test
   lab_results_table$patient_id[i] <- pt_id
