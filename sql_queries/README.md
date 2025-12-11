@@ -22,7 +22,7 @@ This directory contains SQL scipt files for nineteen different queries that can 
 - [Query 18, `get_emergency_hospitals_accred_pre_2015.sql`](#query-18-get_emergency_hospitals_accred_pre_2015sql): Print a list of all hospital names which were accredited prior to 2015 and do have Emergency Service facilities.
 - [Query 19, `get_patients_at_small_hospitals.sql`](#query-19-get_patients_at_small_hospitalssql): Print a list of patients registered with doctors who are based at hospital with <400 beds.
 
-## Steps to download and run any of these scripts
+## Steps to Download and Run Any of These Scripts
 
 Make directory to store SQL script files, for example:
 
@@ -71,7 +71,7 @@ Quit MySQL:
 quit
 ```
 
-## Example ouputs from each query
+## Example Ouputs From Each Query
 
 ### Query 1: `get_docs_at_hospital.sql`
 
