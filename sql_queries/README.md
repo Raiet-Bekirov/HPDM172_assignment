@@ -336,18 +336,18 @@ This produces the following output:
 +-------------------+----------------------------------------+
 ```
 
-### Query 8: `get_docs_from_accredited_hospitals.sql`
+### Query 8: `get_docs_at_teaching_hospitals_accred_btwn_2015_2024.sql`
 
-If `get_docs_from_accredited_hospitals.sql` is downloaded, the following SQL code can be used to print a list of all doctors based at Teaching hospitals which were accredited between 2015–2024. First, select the `hospitals_db` database:
+If `get_docs_at_teaching_hospitals_accred_btwn_2015_2024.sql` is downloaded, the following SQL code can be used to print a list of all doctors based at Teaching hospitals which were accredited between 2015–2024. First, select the `hospitals_db` database:
 
 ```sql
 USE hospitals_db;
 ```
 
-Then, run the `get_docs_from_accredited_hospitals.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
+Then, run the `get_docs_at_teaching_hospitals_accred_btwn_2015_2024.sql` script (in the following command, replace `/filepath/of/` with the appropriate file path):
 
 ```sql
-source /filepath/of/get_docs_from_accredited_hospitals.sql
+source /filepath/of/get_docs_at_teaching_hospitals_accred_btwn_2015_2024.sql
 ```
 
 This produces the following output:
